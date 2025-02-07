@@ -128,6 +128,7 @@ var rootCmd = &cobra.Command{
 					})
 					if idx.Unique {
 						t.Constraints = append(t.Constraints, &schema.Constraint{
+							Name:    name,
 							Type:    "UNIQUE",
 							Def:     def,
 							Table:   &t.Name,
@@ -164,9 +165,11 @@ var rootCmd = &cobra.Command{
 					}
 					s.Relations = append(s.Relations, rel)
 					t.Constraints = append(t.Constraints, &schema.Constraint{
-						Type:  "FOREIGN KEY",
-						Def:   fmt.Sprintf("ForeignKeyType: %s", parentTable),
-						Table: &t.Name,
+						Name:    fmt.Sprintf("ForeignKey for %s to %s", c.Name, parentTable),
+						Type:    "FOREIGN KEY",
+						Def:     fmt.Sprintf("ForeignKeyType: %s", parentTable),
+						Table:   &t.Name,
+						Columns: []string{c.Name},
 					})
 				}
 				if field.Index {
@@ -185,6 +188,7 @@ var rootCmd = &cobra.Command{
 						Columns: []string{c.Name},
 					})
 					t.Constraints = append(t.Constraints, &schema.Constraint{
+						Name:    fmt.Sprintf("Unique for %s", c.Name),
 						Type:    "UNIQUE",
 						Def:     "Unique: true",
 						Table:   &t.Name,
