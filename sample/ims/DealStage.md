@@ -9,18 +9,18 @@ DealStage model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [Deal](Deal.md) |  |  |
-| dealPipelineId | uuid |  | false |  | [DealPipeline](DealPipeline.md) | DealPipeline ID |
-| displayOrder | integer |  | false |  |  | Display Order |
-| description | string |  | true |  |  | Description |
+| name | string |  | false |  |  | Name |
 | type | string |  | true |  |  | Stage type |
 | probability | float |  | false |  |  | Default probability |
+| closedWon | boolean |  | false |  |  | Closed Won? |
 | closedLost | boolean |  | false |  |  | Closed Lost? |
 | createdAt | datetime |  | true |  |  | createdAt |
-| dealPipeline | DealPipeline |  | true |  |  | Link to the DealPipeline |
-| label | string |  | false |  |  | Label |
-| name | string |  | false |  |  | Name |
-| closedWon | boolean |  | false |  |  | Closed Won? |
 | updatedAt | datetime |  | true |  |  | updatedAt |
+| dealPipelineId | uuid |  | false |  | [DealPipeline](DealPipeline.md) | DealPipeline ID |
+| dealPipeline | DealPipeline |  | true |  |  | Link to the DealPipeline |
+| displayOrder | integer |  | false |  |  | Display Order |
+| description | string |  | true |  |  | Description |
+| label | string |  | false |  |  | Label |
 
 ## Constraints
 

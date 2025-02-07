@@ -107,7 +107,7 @@ var rootCmd = &cobra.Command{
 				return err
 			}
 			t := &schema.TableJSON{
-				Type: "Base Table",
+				Type: "TailorDB.Type",
 			}
 			t.Name = typ.Name
 			t.Comment = typ.Description
@@ -160,7 +160,7 @@ var rootCmd = &cobra.Command{
 						Columns:       []string{c.Name},
 						ParentTable:   parentTable,
 						ParentColumns: []string{"id"},
-						Def:           "ForeignKey",
+						Def:           fmt.Sprintf("ForeignKeyType: %s", parentTable),
 					}
 					s.Relations = append(s.Relations, rel)
 					t.Constraints = append(t.Constraints, &schema.Constraint{

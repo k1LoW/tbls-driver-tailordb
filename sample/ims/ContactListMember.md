@@ -9,13 +9,13 @@ ContactListMember model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false |  |  |  |
+| contactListId | uuid |  | false |  | [ContactList](ContactList.md) | ContactList ID |
 | contactList | ContactList |  | true |  |  | Link to the ContactList |
 | addedAt | string |  | true |  |  | Time when the contact was added to the list |
 | createdAt | datetime |  | true |  |  | createdAt |
 | updatedAt | datetime |  | true |  |  | updatedAt |
 | contactId | uuid |  | false |  |  | Contact ID |
 | contact | Contact |  | true |  |  | Link to the Contact |
-| contactListId | uuid |  | false |  | [ContactList](ContactList.md) | ContactList ID |
 
 ## Constraints
 

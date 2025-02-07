@@ -9,13 +9,13 @@ TeamUser model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false |  |  |  |
+| createdAt | datetime |  | true |  |  | createdAt |
 | updatedAt | datetime |  | true |  |  | updatedAt |
 | teamId | uuid |  | false |  | [Team](Team.md) | Team ID |
 | team | Team |  | true |  |  | Link to the Team |
 | userId | uuid |  | false |  | [User](User.md) | User ID |
 | user | User |  | true |  |  | Link to the User |
 | isSecondaryUser | boolean |  | false |  |  | Is Secondary User? |
-| createdAt | datetime |  | true |  |  | createdAt |
 
 ## Constraints
 
@@ -30,10 +30,10 @@ TeamUser model
 | Name | Definition |
 | ---- | ---------- |
 | teamUserCompositeKey | {"teamUserCompositeKey":{"FieldNames":["teamId","userId"],"Unique":true}} |
+| Index for createdAt | Index: true |
 | Index for updatedAt | Index: true |
 | Index for teamId | Index: true |
 | Index for userId | Index: true |
-| Index for createdAt | Index: true |
 
 ## Relations
 

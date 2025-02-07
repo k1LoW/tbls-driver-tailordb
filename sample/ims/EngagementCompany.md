@@ -9,12 +9,12 @@ EngagementCompany model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false |  |  |  |
-| createdAt | datetime |  | true |  |  | createdAt |
-| updatedAt | datetime |  | true |  |  | updatedAt |
 | companyId | uuid |  | false |  | [Company](Company.md) | Company ID |
 | company | Company |  | true |  |  | Link to the Company |
 | engagementId | uuid |  | false |  | [Engagement](Engagement.md) | Engagement ID |
 | engagement | Engagement |  | true |  |  | Link to the Engagement |
+| createdAt | datetime |  | true |  |  | createdAt |
+| updatedAt | datetime |  | true |  |  | updatedAt |
 
 ## Constraints
 

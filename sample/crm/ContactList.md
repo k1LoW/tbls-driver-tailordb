@@ -9,10 +9,10 @@ ContactList model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [ContactListMember](ContactListMember.md) |  |  |
+| isDeleted | boolean |  | true |  |  | Is Deleted? |
 | name | string |  | false |  |  | Contact List Name |
 | createdAt | datetime |  | true |  |  | createdAt |
 | updatedAt | datetime |  | true |  |  | updatedAt |
-| isDeleted | boolean |  | true |  |  | Is Deleted? |
 
 ## Indexes
 

@@ -9,12 +9,12 @@ EngagementContact model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false |  |  |  |
-| updatedAt | datetime |  | true |  |  | updatedAt |
 | contactId | uuid |  | false |  | [Contact](Contact.md) | Contact ID |
 | contact | Contact |  | true |  |  | Link to the Contact |
 | engagementId | uuid |  | false |  | [Engagement](Engagement.md) | Engagement ID |
 | engagement | Engagement |  | true |  |  | Link to the Engagement |
 | createdAt | datetime |  | true |  |  | createdAt |
+| updatedAt | datetime |  | true |  |  | updatedAt |
 
 ## Constraints
 
@@ -29,8 +29,8 @@ EngagementContact model
 | Name | Definition |
 | ---- | ---------- |
 | engagementContactCompositeKey | {"engagementContactCompositeKey":{"FieldNames":["contactId","engagementId"],"Unique":true}} |
-| Index for updatedAt | Index: true |
 | Index for createdAt | Index: true |
+| Index for updatedAt | Index: true |
 
 ## Relations
 

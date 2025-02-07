@@ -9,12 +9,12 @@ Engagement model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [EngagementCompany](EngagementCompany.md) [EngagementContact](EngagementContact.md) [EngagementDeal](EngagementDeal.md) |  |  |
-| active | boolean |  | true |  |  | Is active? |
 | activityType | string |  | false |  |  | Activity type |
 | userId | uuid |  | false |  | [User](User.md) | Owner ID |
 | type | string |  | true |  |  | Engagement type |
 | createdAt | datetime |  | true |  |  | createdAt |
 | updatedAt | datetime |  | true |  |  | updatedAt |
+| active | boolean |  | true |  |  | Is active? |
 
 ## Constraints
 
