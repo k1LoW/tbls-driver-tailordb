@@ -1,0 +1,78 @@
+version: 2
+before:
+  hooks:
+    - go mod download
+    - go mod tidy
+builds:
+  -
+    id: tbls-driver-tailordb-darwin
+    ldflags:
+      - -s -w -X github.com/k1LoW/tbls-driver-tailordb.version={{.Version}} -X github.com/k1LoW/tbls-driver-tailordb.commit={{.FullCommit}} -X github.com/k1LoW/tbls-driver-tailordb.date={{.Date}} -X github.com/k1LoW/tbls-driver-tailordb/version.Version={{.Version}}
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+  -
+    id: tbls-driver-tailordb-windows
+    ldflags:
+      - -s -w -X github.com/k1LoW/tbls-driver-tailordb.version={{.Version}} -X github.com/k1LoW/tbls-driver-tailordb.commit={{.FullCommit}} -X github.com/k1LoW/tbls-driver-tailordb.date={{.Date}} -X github.com/k1LoW/tbls-driver-tailordb/version.Version={{.Version}}
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - windows
+    goarch:
+      - amd64
+  -
+    id: tbls-driver-tailordb-linux
+    ldflags:
+      - -s -w -X github.com/k1LoW/tbls-driver-tailordb.version={{.Version}} -X github.com/k1LoW/tbls-driver-tailordb.commit={{.FullCommit}} -X github.com/k1LoW/tbls-driver-tailordb.date={{.Date}} -X github.com/k1LoW/tbls-driver-tailordb/version.Version={{.Version}}
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+    goarch:
+      - amd64
+      - arm64
+archives:
+  -
+    id: tbls-driver-tailordb-archive
+    name_template: '{{ .ProjectName }}_v{{ .Version }}_{{ .Os }}_{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}'
+    format_overrides:
+      - goos: darwin
+        formats:
+          - zip
+    files:
+      - LICENSE
+      - CREDITS
+      - README.md
+      - CHANGELOG.md
+checksum:
+  name_template: 'checksums.txt'
+changelog:
+  sort: asc
+  filters:
+    exclude:
+    - '^docs:'
+    - '^test:'
+nfpms:
+  -
+    id: tbls-driver-tailordb-nfpms
+    file_name_template: "{{ .ProjectName }}_{{ .Version }}-1_{{ .Arch }}"
+    builds:
+      - tbls-driver-tailordb-linux
+    homepage: https://github.com/k1LoW/tbls-driver-tailordb
+    maintainer: Ken'ichiro Oyama <k1lowxb@gmail.com>
+    description: tbls-driver-tailordb is a tool for exploring multiple root directories.
+    license: MIT
+    formats:
+      - deb
+      - rpm
+      - apk
+    bindir: /usr/bin
+    epoch: 1
+release:
+  draft: true
+  replace_existing_draft: true
