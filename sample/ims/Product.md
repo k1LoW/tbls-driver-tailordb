@@ -9,23 +9,23 @@ Product model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [ProductVariant](ProductVariant.md) |  |  |
-| active | boolean |  | true |  |  | active |
-| createdAt | datetime |  | true |  |  | createdAt |
-| title | string |  | true |  |  | Product title |
-| updatedAt | datetime |  | true |  |  | updatedAt |
-| inStock | integer |  | true |  |  | Quantity of the product |
-| shopifyID | string |  | true |  |  | Shopify product ID |
-| handle | string |  | true |  |  | Product handle |
 | description | string |  | true |  |  | Product description |
+| updatedAt | datetime |  | true |  |  | updatedAt |
+| active | boolean |  | true |  |  | active |
+| title | string |  | true |  |  | Product title |
+| handle | string |  | true |  |  | Product handle |
 | featuredImageID | uuid |  | true |  | [ProductImage](ProductImage.md) | Featured image ID |
 | featuredImage | ProductImage |  | true |  | [ProductImage](ProductImage.md) | Featured image of the product |
+| inStock | integer |  | true |  |  | Quantity of the product |
+| createdAt | datetime |  | true |  |  | createdAt |
+| shopifyID | string |  | true |  |  | Shopify product ID |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for createdAt | Index: true |
 | Index for updatedAt | Index: true |
+| Index for createdAt | Index: true |
 
 ## Relations
 

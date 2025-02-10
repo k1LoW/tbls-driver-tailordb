@@ -9,28 +9,28 @@ Inventory Level of an inventory item
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false |  |  |  |
-| inventoryItemID | uuid |  | true |  | [InventoryItem](InventoryItem.md) | Inventory Item ID |
-| inventoryItem | InventoryItem |  | true |  | [InventoryItem](InventoryItem.md) | Inventory Item |
 | safetyStock | integer |  | true |  |  | Amount of the inventory item safety stock |
 | incoming | integer |  | true |  |  | Amount of the inventory item incoming |
-| location | Location |  | true |  | [Location](Location.md) | Inventory Location |
-| locationID | uuid |  | true |  | [Location](Location.md) | Inventory Location ID |
-| committed | integer |  | true |  |  | Amount of the inventory item reserved |
-| active | boolean |  | true |  |  | active |
+| inventoryItemID | uuid |  | true |  | [InventoryItem](InventoryItem.md) | Inventory Item ID |
+| reserved | integer |  | true |  |  | Amount of the inventory item reserved |
 | damaged | integer |  | true |  |  | Amount of the inventory item damaged |
 | onHand | integer |  | true |  |  | Amount of the inventory item on hand |
-| updatedAt | datetime |  | true |  |  | updatedAt |
-| reserved | integer |  | true |  |  | Amount of the inventory item reserved |
-| available | integer |  | true |  |  | Amount of the inventory item available |
-| qualityControl | integer |  | true |  |  | Amount of the inventory item in quality control |
 | createdAt | datetime |  | true |  |  | createdAt |
+| available | integer |  | true |  |  | Amount of the inventory item available |
+| location | Location |  | true |  | [Location](Location.md) | Inventory Location |
+| updatedAt | datetime |  | true |  |  | updatedAt |
+| active | boolean |  | true |  |  | active |
+| locationID | uuid |  | true |  | [Location](Location.md) | Inventory Location ID |
+| qualityControl | integer |  | true |  |  | Amount of the inventory item in quality control |
+| inventoryItem | InventoryItem |  | true |  | [InventoryItem](InventoryItem.md) | Inventory Item |
+| committed | integer |  | true |  |  | Amount of the inventory item reserved |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for updatedAt | Index: true |
 | Index for createdAt | Index: true |
+| Index for updatedAt | Index: true |
 
 ## Relations
 

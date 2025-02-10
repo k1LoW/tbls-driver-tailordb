@@ -9,12 +9,12 @@ Product Image
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [Product](Product.md) [ProductVariant](ProductVariant.md) |  |  |
-| altText | string |  | true |  |  | Alt text |
-| active | boolean |  | true |  |  | active |
 | createdAt | datetime |  | true |  |  | createdAt |
 | shopifyID | string |  | true |  |  | Shopify image ID |
 | updatedAt | datetime |  | true |  |  | updatedAt |
 | url | string |  | true |  |  | Image URL |
+| altText | string |  | true |  |  | Alt text |
+| active | boolean |  | true |  |  | active |
 
 ## Indexes
 

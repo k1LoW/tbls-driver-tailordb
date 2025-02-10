@@ -9,19 +9,19 @@ Product variant's inventory item model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [InventoryLevel](InventoryLevel.md) [ProductVariant](ProductVariant.md) |  |  |
-| createdAt | datetime |  | true |  |  | createdAt |
 | shopifyID | string |  | true |  |  | Shopify product ID |
 | productVariantID | uuid |  | true |  | [ProductVariant](ProductVariant.md) | Product variant ID |
 | productVariant | ProductVariant |  | true |  | [ProductVariant](ProductVariant.md) | Product variant |
 | updatedAt | datetime |  | true |  |  | updatedAt |
 | active | boolean |  | true |  |  | active |
+| createdAt | datetime |  | true |  |  | createdAt |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for createdAt | Index: true |
 | Index for updatedAt | Index: true |
+| Index for createdAt | Index: true |
 
 ## Relations
 

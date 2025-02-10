@@ -21,23 +21,23 @@
 <text text-anchor="start" x="83.19" y="-243.2" font-family="Arial" font-size="14.00">id </text>
 <text text-anchor="start" x="97.97" y="-243.2" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="76.19,-200.2 76.19,-231 284.57,-231 284.57,-200.2 76.19,-200.2"/>
-<text text-anchor="start" x="83.19" y="-212.4" font-family="Arial" font-size="14.00">updatedAt </text>
-<text text-anchor="start" x="150.91" y="-212.4" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="83.19" y="-212.4" font-family="Arial" font-size="14.00">closedAt </text>
+<text text-anchor="start" x="140.77" y="-212.4" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 <polygon fill="none" stroke="black" points="76.19,-169.4 76.19,-200.2 284.57,-200.2 284.57,-169.4 76.19,-169.4"/>
-<text text-anchor="start" x="83.19" y="-181.6" font-family="Arial" font-size="14.00">active </text>
-<text text-anchor="start" x="123.65" y="-181.6" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
+<text text-anchor="start" x="83.19" y="-181.6" font-family="Arial" font-size="14.00">updatedAt </text>
+<text text-anchor="start" x="150.91" y="-181.6" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 <polygon fill="none" stroke="black" points="76.19,-138.6 76.19,-169.4 284.57,-169.4 284.57,-138.6 76.19,-138.6"/>
-<text text-anchor="start" x="83.19" y="-150.8" font-family="Arial" font-size="14.00">createdAt </text>
-<text text-anchor="start" x="147" y="-150.8" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="83.19" y="-150.8" font-family="Arial" font-size="14.00">active </text>
+<text text-anchor="start" x="123.65" y="-150.8" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
 <polygon fill="none" stroke="black" points="76.19,-107.8 76.19,-138.6 284.57,-138.6 284.57,-107.8 76.19,-107.8"/>
-<text text-anchor="start" x="83.19" y="-120" font-family="Arial" font-size="14.00">name </text>
-<text text-anchor="start" x="122.1" y="-120" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="83.19" y="-120" font-family="Arial" font-size="14.00">createdAt </text>
+<text text-anchor="start" x="147" y="-120" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 <polygon fill="none" stroke="black" points="76.19,-77 76.19,-107.8 284.57,-107.8 284.57,-77 76.19,-77"/>
-<text text-anchor="start" x="83.19" y="-89.2" font-family="Arial" font-size="14.00">isClosed </text>
-<text text-anchor="start" x="140.76" y="-89.2" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
+<text text-anchor="start" x="83.19" y="-89.2" font-family="Arial" font-size="14.00">name </text>
+<text text-anchor="start" x="122.1" y="-89.2" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="76.19,-46.2 76.19,-77 284.57,-77 284.57,-46.2 76.19,-46.2"/>
-<text text-anchor="start" x="83.19" y="-58.4" font-family="Arial" font-size="14.00">closedAt </text>
-<text text-anchor="start" x="140.77" y="-58.4" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="83.19" y="-58.4" font-family="Arial" font-size="14.00">isClosed </text>
+<text text-anchor="start" x="140.76" y="-58.4" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
 <polygon fill="none" stroke="black" stroke-width="3" points="74.69,-44.7 74.69,-298.9 286.07,-298.9 286.07,-44.7 74.69,-44.7"/>
 </g>
 <!-- CostPoolLineItem -->
@@ -52,36 +52,36 @@
 <text text-anchor="start" x="50.2" y="-681.4" font-family="Arial" font-size="14.00">id </text>
 <text text-anchor="start" x="64.99" y="-681.4" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="43.2,-638.4 43.2,-669.2 317.56,-669.2 317.56,-638.4 43.2,-638.4"/>
-<text text-anchor="start" x="50.2" y="-650.6" font-family="Arial" font-size="14.00">costPoolID </text>
-<text text-anchor="start" x="121.79" y="-650.6" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<text text-anchor="start" x="50.2" y="-650.6" font-family="Arial" font-size="14.00">active </text>
+<text text-anchor="start" x="90.66" y="-650.6" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
 <polygon fill="none" stroke="black" points="43.2,-607.6 43.2,-638.4 317.56,-638.4 317.56,-607.6 43.2,-607.6"/>
-<text text-anchor="start" x="50.2" y="-619.8" font-family="Arial" font-size="14.00">costPool </text>
-<text text-anchor="start" x="107.79" y="-619.8" font-family="Arial" font-size="14.00" fill="#666666">[CostPool]</text>
+<text text-anchor="start" x="50.2" y="-619.8" font-family="Arial" font-size="14.00">costPoolID </text>
+<text text-anchor="start" x="121.79" y="-619.8" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="43.2,-576.8 43.2,-607.6 317.56,-607.6 317.56,-576.8 43.2,-576.8"/>
-<text text-anchor="start" x="50.2" y="-589" font-family="Arial" font-size="14.00">createdAt </text>
-<text text-anchor="start" x="114.01" y="-589" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="50.2" y="-589" font-family="Arial" font-size="14.00">costPool </text>
+<text text-anchor="start" x="107.79" y="-589" font-family="Arial" font-size="14.00" fill="#666666">[CostPool]</text>
 <polygon fill="none" stroke="black" points="43.2,-546 43.2,-576.8 317.56,-576.8 317.56,-546 43.2,-546"/>
-<text text-anchor="start" x="50.2" y="-558.2" font-family="Arial" font-size="14.00">name </text>
-<text text-anchor="start" x="89.11" y="-558.2" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="50.2" y="-558.2" font-family="Arial" font-size="14.00">createdAt </text>
+<text text-anchor="start" x="114.01" y="-558.2" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 <polygon fill="none" stroke="black" points="43.2,-515.2 43.2,-546 317.56,-546 317.56,-515.2 43.2,-515.2"/>
-<text text-anchor="start" x="50.2" y="-527.4" font-family="Arial" font-size="14.00">amount </text>
-<text text-anchor="start" x="100.79" y="-527.4" font-family="Arial" font-size="14.00" fill="#666666">[float]</text>
+<text text-anchor="start" x="50.2" y="-527.4" font-family="Arial" font-size="14.00">name </text>
+<text text-anchor="start" x="89.11" y="-527.4" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="43.2,-484.4 43.2,-515.2 317.56,-515.2 317.56,-484.4 43.2,-484.4"/>
-<text text-anchor="start" x="50.2" y="-496.6" font-family="Arial" font-size="14.00">allocationBase </text>
-<text text-anchor="start" x="145.15" y="-496.6" font-family="Arial" font-size="14.00" fill="#666666">[enum]</text>
+<text text-anchor="start" x="50.2" y="-496.6" font-family="Arial" font-size="14.00">amount </text>
+<text text-anchor="start" x="100.79" y="-496.6" font-family="Arial" font-size="14.00" fill="#666666">[float]</text>
 <polygon fill="none" stroke="black" points="43.2,-453.6 43.2,-484.4 317.56,-484.4 317.56,-453.6 43.2,-453.6"/>
-<text text-anchor="start" x="50.2" y="-465.8" font-family="Arial" font-size="14.00">updatedAt </text>
-<text text-anchor="start" x="117.92" y="-465.8" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="50.2" y="-465.8" font-family="Arial" font-size="14.00">allocationBase </text>
+<text text-anchor="start" x="145.15" y="-465.8" font-family="Arial" font-size="14.00" fill="#666666">[enum]</text>
 <polygon fill="none" stroke="black" points="43.2,-422.8 43.2,-453.6 317.56,-453.6 317.56,-422.8 43.2,-422.8"/>
-<text text-anchor="start" x="50.2" y="-435" font-family="Arial" font-size="14.00">active </text>
-<text text-anchor="start" x="90.66" y="-435" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
+<text text-anchor="start" x="50.2" y="-435" font-family="Arial" font-size="14.00">updatedAt </text>
+<text text-anchor="start" x="117.92" y="-435" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 </g>
 <!-- CostPoolLineItem&#45;&gt;CostPool -->
 <g id="edge1" class="edge">
 <title>CostPoolLineItem:costPoolID&#45;&gt;CostPool:id</title>
-<path fill="none" stroke="black" d="M328.64,-651.98C406.72,-622.59 372.86,-246.4 285.57,-246.4"/>
-<polygon fill="black" stroke="black" points="328.73,-651.97 318.09,-649.31 323.48,-652.91 319.22,-653.68 319.22,-653.68 319.22,-653.68 323.48,-652.91 319.69,-658.17 328.73,-651.97"/>
-<text text-anchor="start" x="325.56" y="-663.8" font-family="Arial" font-size="10.00">Source: CostPool</text>
+<path fill="none" stroke="black" d="M328.75,-620.97C399.64,-591.33 365.97,-246.4 285.57,-246.4"/>
+<polygon fill="black" stroke="black" points="328.7,-620.98 318.01,-618.52 323.46,-622.02 319.22,-622.87 319.22,-622.87 319.22,-622.87 323.46,-622.02 319.77,-627.35 328.7,-620.98"/>
+<text text-anchor="start" x="325.56" y="-633" font-family="Arial" font-size="10.00">Source: CostPool</text>
 </g>
 </g>
 </svg>

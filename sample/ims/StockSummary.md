@@ -9,15 +9,15 @@ StockSummary model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false |  |  |  |
-| active | boolean |  | true |  |  | active |
-| createdAt | datetime |  | true |  |  | createdAt |
 | variantID | uuid |  | false |  | [ProductVariant](ProductVariant.md) | Variant ID |
+| variant | ProductVariant |  | true |  | [ProductVariant](ProductVariant.md) | Variant |
 | onHoldQuantity | float |  | false |  |  | onHoldQuantity |
 | inStockQuantity | float |  | true |  |  | DO NOT UPDATE FROM THE FRONT END. The quantity of the product in stock. |
-| updatedAt | datetime |  | true |  |  | updatedAt |
-| variant | ProductVariant |  | true |  | [ProductVariant](ProductVariant.md) | Variant |
-| availableQuantity | float |  | false |  |  | availableQuantity |
 | totalCost | float |  | false |  |  | totalCost |
+| active | boolean |  | true |  |  | active |
+| createdAt | datetime |  | true |  |  | createdAt |
+| updatedAt | datetime |  | true |  |  | updatedAt |
+| availableQuantity | float |  | false |  |  | availableQuantity |
 | averageCost | float |  | true |  |  | averageCost |
 
 ## Indexes

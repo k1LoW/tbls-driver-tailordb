@@ -9,24 +9,24 @@ SalesOrderLineItem model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false |  |  |  |
-| fulfillmentStatus | enum |  | true |  |  | fulfillmentStatus |
-| salesOrderID | uuid |  | true |  | [SalesOrder](SalesOrder.md) | salesOrder ID |
-| updatedAt | datetime |  | true |  |  | updatedAt |
-| variant | ProductVariant |  | true |  | [ProductVariant](ProductVariant.md) | Variant |
 | unitPrice | float |  | true |  |  | unitPrice |
-| sku | string |  | true |  |  | sku |
+| subtotalPrice | float |  | true |  |  | subtotalCost |
+| name | string |  | true |  |  | name |
 | taxable | boolean |  | true |  |  | taxable |
-| active | boolean |  | true |  |  | active |
+| fulfillmentStatus | enum |  | true |  |  | fulfillmentStatus |
+| variant | ProductVariant |  | true |  | [ProductVariant](ProductVariant.md) | Variant |
+| shopifyID | string |  | true |  |  | Shopify product ID |
+| updatedAt | datetime |  | true |  |  | updatedAt |
+| sku | string |  | true |  |  | sku |
 | createdAt | datetime |  | true |  |  | createdAt |
 | variantID | uuid |  | true |  | [ProductVariant](ProductVariant.md) | Variant ID |
-| unitCompareAtPrice | float |  | true |  |  | unitCompareAtPrice |
-| name | string |  | true |  |  | name |
-| shopifyID | string |  | true |  |  | Shopify product ID |
+| quantity | float |  | true |  |  | quantity |
+| salesOrderID | uuid |  | true |  | [SalesOrder](SalesOrder.md) | salesOrder ID |
 | salesOrder | SalesOrder |  | true |  | [SalesOrder](SalesOrder.md) | SalesOrder model. SalesOrder and this model is n:1. |
+| unitCompareAtPrice | float |  | true |  |  | unitCompareAtPrice |
 | discount | float |  | true |  |  | discount |
 | requiresShipping | boolean |  | true |  |  | requiresShipping |
-| quantity | float |  | true |  |  | quantity |
-| subtotalPrice | float |  | true |  |  | subtotalCost |
+| active | boolean |  | true |  |  | active |
 
 ## Indexes
 

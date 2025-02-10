@@ -9,18 +9,18 @@ Invoice model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [InvoiceLineItem](InvoiceLineItem.md) |  |  |
-| shipment | Shipment |  | true |  | [Shipment](Shipment.md) | Shipment model. (Origin of the invoice) Shipment and this model is n:1. |
-| updatedAt | datetime |  | true |  |  | updatedAt |
-| createdAt | datetime |  | true |  |  | createdAt |
-| customerID | uuid |  | true |  | [Contact](Contact.md) | Contact model. Contact and this model is n:1 |
-| customer | Contact |  | true |  | [Contact](Contact.md) | Customer contact |
-| date | datetime |  | true |  |  | date |
-| quickbookInvoiceId | string |  | true |  |  | Quickbook invoice ID |
-| invoiceStatus | enum |  | true |  |  | inventoryType |
 | pushedToQBAt | datetime |  | true |  |  | Date when the invoice was pushed to QuickBooks |
+| createdAt | datetime |  | true |  |  | createdAt |
+| customer | Contact |  | true |  | [Contact](Contact.md) | Customer contact |
+| shipmentID | uuid |  | true |  | [Shipment](Shipment.md) | Shipment ID (Origin of the invoice) |
+| shipment | Shipment |  | true |  | [Shipment](Shipment.md) | Shipment model. (Origin of the invoice) Shipment and this model is n:1. |
+| date | datetime |  | true |  |  | date |
+| invoiceStatus | enum |  | true |  |  | inventoryType |
 | active | boolean |  | true |  |  | active |
 | invoiceNumber | string |  | true |  |  | Invoice number |
-| shipmentID | uuid |  | true |  | [Shipment](Shipment.md) | Shipment ID (Origin of the invoice) |
+| customerID | uuid |  | true |  | [Contact](Contact.md) | Contact model. Contact and this model is n:1 |
+| quickbookInvoiceId | string |  | true |  |  | Quickbook invoice ID |
+| updatedAt | datetime |  | true |  |  | updatedAt |
 
 ## Constraints
 
@@ -32,8 +32,8 @@ Invoice model
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for updatedAt | Index: true |
 | Index for createdAt | Index: true |
+| Index for updatedAt | Index: true |
 
 ## Relations
 

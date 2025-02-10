@@ -9,29 +9,29 @@ PurchaseOrder model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [PurchaseOrderLineItem](PurchaseOrderLineItem.md) [Receipt](Receipt.md) |  |  |
-| shippingContactPhone | string |  | true |  |  | shippingContactPhone |
-| exFactoryDate | datetime |  | true |  |  | exFactoryDate |
-| terms | string |  | true |  |  | terms |
-| shippingInstructions | string |  | true |  |  | shippingInstructions |
-| notes | string |  | true |  |  | notes |
+| dueDate | datetime |  | true |  |  | dueDate |
+| active | boolean |  | true |  |  | active |
 | documentNumber | string |  | false |  |  | documentNumber |
 | supplierID | uuid |  | false |  | [Contact](Contact.md) | supplier ID |
-| billTo | Contact |  | true |  | [Contact](Contact.md) | Contact model. Contact and this model is n:1. |
-| approvedBy | string |  | true |  |  | approvedBy |
-| pulledBy | string |  | true |  |  | pulledBy |
-| receivedBy | string |  | true |  |  | receivedBy |
+| date | datetime |  | true |  |  | date |
+| billToID | uuid |  | true |  | [Contact](Contact.md) | billTo ID |
+| shipTo | Contact |  | true |  | [Contact](Contact.md) | Contact model. Contact and this model is n:1. |
 | shipVia | string |  | true |  |  | shipVia |
+| shippingInstructions | string |  | true |  |  | shippingInstructions |
+| pulledBy | string |  | true |  |  | pulledBy |
+| supplier | Contact |  | true |  | [Contact](Contact.md) | Contact model. Contact and this model is n:1. |
+| billTo | Contact |  | true |  | [Contact](Contact.md) | Contact model. Contact and this model is n:1. |
 | trackingNumber | string |  | true |  |  | trackingNumber |
+| exFactoryDate | datetime |  | true |  |  | exFactoryDate |
 | updatedAt | datetime |  | true |  |  | updatedAt |
 | createdAt | datetime |  | true |  |  | createdAt |
 | shipToID | uuid |  | true |  | [Contact](Contact.md) | shipTo ID |
-| shipTo | Contact |  | true |  | [Contact](Contact.md) | Contact model. Contact and this model is n:1. |
-| billToID | uuid |  | true |  | [Contact](Contact.md) | billTo ID |
+| terms | string |  | true |  |  | terms |
+| notes | string |  | true |  |  | notes |
+| approvedBy | string |  | true |  |  | approvedBy |
+| receivedBy | string |  | true |  |  | receivedBy |
+| shippingContactPhone | string |  | true |  |  | shippingContactPhone |
 | shippingContactName | string |  | true |  |  | shippingContactName |
-| dueDate | datetime |  | true |  |  | dueDate |
-| active | boolean |  | true |  |  | active |
-| supplier | Contact |  | true |  | [Contact](Contact.md) | Contact model. Contact and this model is n:1. |
-| date | datetime |  | true |  |  | date |
 
 ## Indexes
 

@@ -9,26 +9,26 @@ ShipmentLineItem model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [FinancialStockEvent](FinancialStockEvent.md) [OperationalStockEvent](OperationalStockEvent.md) |  |  |
-| variantID | uuid |  | true |  | [ProductVariant](ProductVariant.md) | Variant ID |
-| variant | ProductVariant |  | true |  | [ProductVariant](ProductVariant.md) | Variant |
-| quantity | float |  | false |  |  | quantity |
-| shipmentStatus | enum |  | true |  |  | inventoryType |
-| createdAt | datetime |  | true |  |  | createdAt |
-| unitCost | float |  | false |  |  | unit cost |
+| shipment | Shipment |  | true |  | [Shipment](Shipment.md) | Shipment model. Shipment and this model is n:1. |
 | unitPrice | float |  | false |  |  | unit price |
 | updatedAt | datetime |  | true |  |  | updatedAt |
-| shippedAt | datetime |  | true |  |  | shipped at |
-| active | boolean |  | true |  |  | active |
-| shipmentID | uuid |  | false |  | [Shipment](Shipment.md) | Shipment ID |
-| shipment | Shipment |  | true |  | [Shipment](Shipment.md) | Shipment model. Shipment and this model is n:1. |
+| variantID | uuid |  | true |  | [ProductVariant](ProductVariant.md) | Variant ID |
+| variant | ProductVariant |  | true |  | [ProductVariant](ProductVariant.md) | Variant |
 | taxable | boolean |  | true |  |  | taxable |
+| shippedAt | datetime |  | true |  |  | shipped at |
+| shipmentID | uuid |  | false |  | [Shipment](Shipment.md) | Shipment ID |
+| createdAt | datetime |  | true |  |  | createdAt |
+| unitCost | float |  | false |  |  | unit cost |
+| quantity | float |  | false |  |  | quantity |
+| shipmentStatus | enum |  | true |  |  | inventoryType |
+| active | boolean |  | true |  |  | active |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for createdAt | Index: true |
 | Index for updatedAt | Index: true |
+| Index for createdAt | Index: true |
 
 ## Relations
 

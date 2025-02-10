@@ -153,7 +153,7 @@ var rootCmd = &cobra.Command{
 				c.Name = name
 				c.Type = field.Type
 				if field.Array {
-					c.Type = fmt.Sprintf("Array<%s>", field.Type)
+					c.Type = fmt.Sprintf("Array\\<%s\\>", field.Type)
 				}
 				if field.Type == "nested" {
 					f, err := json.Marshal(field.Fields)

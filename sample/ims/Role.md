@@ -9,17 +9,17 @@ User Roles
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false |  |  |  |
-| name | string |  | false |  |  | Name of the Role |
 | createdAt | datetime |  | true |  |  | createdAt |
 | updatedAt | datetime |  | true |  |  | updatedAt |
+| name | string |  | false |  |  | Name of the Role |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for name | Index: true |
 | Index for createdAt | Index: true |
 | Index for updatedAt | Index: true |
+| Index for name | Index: true |
 
 ## Relations
 

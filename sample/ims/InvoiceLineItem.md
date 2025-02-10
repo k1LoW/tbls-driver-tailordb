@@ -9,23 +9,23 @@ InvoiceLineItem model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false |  |  |  |
+| updatedAt | datetime |  | true |  |  | updatedAt |
+| variantID | uuid |  | true |  | [ProductVariant](ProductVariant.md) | Variant ID |
+| variant | ProductVariant |  | true |  | [ProductVariant](ProductVariant.md) | Variant |
 | active | boolean |  | true |  |  | active |
 | invoice | Invoice |  | true |  | [Invoice](Invoice.md) | Invoice model. Invoice and this model is n:1. |
+| unitPrice | float |  | false |  |  | unit cost |
 | quantity | float |  | false |  |  | quantity |
 | taxable | boolean |  | true |  |  | taxable |
 | createdAt | datetime |  | true |  |  | createdAt |
 | invoiceID | uuid |  | false |  | [Invoice](Invoice.md) | Invoice ID |
-| unitPrice | float |  | false |  |  | unit cost |
-| updatedAt | datetime |  | true |  |  | updatedAt |
-| variantID | uuid |  | true |  | [ProductVariant](ProductVariant.md) | Variant ID |
-| variant | ProductVariant |  | true |  | [ProductVariant](ProductVariant.md) | Variant |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for createdAt | Index: true |
 | Index for updatedAt | Index: true |
+| Index for createdAt | Index: true |
 
 ## Relations
 

@@ -9,21 +9,21 @@ SalesOrder model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [SalesOrderLineItem](SalesOrderLineItem.md) [Shipment](Shipment.md) |  |  |
-| customerEmail | string |  | true |  |  | Customer email |
-| customerID | uuid |  | true |  | [Contact](Contact.md) | Contact model. Contact and this model is n:1 |
-| shopifyID | string |  | true |  |  | Shopify order ID |
-| currentSubtotalPrice | string |  | true |  |  | Current subtotal price |
-| cancelledAt | datetime |  | true |  |  | Cancellation date |
+| updatedAt | datetime |  | true |  |  | updatedAt |
 | customerName | string |  | true |  |  | Customer name |
+| customerEmail | string |  | true |  |  | Customer email |
+| shipStationOrderStatus | enum |  | true |  |  | inventoryType |
+| currency | string |  | true |  |  | Currency |
+| currentSubtotalPrice | string |  | true |  |  | Current subtotal price |
 | createdAt | datetime |  | true |  |  | createdAt |
 | shippedAt | datetime |  | true |  |  | shipped at |
-| active | boolean |  | true |  |  | active |
 | orderNumber | integer |  | true |  |  | Order number |
-| customer | Contact |  | true |  | [Contact](Contact.md) | Customer contact |
-| updatedAt | datetime |  | true |  |  | updatedAt |
 | cancelReason | string |  | true |  |  | Reason for cancellation |
-| currency | string |  | true |  |  | Currency |
-| shipStationOrderStatus | enum |  | true |  |  | inventoryType |
+| cancelledAt | datetime |  | true |  |  | Cancellation date |
+| customerID | uuid |  | true |  | [Contact](Contact.md) | Contact model. Contact and this model is n:1 |
+| shopifyID | string |  | true |  |  | Shopify order ID |
+| active | boolean |  | true |  |  | active |
+| customer | Contact |  | true |  | [Contact](Contact.md) | Customer contact |
 
 ## Constraints
 
@@ -35,8 +35,8 @@ SalesOrder model
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for createdAt | Index: true |
 | Index for updatedAt | Index: true |
+| Index for createdAt | Index: true |
 
 ## Relations
 
