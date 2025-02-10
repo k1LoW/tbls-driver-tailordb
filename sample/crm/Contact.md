@@ -12,13 +12,13 @@ Contact Model
 | linkedInUrl | string |  | true |  |  | LinkedIn URL |
 | createdAt | datetime |  | true |  |  | createdAt |
 | updatedAt | datetime |  | true |  |  | updatedAt |
+| isDeleted | boolean |  | true |  |  | Is Deleted? |
 | firstName | string |  | false |  |  | First Name of the Contact |
+| lastName | string |  | true |  |  | Last Name of the Contact |
 | email | string |  | false |  |  | E-mail |
 | phonePrimary | string |  | false |  |  | Primary Phone Number |
 | companyId | uuid |  | false |  | [Company](Company.md) | Company ID |
 | company | Company |  | true |  | [Company](Company.md) | Link to the Company |
-| isDeleted | boolean |  | true |  |  | Is Deleted? |
-| lastName | string |  | true |  |  | Last Name of the Contact |
 
 ## Constraints
 

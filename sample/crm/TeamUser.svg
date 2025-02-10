@@ -93,7 +93,7 @@
 <text text-anchor="start" x="375.04" y="-147.8" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="330.69,-104.8 330.69,-135.6 507.05,-135.6 507.05,-104.8 330.69,-104.8"/>
 <text text-anchor="start" x="337.69" y="-117" font-family="Arial" font-size="14.00">roles </text>
-<text text-anchor="start" x="371.93" y="-117" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<text text-anchor="start" x="371.93" y="-117" font-family="Arial" font-size="14.00" fill="#666666">[Array&lt;uuid&gt;]</text>
 <polygon fill="none" stroke="black" points="330.69,-74 330.69,-104.8 507.05,-104.8 507.05,-74 330.69,-74"/>
 <text text-anchor="start" x="337.69" y="-86.2" font-family="Arial" font-size="14.00">createdAt </text>
 <text text-anchor="start" x="401.51" y="-86.2" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>

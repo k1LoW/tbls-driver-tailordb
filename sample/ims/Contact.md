@@ -2,36 +2,39 @@
 
 ## Description
 
-Contact Model
+Contact model
 
 ## Columns
 
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
-| id | uuid |  | false | [ContactListMember](ContactListMember.md) [Deal](Deal.md) [EngagementContact](EngagementContact.md) |  |  |
-| phonePrimary | string |  | false |  |  | Primary Phone Number |
-| company | Company |  | true |  | [Company](Company.md) | Link to the Company |
-| createdAt | datetime |  | true |  |  | createdAt |
+| id | uuid |  | false | [Invoice](Invoice.md) [PurchaseOrder](PurchaseOrder.md) [Receipt](Receipt.md) [SalesOrder](SalesOrder.md) [Shipment](Shipment.md) |  |  |
+| openBalance | float |  | true |  |  | The amount of open balance of the customer. |
+| city | string |  | true |  |  | city |
+| province | string |  | true |  |  | province |
 | updatedAt | datetime |  | true |  |  | updatedAt |
-| firstName | string |  | false |  |  | First Name of the Contact |
-| lastName | string |  | true |  |  | Last Name of the Contact |
-| email | string |  | false |  |  | E-mail |
-| linkedInUrl | string |  | true |  |  | LinkedIn URL |
-| companyId | uuid |  | false |  | [Company](Company.md) | Company ID |
-| isDeleted | boolean |  | true |  |  | Is Deleted? |
-
-## Constraints
-
-| Name | Type | Definition |
-| ---- | ---- | ---------- |
-| ForeignKey for company to Company | FOREIGN KEY | ForeignKeyType: Company |
+| country | string |  | true |  |  | country |
+| zip | string |  | true |  |  | zip |
+| provinceCode | string |  | true |  |  | province_code |
+| creditLimit | float |  | true |  |  | The amount of credit limit of the customer. |
+| active | boolean |  | true |  |  | active |
+| name | string |  | false |  |  | name |
+| email | string |  | false |  |  | email |
+| countryCode | string |  | true |  |  | countryCode |
+| company | string |  | true |  |  | company |
+| quickBookCustomerId | string |  | true |  |  | the reference id of the customer in quickbook |
+| address2 | string |  | true |  |  | address2 |
+| availableCredit | float |  | true |  |  | The amount of credit available to the customer. |
+| createdAt | datetime |  | true |  |  | createdAt |
+| phone | string |  | true |  |  | phone |
+| address1 | string |  | true |  |  | address1 |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for createdAt | Index: true |
 | Index for updatedAt | Index: true |
+| Index for createdAt | Index: true |
 
 ## Relations
 

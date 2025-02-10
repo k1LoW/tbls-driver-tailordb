@@ -18,6 +18,7 @@ type Field struct {
 	Array           bool   `json:"Array,omitempty"`
 	Index           bool   `json:"Index,omitempty"`
 	Unique          bool   `json:"Unique,omitempty"`
+	Fields          Fields `json:"Fields,omitempty"`
 }
 
 type Fields map[string]*Field

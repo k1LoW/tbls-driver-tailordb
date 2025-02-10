@@ -21,14 +21,14 @@
 <text text-anchor="start" x="53.2" y="-150.8" font-family="Arial" font-size="14.00">id </text>
 <text text-anchor="start" x="67.99" y="-150.8" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="46.2,-107.8 46.2,-138.6 222.56,-138.6 222.56,-107.8 46.2,-107.8"/>
-<text text-anchor="start" x="53.2" y="-120" font-family="Arial" font-size="14.00">updatedAt </text>
-<text text-anchor="start" x="120.92" y="-120" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="53.2" y="-120" font-family="Arial" font-size="14.00">name </text>
+<text text-anchor="start" x="92.11" y="-120" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="46.2,-77 46.2,-107.8 222.56,-107.8 222.56,-77 46.2,-77"/>
-<text text-anchor="start" x="53.2" y="-89.2" font-family="Arial" font-size="14.00">name </text>
-<text text-anchor="start" x="92.11" y="-89.2" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="53.2" y="-89.2" font-family="Arial" font-size="14.00">createdAt </text>
+<text text-anchor="start" x="117.01" y="-89.2" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 <polygon fill="none" stroke="black" points="46.2,-46.2 46.2,-77 222.56,-77 222.56,-46.2 46.2,-46.2"/>
-<text text-anchor="start" x="53.2" y="-58.4" font-family="Arial" font-size="14.00">createdAt </text>
-<text text-anchor="start" x="117.01" y="-58.4" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="53.2" y="-58.4" font-family="Arial" font-size="14.00">updatedAt </text>
+<text text-anchor="start" x="120.92" y="-58.4" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 <polygon fill="none" stroke="black" stroke-width="3" points="44.7,-44.7 44.7,-206.5 224.06,-206.5 224.06,-44.7 44.7,-44.7"/>
 </g>
 </g>

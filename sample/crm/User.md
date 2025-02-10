@@ -11,7 +11,7 @@ User of the system
 | id | uuid |  | false | [Deal](Deal.md) [TeamUser](TeamUser.md) |  |  |
 | name | string |  | false |  |  | Name of the user |
 | email | string |  | false |  |  | Email of the user |
-| roles | uuid |  | true |  |  | Role IDs of the user |
+| roles | Array<uuid> |  | true |  |  | Role IDs of the user |
 | createdAt | datetime |  | true |  |  | createdAt |
 | updatedAt | datetime |  | true |  |  | updatedAt |
 

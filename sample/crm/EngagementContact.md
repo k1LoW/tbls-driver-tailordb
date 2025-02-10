@@ -9,12 +9,12 @@ EngagementContact model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false |  |  |  |
-| contact | Contact |  | true |  | [Contact](Contact.md) | Link to the Contact |
-| engagementId | uuid |  | false |  | [Engagement](Engagement.md) | Engagement ID |
-| engagement | Engagement |  | true |  | [Engagement](Engagement.md) | Link to the Engagement |
 | createdAt | datetime |  | true |  |  | createdAt |
 | updatedAt | datetime |  | true |  |  | updatedAt |
 | contactId | uuid |  | false |  | [Contact](Contact.md) | Contact ID |
+| contact | Contact |  | true |  | [Contact](Contact.md) | Link to the Contact |
+| engagementId | uuid |  | false |  | [Engagement](Engagement.md) | Engagement ID |
+| engagement | Engagement |  | true |  | [Engagement](Engagement.md) | Link to the Engagement |
 
 ## Constraints
 
