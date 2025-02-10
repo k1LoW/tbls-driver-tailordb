@@ -9,25 +9,25 @@ Team model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [TeamUser](TeamUser.md) |  |  |
-| name | string |  | false |  |  | Team Name |
 | isDeleted | boolean |  | true |  |  | Is Deleted? |
 | createdAt | datetime |  | true |  |  | createdAt |
 | updatedAt | datetime |  | true |  |  | updatedAt |
+| name | string |  | false |  |  | Team Name |
 
 ## Constraints
 
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
-|  | UNIQUE | Unique: true |
+| Unique for name | UNIQUE | Unique: true |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for name | Index: true |
-| Unique for name | Unique: true |
 | Index for createdAt | Index: true |
 | Index for updatedAt | Index: true |
+| Index for name | Index: true |
+| Unique for name | Unique: true |
 
 ## Relations
 

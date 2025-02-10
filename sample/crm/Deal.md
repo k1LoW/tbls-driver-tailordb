@@ -9,29 +9,29 @@ Deal description
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [EngagementDeal](EngagementDeal.md) |  |  |
-| value | float |  | true |  |  | Deal value |
-| dealStageId | uuid |  | false |  | [DealStage](DealStage.md) | DealStage ID |
-| companyId | uuid |  | false |  | [Company](Company.md) | Company ID |
-| contactId | uuid |  | false |  | [Contact](Contact.md) | Contact ID |
-| contact | Contact |  | true |  |  | Link to the Contact |
-| probability | float |  | false |  |  | Deal probability. |
-| isDeleted | boolean |  | true |  |  | Is Deleted? |
-| dealStage | DealStage |  | true |  |  | Link to the DealStage |
-| userId | uuid |  | false |  | [User](User.md) | User ID |
-| user | User |  | true |  |  | Link to the User |
 | createdAt | datetime |  | true |  |  | createdAt |
-| updatedAt | datetime |  | true |  |  | updatedAt |
+| company | Company |  | true |  | [Company](Company.md) | Link to the Company |
+| value | float |  | true |  |  | Deal value |
+| userId | uuid |  | false |  | [User](User.md) | User ID |
+| contactId | uuid |  | false |  | [Contact](Contact.md) | Contact ID |
 | amount | float |  | false |  |  | Deal amount |
-| company | Company |  | true |  |  | Link to the Company |
+| user | User |  | true |  | [User](User.md) | Link to the User |
+| contact | Contact |  | true |  | [Contact](Contact.md) | Link to the Contact |
+| updatedAt | datetime |  | true |  |  | updatedAt |
+| dealStageId | uuid |  | false |  | [DealStage](DealStage.md) | DealStage ID |
+| isDeleted | boolean |  | true |  |  | Is Deleted? |
+| dealStage | DealStage |  | true |  | [DealStage](DealStage.md) | Link to the DealStage |
+| companyId | uuid |  | false |  | [Company](Company.md) | Company ID |
+| probability | float |  | false |  |  | Deal probability. |
 
 ## Constraints
 
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
-|  | FOREIGN KEY | ForeignKeyType: DealStage |
-|  | FOREIGN KEY | ForeignKeyType: Company |
-|  | FOREIGN KEY | ForeignKeyType: Contact |
-|  | FOREIGN KEY | ForeignKeyType: User |
+| ForeignKey for company to Company | FOREIGN KEY | ForeignKeyType: Company |
+| ForeignKey for user to User | FOREIGN KEY | ForeignKeyType: User |
+| ForeignKey for contact to Contact | FOREIGN KEY | ForeignKeyType: Contact |
+| ForeignKey for dealStage to DealStage | FOREIGN KEY | ForeignKeyType: DealStage |
 
 ## Indexes
 

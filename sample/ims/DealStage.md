@@ -9,24 +9,24 @@ DealStage model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [Deal](Deal.md) |  |  |
+| displayOrder | integer |  | false |  |  | Display Order |
 | name | string |  | false |  |  | Name |
-| type | string |  | true |  |  | Stage type |
 | probability | float |  | false |  |  | Default probability |
-| closedWon | boolean |  | false |  |  | Closed Won? |
 | closedLost | boolean |  | false |  |  | Closed Lost? |
 | createdAt | datetime |  | true |  |  | createdAt |
 | updatedAt | datetime |  | true |  |  | updatedAt |
 | dealPipelineId | uuid |  | false |  | [DealPipeline](DealPipeline.md) | DealPipeline ID |
-| dealPipeline | DealPipeline |  | true |  |  | Link to the DealPipeline |
-| displayOrder | integer |  | false |  |  | Display Order |
+| dealPipeline | DealPipeline |  | true |  | [DealPipeline](DealPipeline.md) | Link to the DealPipeline |
 | description | string |  | true |  |  | Description |
 | label | string |  | false |  |  | Label |
+| type | string |  | true |  |  | Stage type |
+| closedWon | boolean |  | false |  |  | Closed Won? |
 
 ## Constraints
 
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
-|  | FOREIGN KEY | ForeignKeyType: DealPipeline |
+| ForeignKey for dealPipeline to DealPipeline | FOREIGN KEY | ForeignKeyType: DealPipeline |
 
 ## Indexes
 

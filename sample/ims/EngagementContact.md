@@ -10,9 +10,9 @@ EngagementContact model
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false |  |  |  |
 | contactId | uuid |  | false |  | [Contact](Contact.md) | Contact ID |
-| contact | Contact |  | true |  |  | Link to the Contact |
+| contact | Contact |  | true |  | [Contact](Contact.md) | Link to the Contact |
 | engagementId | uuid |  | false |  | [Engagement](Engagement.md) | Engagement ID |
-| engagement | Engagement |  | true |  |  | Link to the Engagement |
+| engagement | Engagement |  | true |  | [Engagement](Engagement.md) | Link to the Engagement |
 | createdAt | datetime |  | true |  |  | createdAt |
 | updatedAt | datetime |  | true |  |  | updatedAt |
 
@@ -20,9 +20,9 @@ EngagementContact model
 
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
-|  | UNIQUE | {"engagementContactCompositeKey":{"FieldNames":["contactId","engagementId"],"Unique":true}} |
-|  | FOREIGN KEY | ForeignKeyType: Contact |
-|  | FOREIGN KEY | ForeignKeyType: Engagement |
+| engagementContactCompositeKey | UNIQUE | {"engagementContactCompositeKey":{"FieldNames":["contactId","engagementId"],"Unique":true}} |
+| ForeignKey for contact to Contact | FOREIGN KEY | ForeignKeyType: Contact |
+| ForeignKey for engagement to Engagement | FOREIGN KEY | ForeignKeyType: Engagement |
 
 ## Indexes
 

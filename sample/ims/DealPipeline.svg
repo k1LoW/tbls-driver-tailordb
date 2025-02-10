@@ -21,17 +21,17 @@
 <text text-anchor="start" x="53.2" y="-181.6" font-family="Arial" font-size="14.00">id </text>
 <text text-anchor="start" x="67.99" y="-181.6" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="46.2,-138.6 46.2,-169.4 281.54,-169.4 281.54,-138.6 46.2,-138.6"/>
-<text text-anchor="start" x="53.2" y="-150.8" font-family="Arial" font-size="14.00">displayOrder </text>
-<text text-anchor="start" x="136.45" y="-150.8" font-family="Arial" font-size="14.00" fill="#666666">[integer]</text>
+<text text-anchor="start" x="53.2" y="-150.8" font-family="Arial" font-size="14.00">createdAt </text>
+<text text-anchor="start" x="117.01" y="-150.8" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 <polygon fill="none" stroke="black" points="46.2,-107.8 46.2,-138.6 281.54,-138.6 281.54,-107.8 46.2,-107.8"/>
-<text text-anchor="start" x="53.2" y="-120" font-family="Arial" font-size="14.00">label </text>
-<text text-anchor="start" x="86.67" y="-120" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="53.2" y="-120" font-family="Arial" font-size="14.00">updatedAt </text>
+<text text-anchor="start" x="120.92" y="-120" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 <polygon fill="none" stroke="black" points="46.2,-77 46.2,-107.8 281.54,-107.8 281.54,-77 46.2,-77"/>
-<text text-anchor="start" x="53.2" y="-89.2" font-family="Arial" font-size="14.00">createdAt </text>
-<text text-anchor="start" x="117.01" y="-89.2" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="53.2" y="-89.2" font-family="Arial" font-size="14.00">displayOrder </text>
+<text text-anchor="start" x="136.45" y="-89.2" font-family="Arial" font-size="14.00" fill="#666666">[integer]</text>
 <polygon fill="none" stroke="black" points="46.2,-46.2 46.2,-77 281.54,-77 281.54,-46.2 46.2,-46.2"/>
-<text text-anchor="start" x="53.2" y="-58.4" font-family="Arial" font-size="14.00">updatedAt </text>
-<text text-anchor="start" x="120.92" y="-58.4" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="53.2" y="-58.4" font-family="Arial" font-size="14.00">label </text>
+<text text-anchor="start" x="86.67" y="-58.4" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" stroke-width="3" points="44.7,-44.7 44.7,-237.3 283.04,-237.3 283.04,-44.7 44.7,-44.7"/>
 </g>
 <!-- DealStage -->
@@ -46,48 +46,48 @@
 <text text-anchor="start" x="62.7" y="-743" font-family="Arial" font-size="14.00">id </text>
 <text text-anchor="start" x="77.49" y="-743" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="55.7,-700 55.7,-730.8 272.03,-730.8 272.03,-700 55.7,-700"/>
-<text text-anchor="start" x="62.7" y="-712.2" font-family="Arial" font-size="14.00">name </text>
-<text text-anchor="start" x="101.61" y="-712.2" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="62.7" y="-712.2" font-family="Arial" font-size="14.00">displayOrder </text>
+<text text-anchor="start" x="145.96" y="-712.2" font-family="Arial" font-size="14.00" fill="#666666">[integer]</text>
 <polygon fill="none" stroke="black" points="55.7,-669.2 55.7,-700 272.03,-700 272.03,-669.2 55.7,-669.2"/>
-<text text-anchor="start" x="62.7" y="-681.4" font-family="Arial" font-size="14.00">type </text>
-<text text-anchor="start" x="93.05" y="-681.4" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="62.7" y="-681.4" font-family="Arial" font-size="14.00">name </text>
+<text text-anchor="start" x="101.61" y="-681.4" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="55.7,-638.4 55.7,-669.2 272.03,-669.2 272.03,-638.4 55.7,-638.4"/>
 <text text-anchor="start" x="62.7" y="-650.6" font-family="Arial" font-size="14.00">probability </text>
 <text text-anchor="start" x="130.4" y="-650.6" font-family="Arial" font-size="14.00" fill="#666666">[float]</text>
 <polygon fill="none" stroke="black" points="55.7,-607.6 55.7,-638.4 272.03,-638.4 272.03,-607.6 55.7,-607.6"/>
-<text text-anchor="start" x="62.7" y="-619.8" font-family="Arial" font-size="14.00">closedWon </text>
-<text text-anchor="start" x="135.85" y="-619.8" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
+<text text-anchor="start" x="62.7" y="-619.8" font-family="Arial" font-size="14.00">closedLost </text>
+<text text-anchor="start" x="133.52" y="-619.8" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
 <polygon fill="none" stroke="black" points="55.7,-576.8 55.7,-607.6 272.03,-607.6 272.03,-576.8 55.7,-576.8"/>
-<text text-anchor="start" x="62.7" y="-589" font-family="Arial" font-size="14.00">closedLost </text>
-<text text-anchor="start" x="133.52" y="-589" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
+<text text-anchor="start" x="62.7" y="-589" font-family="Arial" font-size="14.00">createdAt </text>
+<text text-anchor="start" x="126.51" y="-589" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 <polygon fill="none" stroke="black" points="55.7,-546 55.7,-576.8 272.03,-576.8 272.03,-546 55.7,-546"/>
-<text text-anchor="start" x="62.7" y="-558.2" font-family="Arial" font-size="14.00">createdAt </text>
-<text text-anchor="start" x="126.51" y="-558.2" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="62.7" y="-558.2" font-family="Arial" font-size="14.00">updatedAt </text>
+<text text-anchor="start" x="130.42" y="-558.2" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 <polygon fill="none" stroke="black" points="55.7,-515.2 55.7,-546 272.03,-546 272.03,-515.2 55.7,-515.2"/>
-<text text-anchor="start" x="62.7" y="-527.4" font-family="Arial" font-size="14.00">updatedAt </text>
-<text text-anchor="start" x="130.42" y="-527.4" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="62.7" y="-527.4" font-family="Arial" font-size="14.00">dealPipelineId </text>
+<text text-anchor="start" x="154.55" y="-527.4" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="55.7,-484.4 55.7,-515.2 272.03,-515.2 272.03,-484.4 55.7,-484.4"/>
-<text text-anchor="start" x="62.7" y="-496.6" font-family="Arial" font-size="14.00">dealPipelineId </text>
-<text text-anchor="start" x="154.55" y="-496.6" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<text text-anchor="start" x="62.7" y="-496.6" font-family="Arial" font-size="14.00">dealPipeline </text>
+<text text-anchor="start" x="142.87" y="-496.6" font-family="Arial" font-size="14.00" fill="#666666">[DealPipeline]</text>
 <polygon fill="none" stroke="black" points="55.7,-453.6 55.7,-484.4 272.03,-484.4 272.03,-453.6 55.7,-453.6"/>
-<text text-anchor="start" x="62.7" y="-465.8" font-family="Arial" font-size="14.00">dealPipeline </text>
-<text text-anchor="start" x="142.87" y="-465.8" font-family="Arial" font-size="14.00" fill="#666666">[DealPipeline]</text>
+<text text-anchor="start" x="62.7" y="-465.8" font-family="Arial" font-size="14.00">description </text>
+<text text-anchor="start" x="134.29" y="-465.8" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="55.7,-422.8 55.7,-453.6 272.03,-453.6 272.03,-422.8 55.7,-422.8"/>
-<text text-anchor="start" x="62.7" y="-435" font-family="Arial" font-size="14.00">displayOrder </text>
-<text text-anchor="start" x="145.96" y="-435" font-family="Arial" font-size="14.00" fill="#666666">[integer]</text>
+<text text-anchor="start" x="62.7" y="-435" font-family="Arial" font-size="14.00">label </text>
+<text text-anchor="start" x="96.17" y="-435" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="55.7,-392 55.7,-422.8 272.03,-422.8 272.03,-392 55.7,-392"/>
-<text text-anchor="start" x="62.7" y="-404.2" font-family="Arial" font-size="14.00">description </text>
-<text text-anchor="start" x="134.29" y="-404.2" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="62.7" y="-404.2" font-family="Arial" font-size="14.00">type </text>
+<text text-anchor="start" x="93.05" y="-404.2" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="55.7,-361.2 55.7,-392 272.03,-392 272.03,-361.2 55.7,-361.2"/>
-<text text-anchor="start" x="62.7" y="-373.4" font-family="Arial" font-size="14.00">label </text>
-<text text-anchor="start" x="96.17" y="-373.4" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="62.7" y="-373.4" font-family="Arial" font-size="14.00">closedWon </text>
+<text text-anchor="start" x="135.85" y="-373.4" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
 </g>
 <!-- DealStage&#45;&gt;DealPipeline -->
 <g id="edge1" class="edge">
 <title>DealStage:dealPipelineId&#45;&gt;DealPipeline:id</title>
-<path fill="none" stroke="black" d="M282.86,-497.62C343.81,-469.79 349.15,-184.8 282.54,-184.8"/>
-<polygon fill="black" stroke="black" points="283.12,-497.56 272.39,-495.33 277.92,-498.72 273.69,-499.66 273.69,-499.66 273.69,-499.66 277.92,-498.72 274.34,-504.12 283.12,-497.56"/>
-<text text-anchor="start" x="280.03" y="-509.8" font-family="Arial" font-size="10.00">ForeignKeyType: DealPipeline</text>
+<path fill="none" stroke="black" d="M282.99,-528.57C350.59,-500.23 355.96,-184.8 282.54,-184.8"/>
+<polygon fill="black" stroke="black" points="283.16,-528.53 272.46,-526.12 277.93,-529.6 273.69,-530.47 273.69,-530.47 273.69,-530.47 277.93,-529.6 274.26,-534.94 283.16,-528.53"/>
+<text text-anchor="start" x="280.03" y="-540.6" font-family="Arial" font-size="10.00">ForeignKeyType: DealPipeline</text>
 </g>
 </g>
 </svg>

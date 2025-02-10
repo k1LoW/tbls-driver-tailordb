@@ -9,28 +9,28 @@ EngagementDeal model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false |  |  |  |
+| engagement | Engagement |  | true |  | [Engagement](Engagement.md) | Link to the Engagement |
+| createdAt | datetime |  | true |  |  | createdAt |
 | updatedAt | datetime |  | true |  |  | updatedAt |
 | dealId | uuid |  | false |  | [Deal](Deal.md) | Deal ID |
-| deal | Deal |  | true |  |  | Link to the Deal |
+| deal | Deal |  | true |  | [Deal](Deal.md) | Link to the Deal |
 | engagementId | uuid |  | false |  | [Engagement](Engagement.md) | Engagement ID |
-| engagement | Engagement |  | true |  |  | Link to the Engagement |
-| createdAt | datetime |  | true |  |  | createdAt |
 
 ## Constraints
 
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
-|  | UNIQUE | {"engagementDealCompositeKey":{"FieldNames":["dealId","engagementId"],"Unique":true}} |
-|  | FOREIGN KEY | ForeignKeyType: Deal |
-|  | FOREIGN KEY | ForeignKeyType: Engagement |
+| engagementDealCompositeKey | UNIQUE | {"engagementDealCompositeKey":{"FieldNames":["dealId","engagementId"],"Unique":true}} |
+| ForeignKey for engagement to Engagement | FOREIGN KEY | ForeignKeyType: Engagement |
+| ForeignKey for deal to Deal | FOREIGN KEY | ForeignKeyType: Deal |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
 | engagementDealCompositeKey | {"engagementDealCompositeKey":{"FieldNames":["dealId","engagementId"],"Unique":true}} |
-| Index for updatedAt | Index: true |
 | Index for createdAt | Index: true |
+| Index for updatedAt | Index: true |
 
 ## Relations
 

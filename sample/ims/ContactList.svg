@@ -46,33 +46,33 @@
 <text text-anchor="start" x="50.2" y="-589" font-family="Arial" font-size="14.00">id </text>
 <text text-anchor="start" x="64.99" y="-589" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="43.2,-546 43.2,-576.8 330.53,-576.8 330.53,-546 43.2,-546"/>
-<text text-anchor="start" x="50.2" y="-558.2" font-family="Arial" font-size="14.00">contactListId </text>
-<text text-anchor="start" x="132.69" y="-558.2" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<text text-anchor="start" x="50.2" y="-558.2" font-family="Arial" font-size="14.00">contact </text>
+<text text-anchor="start" x="99.23" y="-558.2" font-family="Arial" font-size="14.00" fill="#666666">[Contact]</text>
 <polygon fill="none" stroke="black" points="43.2,-515.2 43.2,-546 330.53,-546 330.53,-515.2 43.2,-515.2"/>
-<text text-anchor="start" x="50.2" y="-527.4" font-family="Arial" font-size="14.00">contactList </text>
-<text text-anchor="start" x="121.01" y="-527.4" font-family="Arial" font-size="14.00" fill="#666666">[ContactList]</text>
+<text text-anchor="start" x="50.2" y="-527.4" font-family="Arial" font-size="14.00">contactListId </text>
+<text text-anchor="start" x="132.69" y="-527.4" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="43.2,-484.4 43.2,-515.2 330.53,-515.2 330.53,-484.4 43.2,-484.4"/>
-<text text-anchor="start" x="50.2" y="-496.6" font-family="Arial" font-size="14.00">addedAt </text>
-<text text-anchor="start" x="106.25" y="-496.6" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="50.2" y="-496.6" font-family="Arial" font-size="14.00">contactList </text>
+<text text-anchor="start" x="121.01" y="-496.6" font-family="Arial" font-size="14.00" fill="#666666">[ContactList]</text>
 <polygon fill="none" stroke="black" points="43.2,-453.6 43.2,-484.4 330.53,-484.4 330.53,-453.6 43.2,-453.6"/>
-<text text-anchor="start" x="50.2" y="-465.8" font-family="Arial" font-size="14.00">createdAt </text>
-<text text-anchor="start" x="114.01" y="-465.8" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="50.2" y="-465.8" font-family="Arial" font-size="14.00">addedAt </text>
+<text text-anchor="start" x="106.25" y="-465.8" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="43.2,-422.8 43.2,-453.6 330.53,-453.6 330.53,-422.8 43.2,-422.8"/>
-<text text-anchor="start" x="50.2" y="-435" font-family="Arial" font-size="14.00">updatedAt </text>
-<text text-anchor="start" x="117.92" y="-435" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="50.2" y="-435" font-family="Arial" font-size="14.00">createdAt </text>
+<text text-anchor="start" x="114.01" y="-435" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 <polygon fill="none" stroke="black" points="43.2,-392 43.2,-422.8 330.53,-422.8 330.53,-392 43.2,-392"/>
-<text text-anchor="start" x="50.2" y="-404.2" font-family="Arial" font-size="14.00">contactId </text>
-<text text-anchor="start" x="110.9" y="-404.2" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<text text-anchor="start" x="50.2" y="-404.2" font-family="Arial" font-size="14.00">updatedAt </text>
+<text text-anchor="start" x="117.92" y="-404.2" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 <polygon fill="none" stroke="black" points="43.2,-361.2 43.2,-392 330.53,-392 330.53,-361.2 43.2,-361.2"/>
-<text text-anchor="start" x="50.2" y="-373.4" font-family="Arial" font-size="14.00">contact </text>
-<text text-anchor="start" x="99.23" y="-373.4" font-family="Arial" font-size="14.00" fill="#666666">[Contact]</text>
+<text text-anchor="start" x="50.2" y="-373.4" font-family="Arial" font-size="14.00">contactId </text>
+<text text-anchor="start" x="110.9" y="-373.4" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 </g>
 <!-- ContactListMember&#45;&gt;ContactList -->
 <g id="edge1" class="edge">
 <title>ContactListMember:contactListId&#45;&gt;ContactList:id</title>
-<path fill="none" stroke="black" d="M341.73,-559.37C412.78,-529.73 381.4,-184.8 301.04,-184.8"/>
-<polygon fill="black" stroke="black" points="341.67,-559.39 330.98,-556.92 336.44,-560.43 332.19,-561.27 332.19,-561.27 332.19,-561.27 336.44,-560.43 332.74,-565.75 341.67,-559.39"/>
-<text text-anchor="start" x="338.53" y="-571.4" font-family="Arial" font-size="10.00">ForeignKeyType: ContactList</text>
+<path fill="none" stroke="black" d="M341.68,-528.39C405.71,-498.94 374.57,-184.8 301.04,-184.8"/>
+<polygon fill="black" stroke="black" points="341.63,-528.4 330.9,-526.13 336.42,-529.54 332.19,-530.46 332.19,-530.46 332.19,-530.46 336.42,-529.54 332.82,-534.93 341.63,-528.4"/>
+<text text-anchor="start" x="338.53" y="-540.6" font-family="Arial" font-size="10.00">ForeignKeyType: ContactList</text>
 </g>
 </g>
 </svg>

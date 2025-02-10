@@ -10,9 +10,9 @@ TeamUser model
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false |  |  |  |
 | teamId | uuid |  | false |  | [Team](Team.md) | Team ID |
-| team | Team |  | true |  |  | Link to the Team |
+| team | Team |  | true |  | [Team](Team.md) | Link to the Team |
 | userId | uuid |  | false |  | [User](User.md) | User ID |
-| user | User |  | true |  |  | Link to the User |
+| user | User |  | true |  | [User](User.md) | Link to the User |
 | isSecondaryUser | boolean |  | false |  |  | Is Secondary User? |
 | createdAt | datetime |  | true |  |  | createdAt |
 | updatedAt | datetime |  | true |  |  | updatedAt |
@@ -21,9 +21,9 @@ TeamUser model
 
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
-|  | UNIQUE | {"teamUserCompositeKey":{"FieldNames":["teamId","userId"],"Unique":true}} |
-|  | FOREIGN KEY | ForeignKeyType: Team |
-|  | FOREIGN KEY | ForeignKeyType: User |
+| teamUserCompositeKey | UNIQUE | {"teamUserCompositeKey":{"FieldNames":["teamId","userId"],"Unique":true}} |
+| ForeignKey for team to Team | FOREIGN KEY | ForeignKeyType: Team |
+| ForeignKey for user to User | FOREIGN KEY | ForeignKeyType: User |
 
 ## Indexes
 

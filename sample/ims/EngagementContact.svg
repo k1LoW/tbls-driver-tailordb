@@ -52,35 +52,35 @@
 <text text-anchor="start" x="50.2" y="-363.4" font-family="Arial" font-size="14.00">id </text>
 <text text-anchor="start" x="64.99" y="-363.4" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="43.2,-320.4 43.2,-351.2 241.55,-351.2 241.55,-320.4 43.2,-320.4"/>
-<text text-anchor="start" x="50.2" y="-332.6" font-family="Arial" font-size="14.00">firstName </text>
-<text text-anchor="start" x="113.99" y="-332.6" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="50.2" y="-332.6" font-family="Arial" font-size="14.00">phonePrimary </text>
+<text text-anchor="start" x="141.24" y="-332.6" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="43.2,-289.6 43.2,-320.4 241.55,-320.4 241.55,-289.6 43.2,-289.6"/>
-<text text-anchor="start" x="50.2" y="-301.8" font-family="Arial" font-size="14.00">lastName </text>
-<text text-anchor="start" x="113.22" y="-301.8" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="50.2" y="-301.8" font-family="Arial" font-size="14.00">company </text>
+<text text-anchor="start" x="110.9" y="-301.8" font-family="Arial" font-size="14.00" fill="#666666">[Company]</text>
 <polygon fill="none" stroke="black" points="43.2,-258.8 43.2,-289.6 241.55,-289.6 241.55,-258.8 43.2,-258.8"/>
-<text text-anchor="start" x="50.2" y="-271" font-family="Arial" font-size="14.00">linkedInUrl </text>
-<text text-anchor="start" x="120.23" y="-271" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="50.2" y="-271" font-family="Arial" font-size="14.00">createdAt </text>
+<text text-anchor="start" x="114.01" y="-271" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 <polygon fill="none" stroke="black" points="43.2,-228 43.2,-258.8 241.55,-258.8 241.55,-228 43.2,-228"/>
-<text text-anchor="start" x="50.2" y="-240.2" font-family="Arial" font-size="14.00">companyId </text>
-<text text-anchor="start" x="122.57" y="-240.2" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<text text-anchor="start" x="50.2" y="-240.2" font-family="Arial" font-size="14.00">updatedAt </text>
+<text text-anchor="start" x="117.92" y="-240.2" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 <polygon fill="none" stroke="black" points="43.2,-197.2 43.2,-228 241.55,-228 241.55,-197.2 43.2,-197.2"/>
-<text text-anchor="start" x="50.2" y="-209.4" font-family="Arial" font-size="14.00">company </text>
-<text text-anchor="start" x="110.9" y="-209.4" font-family="Arial" font-size="14.00" fill="#666666">[Company]</text>
+<text text-anchor="start" x="50.2" y="-209.4" font-family="Arial" font-size="14.00">firstName </text>
+<text text-anchor="start" x="113.99" y="-209.4" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="43.2,-166.4 43.2,-197.2 241.55,-197.2 241.55,-166.4 43.2,-166.4"/>
-<text text-anchor="start" x="50.2" y="-178.6" font-family="Arial" font-size="14.00">createdAt </text>
-<text text-anchor="start" x="114.01" y="-178.6" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="50.2" y="-178.6" font-family="Arial" font-size="14.00">lastName </text>
+<text text-anchor="start" x="113.22" y="-178.6" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="43.2,-135.6 43.2,-166.4 241.55,-166.4 241.55,-135.6 43.2,-135.6"/>
-<text text-anchor="start" x="50.2" y="-147.8" font-family="Arial" font-size="14.00">updatedAt </text>
-<text text-anchor="start" x="117.92" y="-147.8" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="50.2" y="-147.8" font-family="Arial" font-size="14.00">email </text>
+<text text-anchor="start" x="87.54" y="-147.8" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="43.2,-104.8 43.2,-135.6 241.55,-135.6 241.55,-104.8 43.2,-104.8"/>
-<text text-anchor="start" x="50.2" y="-117" font-family="Arial" font-size="14.00">isDeleted </text>
-<text text-anchor="start" x="112.45" y="-117" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
+<text text-anchor="start" x="50.2" y="-117" font-family="Arial" font-size="14.00">linkedInUrl </text>
+<text text-anchor="start" x="120.23" y="-117" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="43.2,-74 43.2,-104.8 241.55,-104.8 241.55,-74 43.2,-74"/>
-<text text-anchor="start" x="50.2" y="-86.2" font-family="Arial" font-size="14.00">email </text>
-<text text-anchor="start" x="87.54" y="-86.2" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="50.2" y="-86.2" font-family="Arial" font-size="14.00">companyId </text>
+<text text-anchor="start" x="122.57" y="-86.2" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="43.2,-43.2 43.2,-74 241.55,-74 241.55,-43.2 43.2,-43.2"/>
-<text text-anchor="start" x="50.2" y="-55.4" font-family="Arial" font-size="14.00">phonePrimary </text>
-<text text-anchor="start" x="141.24" y="-55.4" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="50.2" y="-55.4" font-family="Arial" font-size="14.00">isDeleted </text>
+<text text-anchor="start" x="112.45" y="-55.4" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
 </g>
 <!-- EngagementContact&#45;&gt;Contact -->
 <g id="edge1" class="edge">

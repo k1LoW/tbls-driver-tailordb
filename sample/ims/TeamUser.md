@@ -9,31 +9,31 @@ TeamUser model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false |  |  |  |
+| userId | uuid |  | false |  | [User](User.md) | User ID |
+| user | User |  | true |  | [User](User.md) | Link to the User |
+| isSecondaryUser | boolean |  | false |  |  | Is Secondary User? |
 | createdAt | datetime |  | true |  |  | createdAt |
 | updatedAt | datetime |  | true |  |  | updatedAt |
 | teamId | uuid |  | false |  | [Team](Team.md) | Team ID |
-| team | Team |  | true |  |  | Link to the Team |
-| userId | uuid |  | false |  | [User](User.md) | User ID |
-| user | User |  | true |  |  | Link to the User |
-| isSecondaryUser | boolean |  | false |  |  | Is Secondary User? |
+| team | Team |  | true |  | [Team](Team.md) | Link to the Team |
 
 ## Constraints
 
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
-|  | UNIQUE | {"teamUserCompositeKey":{"FieldNames":["teamId","userId"],"Unique":true}} |
-|  | FOREIGN KEY | ForeignKeyType: Team |
-|  | FOREIGN KEY | ForeignKeyType: User |
+| teamUserCompositeKey | UNIQUE | {"teamUserCompositeKey":{"FieldNames":["teamId","userId"],"Unique":true}} |
+| ForeignKey for user to User | FOREIGN KEY | ForeignKeyType: User |
+| ForeignKey for team to Team | FOREIGN KEY | ForeignKeyType: Team |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
 | teamUserCompositeKey | {"teamUserCompositeKey":{"FieldNames":["teamId","userId"],"Unique":true}} |
+| Index for userId | Index: true |
 | Index for createdAt | Index: true |
 | Index for updatedAt | Index: true |
 | Index for teamId | Index: true |
-| Index for userId | Index: true |
 
 ## Relations
 

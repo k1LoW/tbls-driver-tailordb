@@ -154,24 +154,42 @@ var rootCmd = &cobra.Command{
 				c.Type = field.Type
 				c.Comment = field.Description
 				c.Nullable = !field.Required
-				if field.ForeignKey {
-					parentTable := field.ForeignKeyType
+
+				if field.SourceId != "" {
+					parentTable := c.Type
 					rel := &schema.RelationJSON{
-						Table:         t.Name,
-						Columns:       []string{c.Name},
-						ParentTable:   parentTable,
-						ParentColumns: []string{"id"},
-						Def:           fmt.Sprintf("ForeignKeyType: %s", parentTable),
+						Table:       t.Name,
+						Columns:     []string{field.SourceId, name},
+						ParentTable: parentTable,
+					}
+					// Check sourceId
+					sourceId, ok := typ.Fields[field.SourceId]
+					if !ok {
+						return fmt.Errorf("sourceId %s not found", field.SourceId)
+					}
+					if sourceId.ForeignKey {
+						if sourceId.ForeignKeyField != "" {
+							rel.ParentColumns = []string{sourceId.ForeignKeyField}
+						} else {
+							rel.ParentColumns = []string{"id"}
+						}
+						rel.Def = fmt.Sprintf("ForeignKeyType: %s", sourceId.ForeignKeyType)
+
+						t.Constraints = append(t.Constraints, &schema.Constraint{
+							Name:    fmt.Sprintf("ForeignKey for %s to %s", name, parentTable),
+							Type:    "FOREIGN KEY",
+							Def:     fmt.Sprintf("ForeignKeyType: %s", parentTable),
+							Table:   &t.Name,
+							Columns: []string{field.SourceId, name},
+						})
+
+					} else {
+						rel.ParentColumns = []string{"id"}
+						rel.Def = fmt.Sprintf("Source: %s", parentTable)
 					}
 					s.Relations = append(s.Relations, rel)
-					t.Constraints = append(t.Constraints, &schema.Constraint{
-						Name:    fmt.Sprintf("ForeignKey for %s to %s", c.Name, parentTable),
-						Type:    "FOREIGN KEY",
-						Def:     fmt.Sprintf("ForeignKeyType: %s", parentTable),
-						Table:   &t.Name,
-						Columns: []string{c.Name},
-					})
 				}
+
 				if field.Index {
 					t.Indexes = append(t.Indexes, &schema.Index{
 						Name:    fmt.Sprintf("Index for %s", c.Name),
@@ -180,6 +198,7 @@ var rootCmd = &cobra.Command{
 						Columns: []string{c.Name},
 					})
 				}
+
 				if field.Unique {
 					t.Indexes = append(t.Indexes, &schema.Index{
 						Name:    fmt.Sprintf("Unique for %s", c.Name),

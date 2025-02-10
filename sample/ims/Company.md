@@ -9,28 +9,28 @@ Company Model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [Contact](Contact.md) [Deal](Deal.md) [EngagementCompany](EngagementCompany.md) |  |  |
-| createdAt | datetime |  | true |  |  | createdAt |
-| updatedAt | datetime |  | true |  |  | updatedAt |
 | name | string |  | false |  |  | Company Name |
 | isDeleted | boolean |  | true |  |  | Is Deleted? |
 | url | string |  | true |  |  | Company URL |
 | linkedInUrl | string |  | true |  |  | Company's LinkedIn URL |
 | logoUrl | string |  | true |  |  | Company Logo URL |
+| createdAt | datetime |  | true |  |  | createdAt |
+| updatedAt | datetime |  | true |  |  | updatedAt |
 
 ## Constraints
 
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
-|  | UNIQUE | Unique: true |
+| Unique for name | UNIQUE | Unique: true |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for createdAt | Index: true |
-| Index for updatedAt | Index: true |
 | Index for name | Index: true |
 | Unique for name | Unique: true |
+| Index for createdAt | Index: true |
+| Index for updatedAt | Index: true |
 
 ## Relations
 

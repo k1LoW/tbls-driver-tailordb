@@ -18,7 +18,7 @@ Team model
 
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
-|  | UNIQUE | Unique: true |
+| Unique for name | UNIQUE | Unique: true |
 
 ## Indexes
 

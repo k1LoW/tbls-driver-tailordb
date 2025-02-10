@@ -9,20 +9,20 @@ EngagementCompany model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false |  |  |  |
-| companyId | uuid |  | false |  | [Company](Company.md) | Company ID |
-| company | Company |  | true |  |  | Link to the Company |
-| engagementId | uuid |  | false |  | [Engagement](Engagement.md) | Engagement ID |
-| engagement | Engagement |  | true |  |  | Link to the Engagement |
 | createdAt | datetime |  | true |  |  | createdAt |
 | updatedAt | datetime |  | true |  |  | updatedAt |
+| companyId | uuid |  | false |  | [Company](Company.md) | Company ID |
+| company | Company |  | true |  | [Company](Company.md) | Link to the Company |
+| engagementId | uuid |  | false |  | [Engagement](Engagement.md) | Engagement ID |
+| engagement | Engagement |  | true |  | [Engagement](Engagement.md) | Link to the Engagement |
 
 ## Constraints
 
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
-|  | UNIQUE | {"engagementCompanyCompositeKey":{"FieldNames":["companyId","engagementId"],"Unique":true}} |
-|  | FOREIGN KEY | ForeignKeyType: Company |
-|  | FOREIGN KEY | ForeignKeyType: Engagement |
+| engagementCompanyCompositeKey | UNIQUE | {"engagementCompanyCompositeKey":{"FieldNames":["companyId","engagementId"],"Unique":true}} |
+| ForeignKey for company to Company | FOREIGN KEY | ForeignKeyType: Company |
+| ForeignKey for engagement to Engagement | FOREIGN KEY | ForeignKeyType: Engagement |
 
 ## Indexes
 

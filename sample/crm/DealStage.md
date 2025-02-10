@@ -9,31 +9,31 @@ DealStage model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [Deal](Deal.md) |  |  |
-| dealPipelineId | uuid |  | false |  | [DealPipeline](DealPipeline.md) | DealPipeline ID |
-| displayOrder | integer |  | false |  |  | Display Order |
-| type | string |  | true |  |  | Stage type |
-| closedLost | boolean |  | false |  |  | Closed Lost? |
-| createdAt | datetime |  | true |  |  | createdAt |
 | updatedAt | datetime |  | true |  |  | updatedAt |
-| dealPipeline | DealPipeline |  | true |  |  | Link to the DealPipeline |
+| dealPipeline | DealPipeline |  | true |  | [DealPipeline](DealPipeline.md) | Link to the DealPipeline |
 | description | string |  | true |  |  | Description |
-| label | string |  | false |  |  | Label |
 | name | string |  | false |  |  | Name |
+| createdAt | datetime |  | true |  |  | createdAt |
 | probability | float |  | false |  |  | Default probability |
 | closedWon | boolean |  | false |  |  | Closed Won? |
+| closedLost | boolean |  | false |  |  | Closed Lost? |
+| dealPipelineId | uuid |  | false |  | [DealPipeline](DealPipeline.md) | DealPipeline ID |
+| displayOrder | integer |  | false |  |  | Display Order |
+| label | string |  | false |  |  | Label |
+| type | string |  | true |  |  | Stage type |
 
 ## Constraints
 
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
-|  | FOREIGN KEY | ForeignKeyType: DealPipeline |
+| ForeignKey for dealPipeline to DealPipeline | FOREIGN KEY | ForeignKeyType: DealPipeline |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for createdAt | Index: true |
 | Index for updatedAt | Index: true |
+| Index for createdAt | Index: true |
 
 ## Relations
 

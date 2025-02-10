@@ -9,10 +9,10 @@ DealPipeline description
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [DealStage](DealStage.md) |  |  |
-| displayOrder | integer |  | false |  |  | Display Order |
-| label | string |  | false |  |  | Label |
 | createdAt | datetime |  | true |  |  | createdAt |
 | updatedAt | datetime |  | true |  |  | updatedAt |
+| displayOrder | integer |  | false |  |  | Display Order |
+| label | string |  | false |  |  | Label |
 
 ## Indexes
 

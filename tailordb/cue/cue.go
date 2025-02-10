@@ -8,14 +8,15 @@ type Type struct {
 }
 
 type Field struct {
-	Type           string `json:"Type"`
-	Description    string `json:"Description"`
-	Required       bool   `json:"Required,omitempty"`
-	ForeignKey     bool   `json:"ForeignKey,omitempty"`
-	ForeignKeyType string `json:"ForeignKeyType,omitempty"`
-	SourceId       string `json:"SourceId,omitempty"`
-	Index          bool   `json:"Index,omitempty"`
-	Unique         bool   `json:"Unique,omitempty"`
+	Type            string `json:"Type"`
+	Description     string `json:"Description"`
+	Required        bool   `json:"Required,omitempty"`
+	SourceId        string `json:"SourceId,omitempty"`
+	ForeignKey      bool   `json:"ForeignKey,omitempty"`
+	ForeignKeyType  string `json:"ForeignKeyType,omitempty"`
+	ForeignKeyField string `json:"ForeignKeyField,omitempty"`
+	Index           bool   `json:"Index,omitempty"`
+	Unique          bool   `json:"Unique,omitempty"`
 }
 
 type Fields map[string]*Field

@@ -8,23 +8,23 @@ Contact Model
 
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
-| id | uuid |  | false | [Deal](Deal.md) [EngagementContact](EngagementContact.md) |  |  |
-| firstName | string |  | false |  |  | First Name of the Contact |
-| lastName | string |  | true |  |  | Last Name of the Contact |
-| linkedInUrl | string |  | true |  |  | LinkedIn URL |
-| companyId | uuid |  | false |  | [Company](Company.md) | Company ID |
-| company | Company |  | true |  |  | Link to the Company |
+| id | uuid |  | false | [ContactListMember](ContactListMember.md) [Deal](Deal.md) [EngagementContact](EngagementContact.md) |  |  |
+| phonePrimary | string |  | false |  |  | Primary Phone Number |
+| company | Company |  | true |  | [Company](Company.md) | Link to the Company |
 | createdAt | datetime |  | true |  |  | createdAt |
 | updatedAt | datetime |  | true |  |  | updatedAt |
-| isDeleted | boolean |  | true |  |  | Is Deleted? |
+| firstName | string |  | false |  |  | First Name of the Contact |
+| lastName | string |  | true |  |  | Last Name of the Contact |
 | email | string |  | false |  |  | E-mail |
-| phonePrimary | string |  | false |  |  | Primary Phone Number |
+| linkedInUrl | string |  | true |  |  | LinkedIn URL |
+| companyId | uuid |  | false |  | [Company](Company.md) | Company ID |
+| isDeleted | boolean |  | true |  |  | Is Deleted? |
 
 ## Constraints
 
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
-|  | FOREIGN KEY | ForeignKeyType: Company |
+| ForeignKey for company to Company | FOREIGN KEY | ForeignKeyType: Company |
 
 ## Indexes
 

@@ -86,20 +86,20 @@
 <text text-anchor="start" x="337.69" y="-209.4" font-family="Arial" font-size="14.00">id </text>
 <text text-anchor="start" x="352.48" y="-209.4" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="330.69,-166.4 330.69,-197.2 507.05,-197.2 507.05,-166.4 330.69,-166.4"/>
-<text text-anchor="start" x="337.69" y="-178.6" font-family="Arial" font-size="14.00">email </text>
-<text text-anchor="start" x="375.04" y="-178.6" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="337.69" y="-178.6" font-family="Arial" font-size="14.00">name </text>
+<text text-anchor="start" x="376.6" y="-178.6" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="330.69,-135.6 330.69,-166.4 507.05,-166.4 507.05,-135.6 330.69,-135.6"/>
-<text text-anchor="start" x="337.69" y="-147.8" font-family="Arial" font-size="14.00">roles </text>
-<text text-anchor="start" x="371.93" y="-147.8" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<text text-anchor="start" x="337.69" y="-147.8" font-family="Arial" font-size="14.00">email </text>
+<text text-anchor="start" x="375.04" y="-147.8" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="330.69,-104.8 330.69,-135.6 507.05,-135.6 507.05,-104.8 330.69,-104.8"/>
-<text text-anchor="start" x="337.69" y="-117" font-family="Arial" font-size="14.00">createdAt </text>
-<text text-anchor="start" x="401.51" y="-117" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="337.69" y="-117" font-family="Arial" font-size="14.00">roles </text>
+<text text-anchor="start" x="371.93" y="-117" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="330.69,-74 330.69,-104.8 507.05,-104.8 507.05,-74 330.69,-74"/>
-<text text-anchor="start" x="337.69" y="-86.2" font-family="Arial" font-size="14.00">updatedAt </text>
-<text text-anchor="start" x="405.42" y="-86.2" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="337.69" y="-86.2" font-family="Arial" font-size="14.00">createdAt </text>
+<text text-anchor="start" x="401.51" y="-86.2" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 <polygon fill="none" stroke="black" points="330.69,-43.2 330.69,-74 507.05,-74 507.05,-43.2 330.69,-43.2"/>
-<text text-anchor="start" x="337.69" y="-55.4" font-family="Arial" font-size="14.00">name </text>
-<text text-anchor="start" x="376.6" y="-55.4" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="337.69" y="-55.4" font-family="Arial" font-size="14.00">updatedAt </text>
+<text text-anchor="start" x="405.42" y="-55.4" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 </g>
 <!-- TeamUser&#45;&gt;User -->
 <g id="edge2" class="edge">

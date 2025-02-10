@@ -11,16 +11,10 @@ Engagement model
 | id | uuid |  | false | [EngagementCompany](EngagementCompany.md) [EngagementContact](EngagementContact.md) [EngagementDeal](EngagementDeal.md) |  |  |
 | active | boolean |  | true |  |  | Is active? |
 | activityType | string |  | false |  |  | Activity type |
-| userId | uuid |  | false |  | [User](User.md) | Owner ID |
+| userId | uuid |  | false |  |  | Owner ID |
 | type | string |  | true |  |  | Engagement type |
 | createdAt | datetime |  | true |  |  | createdAt |
 | updatedAt | datetime |  | true |  |  | updatedAt |
-
-## Constraints
-
-| Name | Type | Definition |
-| ---- | ---- | ---------- |
-|  | FOREIGN KEY | ForeignKeyType: User |
 
 ## Indexes
 
