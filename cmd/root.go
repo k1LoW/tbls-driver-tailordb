@@ -152,6 +152,9 @@ var rootCmd = &cobra.Command{
 				c := &schema.ColumnJSON{}
 				c.Name = name
 				c.Type = field.Type
+				if field.Array {
+					c.Type = fmt.Sprintf("Array<%s>", c.Type)
+				}
 				c.Comment = field.Description
 				c.Nullable = !field.Required
 
