@@ -149,6 +149,8 @@ var rootCmd = &cobra.Command{
 			t.Columns = append(t.Columns, id)
 
 			for name, field := range typ.Fields {
+				// TODO: Fix order
+				// TODO: Array field, nested field
 				c := &schema.ColumnJSON{}
 				c.Name = name
 				c.Type = field.Type
