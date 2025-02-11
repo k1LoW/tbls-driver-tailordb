@@ -9,34 +9,34 @@ The variants of a product
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [FinancialStockEvent](FinancialStockEvent.md) [FinancialStockSummary](FinancialStockSummary.md) [InventoryItem](InventoryItem.md) [InvoiceLineItem](InvoiceLineItem.md) [OperationalStockEvent](OperationalStockEvent.md) [PurchaseOrderLineItem](PurchaseOrderLineItem.md) [ReceiptLineItem](ReceiptLineItem.md) [SalesOrderLineItem](SalesOrderLineItem.md) [ShipmentLineItem](ShipmentLineItem.md) [StockSummary](StockSummary.md) |  |  |
-| shopifyID | string |  | true |  |  | Shopify product ID |
-| availableForSale | boolean |  | true |  |  | Is the product available for sale |
-| displayName | string |  | true |  |  | The display name of the product |
-| price | float |  | true |  |  | The price of the product |
-| product | Product |  | true |  | [Product](Product.md) | The product of the product variant |
-| updatedAt | datetime |  | true |  |  | updatedAt |
-| sku | string |  | true |  |  | The sku(Stock Keeping Unit) of the product |
-| image | ProductImage |  | true |  | [ProductImage](ProductImage.md) | The image of the product variant |
-| inventoryItem | InventoryItem |  | true |  | [InventoryItem](InventoryItem.md) | The inventory item of the product |
-| inventoryType | enum |  | true |  |  | inventoryType |
-| quickbookSyncToken | string |  | true |  |  | The quickbook sync token of the product |
 | taxable | boolean |  | true |  |  | Is the product taxable |
 | quickbookItemId | string |  | true |  |  | The quickbook item ID of the product |
-| createdAt | datetime |  | true |  |  | createdAt |
 | barcode | string |  | true |  |  | The barcode of the product |
-| imageID | uuid |  | true |  | [ProductImage](ProductImage.md) | The image of the product variant |
-| inventoryQuantity | integer |  | true |  |  | The inventory quantity of the product |
-| productID | uuid |  | true |  | [Product](Product.md) | The product ID of the product variant |
-| active | boolean |  | true |  |  | active |
+| displayName | string |  | true |  |  | The display name of the product |
 | inventoryItemID | uuid |  | true |  | [InventoryItem](InventoryItem.md) | The inventory item ID of the product deprecated |
+| sku | string |  | true |  |  | The sku(Stock Keeping Unit) of the product |
+| image | ProductImage |  | true |  | [ProductImage](ProductImage.md) | The image of the product variant |
+| createdAt | datetime |  | true |  |  | createdAt |
+| shopifyID | string |  | true |  |  | Shopify product ID |
+| availableForSale | boolean |  | true |  |  | Is the product available for sale |
+| productID | uuid |  | true |  | [Product](Product.md) | The product ID of the product variant |
+| inventoryType | enum |  | true |  |  | inventoryType |
+| quickbookSyncToken | string |  | true |  |  | The quickbook sync token of the product |
+| updatedAt | datetime |  | true |  |  | updatedAt |
+| active | boolean |  | true |  |  | active |
+| imageID | uuid |  | true |  | [ProductImage](ProductImage.md) | The image of the product variant |
+| price | float |  | true |  |  | The price of the product |
 | quickbookItemName | string |  | true |  |  | The quickbook item name of the product |
+| inventoryQuantity | integer |  | true |  |  | The inventory quantity of the product |
+| inventoryItem | InventoryItem |  | true |  | [InventoryItem](InventoryItem.md) | The inventory item of the product |
+| product | Product |  | true |  | [Product](Product.md) | The product of the product variant |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for updatedAt | Index: true |
 | Index for createdAt | Index: true |
+| Index for updatedAt | Index: true |
 
 ## Relations
 

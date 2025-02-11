@@ -9,18 +9,18 @@ Invoice model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [InvoiceLineItem](InvoiceLineItem.md) |  |  |
-| pushedToQBAt | datetime |  | true |  |  | Date when the invoice was pushed to QuickBooks |
-| createdAt | datetime |  | true |  |  | createdAt |
-| customer | Contact |  | true |  | [Contact](Contact.md) | Customer contact |
+| customerID | uuid |  | true |  | [Contact](Contact.md) | Contact model. Contact and this model is n:1 |
 | shipmentID | uuid |  | true |  | [Shipment](Shipment.md) | Shipment ID (Origin of the invoice) |
+| quickbookInvoiceId | string |  | true |  |  | Quickbook invoice ID |
+| updatedAt | datetime |  | true |  |  | updatedAt |
+| pushedToQBAt | datetime |  | true |  |  | Date when the invoice was pushed to QuickBooks |
+| active | boolean |  | true |  |  | active |
+| createdAt | datetime |  | true |  |  | createdAt |
+| invoiceNumber | string |  | true |  |  | Invoice number |
+| customer | Contact |  | true |  | [Contact](Contact.md) | Customer contact |
 | shipment | Shipment |  | true |  | [Shipment](Shipment.md) | Shipment model. (Origin of the invoice) Shipment and this model is n:1. |
 | date | datetime |  | true |  |  | date |
 | invoiceStatus | enum |  | true |  |  | inventoryType |
-| active | boolean |  | true |  |  | active |
-| invoiceNumber | string |  | true |  |  | Invoice number |
-| customerID | uuid |  | true |  | [Contact](Contact.md) | Contact model. Contact and this model is n:1 |
-| quickbookInvoiceId | string |  | true |  |  | Quickbook invoice ID |
-| updatedAt | datetime |  | true |  |  | updatedAt |
 
 ## Constraints
 
@@ -32,8 +32,8 @@ Invoice model
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for createdAt | Index: true |
 | Index for updatedAt | Index: true |
+| Index for createdAt | Index: true |
 
 ## Relations
 

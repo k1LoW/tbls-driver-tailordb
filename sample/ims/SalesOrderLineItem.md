@@ -9,24 +9,24 @@ SalesOrderLineItem model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false |  |  |  |
-| unitPrice | float |  | true |  |  | unitPrice |
-| subtotalPrice | float |  | true |  |  | subtotalCost |
-| name | string |  | true |  |  | name |
-| taxable | boolean |  | true |  |  | taxable |
-| fulfillmentStatus | enum |  | true |  |  | fulfillmentStatus |
-| variant | ProductVariant |  | true |  | [ProductVariant](ProductVariant.md) | Variant |
 | shopifyID | string |  | true |  |  | Shopify product ID |
 | updatedAt | datetime |  | true |  |  | updatedAt |
-| sku | string |  | true |  |  | sku |
-| createdAt | datetime |  | true |  |  | createdAt |
+| fulfillmentStatus | enum |  | true |  |  | fulfillmentStatus |
+| active | boolean |  | true |  |  | active |
+| unitPrice | float |  | true |  |  | unitPrice |
+| unitCompareAtPrice | float |  | true |  |  | unitCompareAtPrice |
+| name | string |  | true |  |  | name |
+| salesOrderID | uuid |  | true |  | [SalesOrder](SalesOrder.md) | salesOrder ID |
 | variantID | uuid |  | true |  | [ProductVariant](ProductVariant.md) | Variant ID |
 | quantity | float |  | true |  |  | quantity |
-| salesOrderID | uuid |  | true |  | [SalesOrder](SalesOrder.md) | salesOrder ID |
-| salesOrder | SalesOrder |  | true |  | [SalesOrder](SalesOrder.md) | SalesOrder model. SalesOrder and this model is n:1. |
-| unitCompareAtPrice | float |  | true |  |  | unitCompareAtPrice |
 | discount | float |  | true |  |  | discount |
+| sku | string |  | true |  |  | sku |
 | requiresShipping | boolean |  | true |  |  | requiresShipping |
-| active | boolean |  | true |  |  | active |
+| createdAt | datetime |  | true |  |  | createdAt |
+| salesOrder | SalesOrder |  | true |  | [SalesOrder](SalesOrder.md) | SalesOrder model. SalesOrder and this model is n:1. |
+| variant | ProductVariant |  | true |  | [ProductVariant](ProductVariant.md) | Variant |
+| subtotalPrice | float |  | true |  |  | subtotalCost |
+| taxable | boolean |  | true |  |  | taxable |
 
 ## Indexes
 

@@ -22,7 +22,7 @@
 | [PurchaseOrder](PurchaseOrder.md) | 24 | PurchaseOrder model | TailorDB.Type |
 | [PurchaseOrderLineItem](PurchaseOrderLineItem.md) | 11 | PurchaseOrderLineItem model | TailorDB.Type |
 | [Receipt](Receipt.md) | 11 | Receipt model | TailorDB.Type |
-| [ReceiptLineItem](ReceiptLineItem.md) | 18 | ReceiptLineItem model | TailorDB.Type |
+| [ReceiptLineItem](ReceiptLineItem.md) | 20 | ReceiptLineItem model | TailorDB.Type |
 | [Role](Role.md) | 4 | User Roles | TailorDB.Type |
 | [SalesOrder](SalesOrder.md) | 16 | SalesOrder model | TailorDB.Type |
 | [SalesOrderLineItem](SalesOrderLineItem.md) | 19 | SalesOrderLineItem model | TailorDB.Type |

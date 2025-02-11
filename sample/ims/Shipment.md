@@ -9,15 +9,15 @@ Shipment model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [Invoice](Invoice.md) [ShipmentLineItem](ShipmentLineItem.md) |  |  |
+| active | boolean |  | true |  |  | active |
+| createdAt | datetime |  | true |  |  | createdAt |
+| customerID | uuid |  | true |  | [Contact](Contact.md) | Contact ID |
+| salesOrderID | uuid |  | true |  | [SalesOrder](SalesOrder.md) | salesOrder ID |
+| shipmentNumber | string |  | true |  |  | Shipment number |
+| customer | Contact |  | true |  | [Contact](Contact.md) | Contact model. Contact and this model is n:1 |
+| salesOrder | SalesOrder |  | true |  | [SalesOrder](SalesOrder.md) | SalesOrder model. SalesOrder and this model is n:1. |
 | date | datetime |  | true |  |  | date |
 | updatedAt | datetime |  | true |  |  | updatedAt |
-| createdAt | datetime |  | true |  |  | createdAt |
-| shipmentNumber | string |  | true |  |  | Shipment number |
-| salesOrderID | uuid |  | true |  | [SalesOrder](SalesOrder.md) | salesOrder ID |
-| salesOrder | SalesOrder |  | true |  | [SalesOrder](SalesOrder.md) | SalesOrder model. SalesOrder and this model is n:1. |
-| active | boolean |  | true |  |  | active |
-| customerID | uuid |  | true |  | [Contact](Contact.md) | Contact ID |
-| customer | Contact |  | true |  | [Contact](Contact.md) | Contact model. Contact and this model is n:1 |
 
 ## Constraints
 
@@ -29,8 +29,8 @@ Shipment model
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for updatedAt | Index: true |
 | Index for createdAt | Index: true |
+| Index for updatedAt | Index: true |
 
 ## Relations
 

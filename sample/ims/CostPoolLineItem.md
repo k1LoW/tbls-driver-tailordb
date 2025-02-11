@@ -9,6 +9,7 @@ CostPoolLineItem model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false |  |  |  |
+| updatedAt | datetime |  | true |  |  | updatedAt |
 | active | boolean |  | true |  |  | active |
 | costPoolID | uuid |  | false |  | [CostPool](CostPool.md) | costPool ID |
 | costPool | CostPool |  | true |  | [CostPool](CostPool.md) | CostPool model. CostPool and this model is n:1. |
@@ -16,14 +17,13 @@ CostPoolLineItem model
 | name | string |  | false |  |  | name |
 | amount | float |  | false |  |  | amount |
 | allocationBase | enum |  | false |  |  | allocationBase |
-| updatedAt | datetime |  | true |  |  | updatedAt |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for createdAt | Index: true |
 | Index for updatedAt | Index: true |
+| Index for createdAt | Index: true |
 
 ## Relations
 

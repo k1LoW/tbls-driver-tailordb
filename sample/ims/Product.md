@@ -9,16 +9,16 @@ Product model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [ProductVariant](ProductVariant.md) |  |  |
+| handle | string |  | true |  |  | Product handle |
 | description | string |  | true |  |  | Product description |
+| inStock | integer |  | true |  |  | Quantity of the product |
 | updatedAt | datetime |  | true |  |  | updatedAt |
 | active | boolean |  | true |  |  | active |
-| title | string |  | true |  |  | Product title |
-| handle | string |  | true |  |  | Product handle |
-| featuredImageID | uuid |  | true |  | [ProductImage](ProductImage.md) | Featured image ID |
-| featuredImage | ProductImage |  | true |  | [ProductImage](ProductImage.md) | Featured image of the product |
-| inStock | integer |  | true |  |  | Quantity of the product |
 | createdAt | datetime |  | true |  |  | createdAt |
 | shopifyID | string |  | true |  |  | Shopify product ID |
+| title | string |  | true |  |  | Product title |
+| featuredImageID | uuid |  | true |  | [ProductImage](ProductImage.md) | Featured image ID |
+| featuredImage | ProductImage |  | true |  | [ProductImage](ProductImage.md) | Featured image of the product |
 
 ## Indexes
 

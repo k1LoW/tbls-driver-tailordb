@@ -9,25 +9,25 @@ Contact model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [Invoice](Invoice.md) [PurchaseOrder](PurchaseOrder.md) [Receipt](Receipt.md) [SalesOrder](SalesOrder.md) [Shipment](Shipment.md) |  |  |
-| createdAt | datetime |  | true |  |  | createdAt |
+| phone | string |  | true |  |  | phone |
+| address1 | string |  | true |  |  | address1 |
+| city | string |  | true |  |  | city |
 | province | string |  | true |  |  | province |
+| createdAt | datetime |  | true |  |  | createdAt |
+| email | string |  | false |  |  | email |
+| name | string |  | false |  |  | name |
+| quickBookCustomerId | string |  | true |  |  | the reference id of the customer in quickbook |
+| country | string |  | true |  |  | country |
 | countryCode | string |  | true |  |  | countryCode |
+| provinceCode | string |  | true |  |  | province_code |
+| openBalance | float |  | true |  |  | The amount of open balance of the customer. |
+| creditLimit | float |  | true |  |  | The amount of credit limit of the customer. |
 | active | boolean |  | true |  |  | active |
 | address2 | string |  | true |  |  | address2 |
-| city | string |  | true |  |  | city |
-| provinceCode | string |  | true |  |  | province_code |
-| creditLimit | float |  | true |  |  | The amount of credit limit of the customer. |
-| name | string |  | false |  |  | name |
-| address1 | string |  | true |  |  | address1 |
-| country | string |  | true |  |  | country |
-| zip | string |  | true |  |  | zip |
 | company | string |  | true |  |  | company |
-| openBalance | float |  | true |  |  | The amount of open balance of the customer. |
-| email | string |  | false |  |  | email |
-| phone | string |  | true |  |  | phone |
-| updatedAt | datetime |  | true |  |  | updatedAt |
-| quickBookCustomerId | string |  | true |  |  | the reference id of the customer in quickbook |
 | availableCredit | float |  | true |  |  | The amount of credit available to the customer. |
+| updatedAt | datetime |  | true |  |  | updatedAt |
+| zip | string |  | true |  |  | zip |
 
 ## Indexes
 

@@ -9,18 +9,18 @@ Inventory location on Shopify
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [InventoryLevel](InventoryLevel.md) |  |  |
+| active | boolean |  | true |  |  | active |
+| createdAt | datetime |  | true |  |  | createdAt |
 | name | string |  | true |  |  | Name of the location |
 | shopifyID | string |  | true |  |  | Shopify ID of the location |
 | updatedAt | datetime |  | true |  |  | updatedAt |
-| active | boolean |  | true |  |  | active |
-| createdAt | datetime |  | true |  |  | createdAt |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for updatedAt | Index: true |
 | Index for createdAt | Index: true |
+| Index for updatedAt | Index: true |
 
 ## Relations
 

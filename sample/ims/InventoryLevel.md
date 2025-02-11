@@ -9,21 +9,21 @@ Inventory Level of an inventory item
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false |  |  |  |
-| safetyStock | integer |  | true |  |  | Amount of the inventory item safety stock |
-| incoming | integer |  | true |  |  | Amount of the inventory item incoming |
+| active | boolean |  | true |  |  | active |
+| available | integer |  | true |  |  | Amount of the inventory item available |
+| qualityControl | integer |  | true |  |  | Amount of the inventory item in quality control |
 | inventoryItemID | uuid |  | true |  | [InventoryItem](InventoryItem.md) | Inventory Item ID |
-| reserved | integer |  | true |  |  | Amount of the inventory item reserved |
-| damaged | integer |  | true |  |  | Amount of the inventory item damaged |
 | onHand | integer |  | true |  |  | Amount of the inventory item on hand |
 | createdAt | datetime |  | true |  |  | createdAt |
-| available | integer |  | true |  |  | Amount of the inventory item available |
 | location | Location |  | true |  | [Location](Location.md) | Inventory Location |
-| updatedAt | datetime |  | true |  |  | updatedAt |
-| active | boolean |  | true |  |  | active |
-| locationID | uuid |  | true |  | [Location](Location.md) | Inventory Location ID |
-| qualityControl | integer |  | true |  |  | Amount of the inventory item in quality control |
-| inventoryItem | InventoryItem |  | true |  | [InventoryItem](InventoryItem.md) | Inventory Item |
 | committed | integer |  | true |  |  | Amount of the inventory item reserved |
+| reserved | integer |  | true |  |  | Amount of the inventory item reserved |
+| safetyStock | integer |  | true |  |  | Amount of the inventory item safety stock |
+| locationID | uuid |  | true |  | [Location](Location.md) | Inventory Location ID |
+| inventoryItem | InventoryItem |  | true |  | [InventoryItem](InventoryItem.md) | Inventory Item |
+| damaged | integer |  | true |  |  | Amount of the inventory item damaged |
+| incoming | integer |  | true |  |  | Amount of the inventory item incoming |
+| updatedAt | datetime |  | true |  |  | updatedAt |
 
 ## Indexes
 
