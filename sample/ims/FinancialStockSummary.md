@@ -9,16 +9,16 @@ StockSummary model for the financial ledger
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false |  |  |  |
-| inStockQuantity | float |  | true |  |  | DO NOT UPDATE FROM THE FRONT END. The quantity of the product in stock. |
-| totalCost | float |  | false |  |  | totalCost |
 | active | boolean |  | true |  |  | active |
+| createdAt | datetime |  | true |  |  | createdAt |
 | onHoldQuantity | float |  | false |  |  | onHoldQuantity |
+| availableQuantity | float |  | false |  |  | availableQuantity |
+| totalCost | float |  | false |  |  | totalCost |
+| updatedAt | datetime |  | true |  |  | updatedAt |
 | variantID | uuid |  | false |  | [ProductVariant](ProductVariant.md) | Variant ID |
 | variant | ProductVariant |  | true |  | [ProductVariant](ProductVariant.md) | Variant |
-| availableQuantity | float |  | false |  |  | availableQuantity |
+| inStockQuantity | float |  | true |  |  | DO NOT UPDATE FROM THE FRONT END. The quantity of the product in stock. |
 | averageCost | float |  | true |  |  | averageCost |
-| createdAt | datetime |  | true |  |  | createdAt |
-| updatedAt | datetime |  | true |  |  | updatedAt |
 
 ## Indexes
 

@@ -9,16 +9,16 @@ Receipt model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [ReceiptLineItem](ReceiptLineItem.md) |  |  |
-| supplierID | uuid |  | true |  | [Contact](Contact.md) | Supplier ID |
+| receiptNumber | string |  | true |  |  | Receipt number |
+| purchaseOrderID | uuid |  | true |  | [PurchaseOrder](PurchaseOrder.md) | purchaseOrder ID |
+| active | boolean |  | true |  |  | active |
+| createdAt | datetime |  | true |  |  | createdAt |
 | purchaseOrder | PurchaseOrder |  | true |  | [PurchaseOrder](PurchaseOrder.md) | PurchaseOrder model. PurchaseOrder and this model is n:1. |
 | date | datetime |  | true |  |  | date |
 | receiptStatus | enum |  | true |  |  | inventoryType |
-| active | boolean |  | true |  |  | active |
-| createdAt | datetime |  | true |  |  | createdAt |
-| receiptNumber | string |  | true |  |  | Receipt number |
-| supplier | Contact |  | true |  | [Contact](Contact.md) | Supplier model. Supplier and this model is n:1. |
-| purchaseOrderID | uuid |  | true |  | [PurchaseOrder](PurchaseOrder.md) | purchaseOrder ID |
 | updatedAt | datetime |  | true |  |  | updatedAt |
+| supplierID | uuid |  | true |  | [Contact](Contact.md) | Supplier ID |
+| supplier | Contact |  | true |  | [Contact](Contact.md) | Supplier model. Supplier and this model is n:1. |
 
 ## Constraints
 

@@ -9,41 +9,41 @@ DO NOT UPDATE FROM THE FRONT END. FinancialStockEvent model. Holds StockEvents t
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false |  |  |  |
-| onHoldQuantity | float |  | true |  |  | Quantity of the product that is on hold. |
-| totalCost | float |  | true |  |  | totalCost |
-| receiptLineItem | ReceiptLineItem |  | true |  | [ReceiptLineItem](ReceiptLineItem.md) | ReceiptLineItem model. ReceiptLineItem and this model is 1:1. One stock event is only related o either one receipt or shipment |
-| variantID | uuid |  | true |  | [ProductVariant](ProductVariant.md) | Variant ID |
 | isOnHold | boolean |  | false |  |  | isOnHold |
-| shipmentLineItemID | uuid |  | true |  | [ShipmentLineItem](ShipmentLineItem.md) | Shipment where the StockEvents come from |
-| operationalStockEventID | uuid |  | false |  | [OperationalStockEvent](OperationalStockEvent.md) | OperationalStockEvent where the StockEvents come from |
-| unitCost | float |  | false |  |  | unitCost |
-| availableQuantity | float |  | true |  |  | Available for sale quantity. |
 | inStockQuantity | float |  | true |  |  | The quantity of the product in stock. |
-| averageCost | float |  | true |  |  | DO NOT UPDATE FROM THE FRONT END, use calculateStockEventAndUpdateStockSummary pipeline instead. Average cost of the product at the time of the event |
 | shipmentLineItem | ShipmentLineItem |  | true |  | [ShipmentLineItem](ShipmentLineItem.md) | ShipmentLineItem model. ShipmentLineItem and this model is 1:1. One stock event is only related o either one receipt or shipment. |
+| updatedAt | datetime |  | true |  |  | updatedAt |
+| variantID | uuid |  | true |  | [ProductVariant](ProductVariant.md) | Variant ID |
+| incrementalQuantity | float |  | false |  |  | incrementalQuantity |
+| totalCost | float |  | true |  |  | totalCost |
 | receiptLineItemID | uuid |  | true |  | [ReceiptLineItem](ReceiptLineItem.md) | ReceiptLineItem where the StockEvent come from |
+| shipmentLineItemID | uuid |  | true |  | [ShipmentLineItem](ShipmentLineItem.md) | Shipment where the StockEvents come from |
 | operationalStockEvent | OperationalStockEvent |  | true |  | [OperationalStockEvent](OperationalStockEvent.md) | OperationalStockEvent model. OperationalStockEvent and this model is n:1. One stock event is only related o either one receipt or shipment. |
+| variant | ProductVariant |  | true |  | [ProductVariant](ProductVariant.md) | Variant |
+| unitCost | float |  | false |  |  | unitCost |
+| onHoldQuantity | float |  | true |  |  | Quantity of the product that is on hold. |
+| averageCost | float |  | true |  |  | DO NOT UPDATE FROM THE FRONT END, use calculateStockEventAndUpdateStockSummary pipeline instead. Average cost of the product at the time of the event |
+| availableQuantity | float |  | true |  |  | Available for sale quantity. |
+| receiptLineItem | ReceiptLineItem |  | true |  | [ReceiptLineItem](ReceiptLineItem.md) | ReceiptLineItem model. ReceiptLineItem and this model is 1:1. One stock event is only related o either one receipt or shipment |
+| operationalStockEventID | uuid |  | false |  | [OperationalStockEvent](OperationalStockEvent.md) | OperationalStockEvent where the StockEvents come from |
 | active | boolean |  | true |  |  | active |
 | createdAt | datetime |  | true |  |  | createdAt |
-| updatedAt | datetime |  | true |  |  | updatedAt |
-| variant | ProductVariant |  | true |  | [ProductVariant](ProductVariant.md) | Variant |
-| incrementalQuantity | float |  | false |  |  | incrementalQuantity |
 | transactionTotalCost | float |  | true |  |  | transactionTotalCost |
 
 ## Constraints
 
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
-| ForeignKey for receiptLineItem to ReceiptLineItem | FOREIGN KEY | ForeignKeyType: ReceiptLineItem |
 | ForeignKey for shipmentLineItem to ShipmentLineItem | FOREIGN KEY | ForeignKeyType: ShipmentLineItem |
 | ForeignKey for operationalStockEvent to OperationalStockEvent | FOREIGN KEY | ForeignKeyType: OperationalStockEvent |
+| ForeignKey for receiptLineItem to ReceiptLineItem | FOREIGN KEY | ForeignKeyType: ReceiptLineItem |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for createdAt | Index: true |
 | Index for updatedAt | Index: true |
+| Index for createdAt | Index: true |
 
 ## Relations
 

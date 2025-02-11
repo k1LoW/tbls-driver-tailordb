@@ -9,26 +9,26 @@ OperationalStockEvent model. Holds the stock event data that can change.
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [FinancialStockEvent](FinancialStockEvent.md) |  |  |
-| createdAt | datetime |  | true |  |  | createdAt |
-| variantID | uuid |  | false |  | [ProductVariant](ProductVariant.md) | Variant ID |
-| variant | ProductVariant |  | true |  | [ProductVariant](ProductVariant.md) | Variant |
-| unitCost | float |  | false |  |  | unitCost |
+| availableQuantity | float |  | true |  |  | DO NOT UPDATE FROM THE FRONT END. Available for sale quantity. |
 | shipmentLineItem | ShipmentLineItem |  | true |  | [ShipmentLineItem](ShipmentLineItem.md) | ShipmentLineItem model. ShipmentLineItem and this model is 1:1. One stock event is only related o either one receipt or shipment. |
 | copiedToFinancialLedger | boolean |  | true |  |  | DO NOT UPDATE FROM THE FRONT END. If the stock event is copied to the financial ledger. |
-| active | boolean |  | true |  |  | active |
-| inStockQuantity | float |  | true |  |  | DO NOT UPDATE FROM THE FRONT END. The quantity of the product in stock. |
-| receiptLineItem | ReceiptLineItem |  | true |  | [ReceiptLineItem](ReceiptLineItem.md) | ReceiptLineItem model. ReceiptLineItem and this model is 1:1. One stock event is only related o either one receipt or shipment |
+| variant | ProductVariant |  | true |  | [ProductVariant](ProductVariant.md) | Variant |
+| incrementalQuantity | float |  | false |  |  | incrementalQuantity |
 | transactionTotalCost | float |  | true |  |  | transactionTotalCost |
 | isOnHold | boolean |  | false |  |  | isOnHold |
-| onHoldQuantity | float |  | true |  |  | DO NOT UPDATE FROM THE FRONT END. Quantity of the product that is on hold. |
-| availableQuantity | float |  | true |  |  | DO NOT UPDATE FROM THE FRONT END. Available for sale quantity. |
-| receiptLineItemID | uuid |  | true |  | [ReceiptLineItem](ReceiptLineItem.md) | ReceiptLineItem where the StockEvent come from |
 | updatedAt | datetime |  | true |  |  | updatedAt |
-| incrementalQuantity | float |  | false |  |  | incrementalQuantity |
-| totalCost | float |  | true |  |  | DO NOT UPDATE FROM THE FRONT END, use calculateStockEventAndUpdateStockSummary pipeline instead. Total cost of the product at the time of the event |
+| onHoldQuantity | float |  | true |  |  | DO NOT UPDATE FROM THE FRONT END. Quantity of the product that is on hold. |
 | averageCost | float |  | true |  |  | DO NOT UPDATE FROM THE FRONT END, use calculateStockEventAndUpdateStockSummary pipeline instead. Average cost of the product at the time of the event |
+| receiptLineItemID | uuid |  | true |  | [ReceiptLineItem](ReceiptLineItem.md) | ReceiptLineItem where the StockEvent come from |
+| receiptLineItem | ReceiptLineItem |  | true |  | [ReceiptLineItem](ReceiptLineItem.md) | ReceiptLineItem model. ReceiptLineItem and this model is 1:1. One stock event is only related o either one receipt or shipment |
 | shipmentLineItemID | uuid |  | true |  | [ShipmentLineItem](ShipmentLineItem.md) | Shipment where the StockEvents come from |
 | sequence | integer |  | true |  |  | DO NOT UPDATE FROM THE FRONT END. Sequence of the stock event. |
+| active | boolean |  | true |  |  | active |
+| variantID | uuid |  | false |  | [ProductVariant](ProductVariant.md) | Variant ID |
+| unitCost | float |  | false |  |  | unitCost |
+| inStockQuantity | float |  | true |  |  | DO NOT UPDATE FROM THE FRONT END. The quantity of the product in stock. |
+| totalCost | float |  | true |  |  | DO NOT UPDATE FROM THE FRONT END, use calculateStockEventAndUpdateStockSummary pipeline instead. Total cost of the product at the time of the event |
+| createdAt | datetime |  | true |  |  | createdAt |
 
 ## Constraints
 
@@ -41,8 +41,8 @@ OperationalStockEvent model. Holds the stock event data that can change.
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for createdAt | Index: true |
 | Index for updatedAt | Index: true |
+| Index for createdAt | Index: true |
 
 ## Relations
 

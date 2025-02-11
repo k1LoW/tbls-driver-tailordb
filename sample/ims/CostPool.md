@@ -8,20 +8,20 @@ CostPool model
 
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
-| id | uuid |  | false | [CostPoolLineItem](CostPoolLineItem.md) |  |  |
-| closedAt | datetime |  | true |  |  | closedAt |
-| updatedAt | datetime |  | true |  |  | updatedAt |
-| active | boolean |  | true |  |  | active |
+| id | uuid |  | false | [CostPoolLineItem](CostPoolLineItem.md) [ReceiptLineItem](ReceiptLineItem.md) |  |  |
 | createdAt | datetime |  | true |  |  | createdAt |
 | name | string |  | false |  |  | name |
 | isClosed | boolean |  | true |  |  | isClosed |
+| closedAt | datetime |  | true |  |  | closedAt |
+| updatedAt | datetime |  | true |  |  | updatedAt |
+| active | boolean |  | true |  |  | active |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for updatedAt | Index: true |
 | Index for createdAt | Index: true |
+| Index for updatedAt | Index: true |
 
 ## Relations
 

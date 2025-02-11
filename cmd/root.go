@@ -33,7 +33,6 @@ import (
 	"cuelang.org/go/cue/load"
 	cuedb "github.com/k1LoW/tbls-driver-tailordb/tailordb/cue"
 	"github.com/k1LoW/tbls-driver-tailordb/version"
-	"github.com/k1LoW/tbls/schema"
 	"github.com/spf13/cobra"
 )
 
@@ -89,149 +88,10 @@ var rootCmd = &cobra.Command{
 			}
 			database = databases[0]
 		}
-		s := schema.SchemaJSON{}
-		s.Name, err = database.LookupPath(cue.MakePath(cue.Str("Namespace"))).String()
+		s, err := cuedb.Analyze(database)
 		if err != nil {
 			return err
 		}
-		typesIter, err := database.LookupPath(cue.MakePath(cue.Str("Types"))).List()
-		if err != nil {
-			return err
-		}
-
-		// tables
-		for typesIter.Next() {
-			v := typesIter.Value()
-			typ := &cuedb.Type{}
-			if err := v.Decode(&typ); err != nil {
-				return err
-			}
-			t := &schema.TableJSON{
-				Type: "TailorDB.Type",
-			}
-			t.Name = typ.Name
-			t.Comment = typ.Description
-
-			// indexes
-			{
-				b, err := json.Marshal(typ.Indexes)
-				if err != nil {
-					return err
-				}
-				def := string(b)
-				for name, idx := range typ.Indexes {
-					t.Indexes = append(t.Indexes, &schema.Index{
-						Name:    name,
-						Def:     def,
-						Table:   &t.Name,
-						Columns: idx.FieldNames,
-					})
-					if idx.Unique {
-						t.Constraints = append(t.Constraints, &schema.Constraint{
-							Name:    name,
-							Type:    "UNIQUE",
-							Def:     def,
-							Table:   &t.Name,
-							Columns: idx.FieldNames,
-						})
-					}
-				}
-			}
-
-			// columns
-
-			// Add id column
-			id := &schema.ColumnJSON{
-				Name:     "id",
-				Type:     "uuid",
-				Nullable: false,
-			}
-			t.Columns = append(t.Columns, id)
-
-			for name, field := range typ.Fields {
-				// TODO: Fix order
-				// TODO: Array field, nested field
-				c := &schema.ColumnJSON{}
-				c.Name = name
-				c.Type = field.Type
-				if field.Array {
-					c.Type = fmt.Sprintf("Array\\<%s\\>", field.Type)
-				}
-				if field.Type == "nested" {
-					f, err := json.Marshal(field.Fields)
-					if err != nil {
-						return err
-					}
-					c.ExtraDef = string(f)
-				}
-				c.Comment = field.Description
-				c.Nullable = !field.Required
-
-				if field.SourceId != "" {
-					parentTable := c.Type
-					rel := &schema.RelationJSON{
-						Table:       t.Name,
-						Columns:     []string{field.SourceId, name},
-						ParentTable: parentTable,
-					}
-					// Check sourceId
-					sourceId, ok := typ.Fields[field.SourceId]
-					if !ok {
-						return fmt.Errorf("sourceId %s not found", field.SourceId)
-					}
-					if sourceId.ForeignKey {
-						if sourceId.ForeignKeyField != "" {
-							rel.ParentColumns = []string{sourceId.ForeignKeyField}
-						} else {
-							rel.ParentColumns = []string{"id"}
-						}
-						rel.Def = fmt.Sprintf("ForeignKeyType: %s", sourceId.ForeignKeyType)
-
-						t.Constraints = append(t.Constraints, &schema.Constraint{
-							Name:    fmt.Sprintf("ForeignKey for %s to %s", name, parentTable),
-							Type:    "FOREIGN KEY",
-							Def:     fmt.Sprintf("ForeignKeyType: %s", parentTable),
-							Table:   &t.Name,
-							Columns: []string{field.SourceId, name},
-						})
-
-					} else {
-						rel.ParentColumns = []string{"id"}
-						rel.Def = fmt.Sprintf("Source: %s", parentTable)
-					}
-					s.Relations = append(s.Relations, rel)
-				}
-
-				if field.Index {
-					t.Indexes = append(t.Indexes, &schema.Index{
-						Name:    fmt.Sprintf("Index for %s", c.Name),
-						Def:     "Index: true",
-						Table:   &t.Name,
-						Columns: []string{c.Name},
-					})
-				}
-
-				if field.Unique {
-					t.Indexes = append(t.Indexes, &schema.Index{
-						Name:    fmt.Sprintf("Unique for %s", c.Name),
-						Def:     "Unique: true",
-						Table:   &t.Name,
-						Columns: []string{c.Name},
-					})
-					t.Constraints = append(t.Constraints, &schema.Constraint{
-						Name:    fmt.Sprintf("Unique for %s", c.Name),
-						Type:    "UNIQUE",
-						Def:     "Unique: true",
-						Table:   &t.Name,
-						Columns: []string{c.Name},
-					})
-				}
-				t.Columns = append(t.Columns, c)
-			}
-
-			s.Tables = append(s.Tables, t)
-		}
-
 		b, err := json.MarshalIndent(s, "", "  ")
 		if err != nil {
 			return err
