@@ -12,6 +12,7 @@ jobs:
       tagpr-tag: ${{ steps.run-tagpr.outputs.tag }}
     permissions:
       contents: write
+      issues: read
       pull-requests: write
       packages: write
     env:
