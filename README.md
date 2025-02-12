@@ -1,6 +1,6 @@
 # tbls-driver-tailordb
 
-tbls driver for [TailorDB](https://docs.tailor.tech/guides/tailordb/overview) schema definition.
+[tbls driver](https://github.com/k1LoW/tbls#external-database-driver) for [TailorDB](https://docs.tailor.tech/guides/tailordb/overview) schema definition.
 
 ## Usage
 
