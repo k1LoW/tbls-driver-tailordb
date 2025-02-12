@@ -23,3 +23,22 @@ $ tbls doc tailordb://path/to/services/tailordb/tailordb.cue
 
 - [x] CUE
 - [ ] Terraform
+
+## Install
+
+**homebrew tap:**
+
+```console
+$ brew install k1LoW/tap/tbls-driver-tailordb
+```
+
+**go install:**
+
+```console
+$ go install github.com/k1LoW/tbls-driver-tailordb@latest
+```
+
+**manually:**
+
+Download binary from [releases page](https://github.com/k1LoW/tbls-driver-tailordb/releases)
+
