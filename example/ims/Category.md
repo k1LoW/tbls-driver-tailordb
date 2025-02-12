@@ -23,18 +23,7 @@ Contains information about categories of products.
 
 ## Relations
 
-```mermaid
-erDiagram
-
-
-"Category" {
-  uuid id
-  string name
-  string description
-  datetime createdAt
-  datetime updatedAt
-}
-```
+![er](Category.svg)
 
 ---
 

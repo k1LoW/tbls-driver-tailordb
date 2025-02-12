@@ -24,38 +24,7 @@ Inventory location on Shopify
 
 ## Relations
 
-```mermaid
-erDiagram
-
-"InventoryLevel" }o--o| "Location" : "Source: Location"
-
-"Location" {
-  uuid id
-  boolean active
-  datetime createdAt
-  string name
-  string shopifyID
-  datetime updatedAt
-}
-"InventoryLevel" {
-  uuid id
-  boolean active
-  datetime createdAt
-  uuid locationID FK
-  Location location FK
-  uuid inventoryItemID FK
-  InventoryItem inventoryItem FK
-  integer available
-  integer committed
-  integer reserved
-  integer damaged
-  integer safetyStock
-  integer qualityControl
-  integer onHand
-  integer incoming
-  datetime updatedAt
-}
-```
+![er](Location.svg)
 
 ---
 

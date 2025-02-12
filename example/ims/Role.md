@@ -23,17 +23,7 @@ User Roles
 
 ## Relations
 
-```mermaid
-erDiagram
-
-
-"Role" {
-  uuid id
-  string name
-  datetime createdAt
-  datetime updatedAt
-}
-```
+![er](Role.svg)
 
 ---
 

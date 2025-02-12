@@ -29,65 +29,7 @@ InvoiceLineItem model
 
 ## Relations
 
-```mermaid
-erDiagram
-
-"InvoiceLineItem" }o--|| "Invoice" : "Source: Invoice"
-"InvoiceLineItem" }o--o| "ProductVariant" : "Source: ProductVariant"
-
-"InvoiceLineItem" {
-  uuid id
-  boolean active
-  datetime createdAt
-  uuid invoiceID FK
-  Invoice invoice FK
-  float unitPrice
-  datetime updatedAt
-  uuid variantID FK
-  ProductVariant variant FK
-  float quantity
-  boolean taxable
-}
-"Invoice" {
-  uuid id
-  boolean active
-  datetime createdAt
-  string invoiceNumber
-  uuid customerID FK
-  Contact customer FK
-  uuid shipmentID FK
-  Shipment shipment FK
-  datetime date
-  string quickbookInvoiceId
-  enum invoiceStatus
-  datetime pushedToQBAt
-  datetime updatedAt
-}
-"ProductVariant" {
-  uuid id
-  boolean active
-  datetime createdAt
-  string shopifyID
-  boolean availableForSale
-  string barcode
-  string sku
-  string displayName
-  uuid imageID FK
-  ProductImage image FK
-  integer inventoryQuantity
-  float price
-  uuid inventoryItemID FK
-  InventoryItem inventoryItem FK
-  uuid productID FK
-  Product product FK
-  boolean taxable
-  enum inventoryType
-  string quickbookItemId
-  string quickbookSyncToken
-  string quickbookItemName
-  datetime updatedAt
-}
-```
+![er](InvoiceLineItem.svg)
 
 ---
 

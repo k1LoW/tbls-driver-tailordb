@@ -25,59 +25,7 @@ Product Image
 
 ## Relations
 
-```mermaid
-erDiagram
-
-"Product" }o--o| "ProductImage" : "Source: ProductImage"
-"ProductVariant" }o--o| "ProductImage" : "Source: ProductImage"
-
-"ProductImage" {
-  uuid id
-  boolean active
-  datetime createdAt
-  string shopifyID
-  datetime updatedAt
-  string url
-  string altText
-}
-"Product" {
-  uuid id
-  boolean active
-  datetime createdAt
-  string shopifyID
-  string title
-  string handle
-  string description
-  uuid featuredImageID FK
-  ProductImage featuredImage FK
-  integer inStock
-  datetime updatedAt
-}
-"ProductVariant" {
-  uuid id
-  boolean active
-  datetime createdAt
-  string shopifyID
-  boolean availableForSale
-  string barcode
-  string sku
-  string displayName
-  uuid imageID FK
-  ProductImage image FK
-  integer inventoryQuantity
-  float price
-  uuid inventoryItemID FK
-  InventoryItem inventoryItem FK
-  uuid productID FK
-  Product product FK
-  boolean taxable
-  enum inventoryType
-  string quickbookItemId
-  string quickbookSyncToken
-  string quickbookItemName
-  datetime updatedAt
-}
-```
+![er](ProductImage.svg)
 
 ---
 

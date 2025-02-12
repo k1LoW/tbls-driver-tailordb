@@ -25,55 +25,7 @@ CostPool model
 
 ## Relations
 
-```mermaid
-erDiagram
-
-"CostPoolLineItem" }o--|| "CostPool" : "Source: CostPool"
-"ReceiptLineItem" }o--o| "CostPool" : "Source: CostPool"
-
-"CostPool" {
-  uuid id
-  boolean active
-  datetime createdAt
-  string name
-  boolean isClosed
-  datetime closedAt
-  datetime updatedAt
-}
-"CostPoolLineItem" {
-  uuid id
-  boolean active
-  uuid costPoolID FK
-  CostPool costPool FK
-  datetime createdAt
-  string name
-  float amount
-  enum allocationBase
-  datetime updatedAt
-}
-"ReceiptLineItem" {
-  uuid id
-  boolean active
-  datetime createdAt
-  uuid receiptID FK
-  Receipt receipt FK
-  datetime updatedAt
-  uuid variantID FK
-  ProductVariant variant FK
-  float quantity
-  float subtotalUnitCost
-  float subtotalCost
-  float cubicMeters
-  Array__nested__ costPools
-  uuid costPools.costPoolID FK
-  CostPool costPools.costPool FK
-  float totalCostPoolAllocation
-  float unitCostPoolAllocation
-  float totalUnitCost
-  enum receiptStatus
-  datetime receivedAt
-}
-```
+![er](CostPool.svg)
 
 ---
 

@@ -34,48 +34,7 @@ Inventory Level of an inventory item
 
 ## Relations
 
-```mermaid
-erDiagram
-
-"InventoryLevel" }o--o| "Location" : "Source: Location"
-"InventoryLevel" }o--o| "InventoryItem" : "Source: InventoryItem"
-
-"InventoryLevel" {
-  uuid id
-  boolean active
-  datetime createdAt
-  uuid locationID FK
-  Location location FK
-  uuid inventoryItemID FK
-  InventoryItem inventoryItem FK
-  integer available
-  integer committed
-  integer reserved
-  integer damaged
-  integer safetyStock
-  integer qualityControl
-  integer onHand
-  integer incoming
-  datetime updatedAt
-}
-"Location" {
-  uuid id
-  boolean active
-  datetime createdAt
-  string name
-  string shopifyID
-  datetime updatedAt
-}
-"InventoryItem" {
-  uuid id
-  boolean active
-  datetime createdAt
-  string shopifyID
-  uuid productVariantID FK
-  ProductVariant productVariant FK
-  datetime updatedAt
-}
-```
+![er](InventoryLevel.svg)
 
 ---
 
