@@ -8,6 +8,10 @@ tbls driver for TailorDB schema definition.
 $ tbls doc tailordb://path/to/workspace.cue
 ```
 
+```console
+$ tbls doc tailordb://path/to/services/tailordb/tailordb.cue
+```
+
 ## Support type
 
 - [x] CUE
