@@ -27,7 +27,32 @@ CostPoolLineItem model
 
 ## Relations
 
-![er](CostPoolLineItem.svg)
+```mermaid
+erDiagram
+
+"CostPoolLineItem" }o--|| "CostPool" : "Source: CostPool"
+
+"CostPoolLineItem" {
+  uuid id
+  boolean active
+  uuid costPoolID FK
+  CostPool costPool FK
+  datetime createdAt
+  string name
+  float amount
+  enum allocationBase
+  datetime updatedAt
+}
+"CostPool" {
+  uuid id
+  boolean active
+  datetime createdAt
+  string name
+  boolean isClosed
+  datetime closedAt
+  datetime updatedAt
+}
+```
 
 ---
 

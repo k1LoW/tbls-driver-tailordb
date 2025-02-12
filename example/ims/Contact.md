@@ -38,7 +38,124 @@ Contact model
 
 ## Relations
 
-![er](Contact.svg)
+```mermaid
+erDiagram
+
+"Invoice" }o--o| "Contact" : "ForeignKeyType: Contact"
+"Receipt" }o--o| "Contact" : "ForeignKeyType: Contact"
+"SalesOrder" }o--o| "Contact" : "ForeignKeyType: Contact"
+"Shipment" }o--o| "Contact" : "ForeignKeyType: Contact"
+"PurchaseOrder" }o--o| "Contact" : "Source: Contact"
+"PurchaseOrder" }o--o| "Contact" : "Source: Contact"
+"PurchaseOrder" }o--|| "Contact" : "Source: Contact"
+
+"Contact" {
+  uuid id
+  boolean active
+  datetime createdAt
+  string name
+  string email
+  string phone
+  string address1
+  string address2
+  string city
+  string province
+  string country
+  datetime updatedAt
+  string zip
+  string countryCode
+  string company
+  string provinceCode
+  string quickBookCustomerId
+  float openBalance
+  float creditLimit
+  float availableCredit
+}
+"Invoice" {
+  uuid id
+  boolean active
+  datetime createdAt
+  string invoiceNumber
+  uuid customerID FK
+  Contact customer FK
+  uuid shipmentID FK
+  Shipment shipment FK
+  datetime date
+  string quickbookInvoiceId
+  enum invoiceStatus
+  datetime pushedToQBAt
+  datetime updatedAt
+}
+"Receipt" {
+  uuid id
+  boolean active
+  datetime createdAt
+  string receiptNumber
+  uuid supplierID FK
+  Contact supplier FK
+  uuid purchaseOrderID FK
+  PurchaseOrder purchaseOrder FK
+  datetime date
+  enum receiptStatus
+  datetime updatedAt
+}
+"SalesOrder" {
+  uuid id
+  boolean active
+  integer orderNumber
+  uuid customerID FK
+  Contact customer FK
+  string shopifyID
+  string cancelReason
+  datetime cancelledAt
+  string currency
+  string currentSubtotalPrice
+  string customerName
+  string customerEmail
+  datetime createdAt
+  enum shipStationOrderStatus
+  datetime shippedAt
+  datetime updatedAt
+}
+"Shipment" {
+  uuid id
+  boolean active
+  datetime createdAt
+  string shipmentNumber
+  uuid customerID FK
+  Contact customer FK
+  uuid salesOrderID FK
+  SalesOrder salesOrder FK
+  datetime date
+  datetime updatedAt
+}
+"PurchaseOrder" {
+  uuid id
+  boolean active
+  datetime createdAt
+  string documentNumber
+  uuid supplierID FK
+  Contact supplier FK
+  datetime date
+  uuid billToID FK
+  Contact billTo FK
+  uuid shipToID FK
+  Contact shipTo FK
+  string shipVia
+  string trackingNumber
+  string shippingContactPhone
+  string shippingContactName
+  datetime exFactoryDate
+  datetime dueDate
+  string terms
+  string shippingInstructions
+  string notes
+  string approvedBy
+  string pulledBy
+  string receivedBy
+  datetime updatedAt
+}
+```
 
 ---
 

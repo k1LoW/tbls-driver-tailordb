@@ -23,7 +23,17 @@ User Roles
 
 ## Relations
 
-![er](Role.svg)
+```mermaid
+erDiagram
+
+
+"Role" {
+  uuid id
+  string name
+  datetime createdAt
+  datetime updatedAt
+}
+```
 
 ---
 

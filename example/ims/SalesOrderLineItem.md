@@ -37,7 +37,76 @@ SalesOrderLineItem model
 
 ## Relations
 
-![er](SalesOrderLineItem.svg)
+```mermaid
+erDiagram
+
+"SalesOrderLineItem" }o--o| "SalesOrder" : "Source: SalesOrder"
+"SalesOrderLineItem" }o--o| "ProductVariant" : "Source: ProductVariant"
+
+"SalesOrderLineItem" {
+  uuid id
+  boolean active
+  datetime createdAt
+  string shopifyID
+  uuid salesOrderID FK
+  SalesOrder salesOrder FK
+  datetime updatedAt
+  uuid variantID FK
+  ProductVariant variant FK
+  float quantity
+  float unitPrice
+  float subtotalPrice
+  float unitCompareAtPrice
+  float discount
+  string name
+  string sku
+  boolean requiresShipping
+  boolean taxable
+  enum fulfillmentStatus
+}
+"SalesOrder" {
+  uuid id
+  boolean active
+  integer orderNumber
+  uuid customerID FK
+  Contact customer FK
+  string shopifyID
+  string cancelReason
+  datetime cancelledAt
+  string currency
+  string currentSubtotalPrice
+  string customerName
+  string customerEmail
+  datetime createdAt
+  enum shipStationOrderStatus
+  datetime shippedAt
+  datetime updatedAt
+}
+"ProductVariant" {
+  uuid id
+  boolean active
+  datetime createdAt
+  string shopifyID
+  boolean availableForSale
+  string barcode
+  string sku
+  string displayName
+  uuid imageID FK
+  ProductImage image FK
+  integer inventoryQuantity
+  float price
+  uuid inventoryItemID FK
+  InventoryItem inventoryItem FK
+  uuid productID FK
+  Product product FK
+  boolean taxable
+  enum inventoryType
+  string quickbookItemId
+  string quickbookSyncToken
+  string quickbookItemName
+  datetime updatedAt
+}
+```
 
 ---
 

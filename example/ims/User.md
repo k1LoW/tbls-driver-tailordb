@@ -33,7 +33,19 @@ User of the system
 
 ## Relations
 
-![er](User.svg)
+```mermaid
+erDiagram
+
+
+"User" {
+  uuid id
+  string name
+  string email
+  Array__uuid__ roles
+  datetime createdAt
+  datetime updatedAt
+}
+```
 
 ---
 

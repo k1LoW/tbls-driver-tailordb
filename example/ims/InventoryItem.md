@@ -25,7 +25,65 @@ Product variant's inventory item model
 
 ## Relations
 
-![er](InventoryItem.svg)
+```mermaid
+erDiagram
+
+"InventoryLevel" }o--o| "InventoryItem" : "Source: InventoryItem"
+"ProductVariant" }o--o| "InventoryItem" : "Source: InventoryItem"
+"InventoryItem" }o--o| "ProductVariant" : "Source: ProductVariant"
+
+"InventoryItem" {
+  uuid id
+  boolean active
+  datetime createdAt
+  string shopifyID
+  uuid productVariantID FK
+  ProductVariant productVariant FK
+  datetime updatedAt
+}
+"InventoryLevel" {
+  uuid id
+  boolean active
+  datetime createdAt
+  uuid locationID FK
+  Location location FK
+  uuid inventoryItemID FK
+  InventoryItem inventoryItem FK
+  integer available
+  integer committed
+  integer reserved
+  integer damaged
+  integer safetyStock
+  integer qualityControl
+  integer onHand
+  integer incoming
+  datetime updatedAt
+}
+"ProductVariant" {
+  uuid id
+  boolean active
+  datetime createdAt
+  string shopifyID
+  boolean availableForSale
+  string barcode
+  string sku
+  string displayName
+  uuid imageID FK
+  ProductImage image FK
+  integer inventoryQuantity
+  float price
+  uuid inventoryItemID FK
+  InventoryItem inventoryItem FK
+  uuid productID FK
+  Product product FK
+  boolean taxable
+  enum inventoryType
+  string quickbookItemId
+  string quickbookSyncToken
+  string quickbookItemName
+  datetime updatedAt
+}
+```
 
 ---
 

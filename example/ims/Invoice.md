@@ -37,7 +37,76 @@ Invoice model
 
 ## Relations
 
-![er](Invoice.svg)
+```mermaid
+erDiagram
+
+"InvoiceLineItem" }o--|| "Invoice" : "Source: Invoice"
+"Invoice" }o--o| "Contact" : "ForeignKeyType: Contact"
+"Invoice" }o--o| "Shipment" : "Source: Shipment"
+
+"Invoice" {
+  uuid id
+  boolean active
+  datetime createdAt
+  string invoiceNumber
+  uuid customerID FK
+  Contact customer FK
+  uuid shipmentID FK
+  Shipment shipment FK
+  datetime date
+  string quickbookInvoiceId
+  enum invoiceStatus
+  datetime pushedToQBAt
+  datetime updatedAt
+}
+"InvoiceLineItem" {
+  uuid id
+  boolean active
+  datetime createdAt
+  uuid invoiceID FK
+  Invoice invoice FK
+  float unitPrice
+  datetime updatedAt
+  uuid variantID FK
+  ProductVariant variant FK
+  float quantity
+  boolean taxable
+}
+"Contact" {
+  uuid id
+  boolean active
+  datetime createdAt
+  string name
+  string email
+  string phone
+  string address1
+  string address2
+  string city
+  string province
+  string country
+  datetime updatedAt
+  string zip
+  string countryCode
+  string company
+  string provinceCode
+  string quickBookCustomerId
+  float openBalance
+  float creditLimit
+  float availableCredit
+}
+"Shipment" {
+  uuid id
+  boolean active
+  datetime createdAt
+  string shipmentNumber
+  uuid customerID FK
+  Contact customer FK
+  uuid salesOrderID FK
+  SalesOrder salesOrder FK
+  datetime date
+  datetime updatedAt
+}
+```
 
 ---
 

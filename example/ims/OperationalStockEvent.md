@@ -46,7 +46,123 @@ OperationalStockEvent model. Holds the stock event data that can change.
 
 ## Relations
 
-![er](OperationalStockEvent.svg)
+```mermaid
+erDiagram
+
+"FinancialStockEvent" }o--|| "OperationalStockEvent" : "ForeignKeyType: OperationalStockEvent"
+"OperationalStockEvent" }o--|| "ProductVariant" : "Source: ProductVariant"
+"OperationalStockEvent" }o--o| "ReceiptLineItem" : "ForeignKeyType: ReceiptLineItem"
+"OperationalStockEvent" }o--o| "ShipmentLineItem" : "ForeignKeyType: ShipmentLineItem"
+
+"OperationalStockEvent" {
+  uuid id
+  boolean active
+  datetime createdAt
+  datetime updatedAt
+  uuid variantID FK
+  ProductVariant variant FK
+  float incrementalQuantity
+  float unitCost
+  float transactionTotalCost
+  boolean isOnHold
+  float onHoldQuantity
+  float availableQuantity
+  float inStockQuantity
+  float totalCost
+  float averageCost
+  uuid receiptLineItemID FK
+  ReceiptLineItem receiptLineItem FK
+  uuid shipmentLineItemID FK
+  ShipmentLineItem shipmentLineItem FK
+  integer sequence
+  boolean copiedToFinancialLedger
+}
+"FinancialStockEvent" {
+  uuid id
+  boolean active
+  datetime createdAt
+  datetime updatedAt
+  uuid variantID FK
+  ProductVariant variant FK
+  float incrementalQuantity
+  float unitCost
+  float transactionTotalCost
+  boolean isOnHold
+  float onHoldQuantity
+  float availableQuantity
+  float inStockQuantity
+  float totalCost
+  float averageCost
+  uuid receiptLineItemID FK
+  ReceiptLineItem receiptLineItem FK
+  uuid shipmentLineItemID FK
+  ShipmentLineItem shipmentLineItem FK
+  uuid operationalStockEventID FK
+  OperationalStockEvent operationalStockEvent FK
+}
+"ProductVariant" {
+  uuid id
+  boolean active
+  datetime createdAt
+  string shopifyID
+  boolean availableForSale
+  string barcode
+  string sku
+  string displayName
+  uuid imageID FK
+  ProductImage image FK
+  integer inventoryQuantity
+  float price
+  uuid inventoryItemID FK
+  InventoryItem inventoryItem FK
+  uuid productID FK
+  Product product FK
+  boolean taxable
+  enum inventoryType
+  string quickbookItemId
+  string quickbookSyncToken
+  string quickbookItemName
+  datetime updatedAt
+}
+"ReceiptLineItem" {
+  uuid id
+  boolean active
+  datetime createdAt
+  uuid receiptID FK
+  Receipt receipt FK
+  datetime updatedAt
+  uuid variantID FK
+  ProductVariant variant FK
+  float quantity
+  float subtotalUnitCost
+  float subtotalCost
+  float cubicMeters
+  Array__nested__ costPools
+  uuid costPools.costPoolID FK
+  CostPool costPools.costPool FK
+  float totalCostPoolAllocation
+  float unitCostPoolAllocation
+  float totalUnitCost
+  enum receiptStatus
+  datetime receivedAt
+}
+"ShipmentLineItem" {
+  uuid id
+  boolean active
+  datetime createdAt
+  uuid shipmentID FK
+  Shipment shipment FK
+  float unitCost
+  float unitPrice
+  datetime updatedAt
+  uuid variantID FK
+  ProductVariant variant FK
+  float quantity
+  boolean taxable
+  enum shipmentStatus
+  datetime shippedAt
+}
+```
 
 ---
 

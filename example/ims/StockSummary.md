@@ -29,7 +29,49 @@ StockSummary model
 
 ## Relations
 
-![er](StockSummary.svg)
+```mermaid
+erDiagram
+
+"StockSummary" }o--|| "ProductVariant" : "Source: ProductVariant"
+
+"StockSummary" {
+  uuid id
+  boolean active
+  datetime createdAt
+  datetime updatedAt
+  uuid variantID FK
+  ProductVariant variant FK
+  float onHoldQuantity
+  float availableQuantity
+  float inStockQuantity
+  float totalCost
+  float averageCost
+}
+"ProductVariant" {
+  uuid id
+  boolean active
+  datetime createdAt
+  string shopifyID
+  boolean availableForSale
+  string barcode
+  string sku
+  string displayName
+  uuid imageID FK
+  ProductImage image FK
+  integer inventoryQuantity
+  float price
+  uuid inventoryItemID FK
+  InventoryItem inventoryItem FK
+  uuid productID FK
+  Product product FK
+  boolean taxable
+  enum inventoryType
+  string quickbookItemId
+  string quickbookSyncToken
+  string quickbookItemName
+  datetime updatedAt
+}
+```
 
 ---
 

@@ -35,7 +35,97 @@ Receipt model
 
 ## Relations
 
-![er](Receipt.svg)
+```mermaid
+erDiagram
+
+"ReceiptLineItem" }o--|| "Receipt" : "Source: Receipt"
+"Receipt" }o--o| "Contact" : "ForeignKeyType: Contact"
+"Receipt" }o--o| "PurchaseOrder" : "Source: PurchaseOrder"
+
+"Receipt" {
+  uuid id
+  boolean active
+  datetime createdAt
+  string receiptNumber
+  uuid supplierID FK
+  Contact supplier FK
+  uuid purchaseOrderID FK
+  PurchaseOrder purchaseOrder FK
+  datetime date
+  enum receiptStatus
+  datetime updatedAt
+}
+"ReceiptLineItem" {
+  uuid id
+  boolean active
+  datetime createdAt
+  uuid receiptID FK
+  Receipt receipt FK
+  datetime updatedAt
+  uuid variantID FK
+  ProductVariant variant FK
+  float quantity
+  float subtotalUnitCost
+  float subtotalCost
+  float cubicMeters
+  Array__nested__ costPools
+  uuid costPools.costPoolID FK
+  CostPool costPools.costPool FK
+  float totalCostPoolAllocation
+  float unitCostPoolAllocation
+  float totalUnitCost
+  enum receiptStatus
+  datetime receivedAt
+}
+"Contact" {
+  uuid id
+  boolean active
+  datetime createdAt
+  string name
+  string email
+  string phone
+  string address1
+  string address2
+  string city
+  string province
+  string country
+  datetime updatedAt
+  string zip
+  string countryCode
+  string company
+  string provinceCode
+  string quickBookCustomerId
+  float openBalance
+  float creditLimit
+  float availableCredit
+}
+"PurchaseOrder" {
+  uuid id
+  boolean active
+  datetime createdAt
+  string documentNumber
+  uuid supplierID FK
+  Contact supplier FK
+  datetime date
+  uuid billToID FK
+  Contact billTo FK
+  uuid shipToID FK
+  Contact shipTo FK
+  string shipVia
+  string trackingNumber
+  string shippingContactPhone
+  string shippingContactName
+  datetime exFactoryDate
+  datetime dueDate
+  string terms
+  string shippingInstructions
+  string notes
+  string approvedBy
+  string pulledBy
+  string receivedBy
+  datetime updatedAt
+}
+```
 
 ---
 
