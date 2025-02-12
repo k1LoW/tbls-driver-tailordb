@@ -1,1 +1,4 @@
 tbls-driver-tailordb
+coverage.out
+testdata/manifests/typecue/cue.mod/pkg/
+

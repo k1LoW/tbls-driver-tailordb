@@ -5,6 +5,7 @@ default: test
 ci: depsdev test
 
 test:
+	cd testdata/manifests/typecue && tailorctl manifest tidy
 	go test ./... -coverprofile=coverage.out -covermode=count
 
 lint:
@@ -13,6 +14,7 @@ lint:
 depsdev:
 	go install github.com/Songmu/ghch/cmd/ghch@latest
 	go install github.com/Songmu/gocredits/cmd/gocredits@latest
+	brew install tailor-platform/tap/tailorctl
 
 prerelease:
 	git pull origin main --tag

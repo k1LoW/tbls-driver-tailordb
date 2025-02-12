@@ -6,6 +6,7 @@ require (
 	cuelang.org/go v0.12.0
 	github.com/k1LoW/tbls v1.81.0
 	github.com/spf13/cobra v1.8.1
+	github.com/tenntenn/golden v0.5.4
 )
 
 require (
@@ -13,8 +14,11 @@ require (
 	github.com/cockroachdb/apd/v3 v3.2.1 // indirect
 	github.com/emicklei/proto v1.13.4 // indirect
 	github.com/goccy/go-yaml v1.15.13 // indirect
+	github.com/google/go-cmp v0.6.0 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
+	github.com/josharian/mapfs v0.0.0-20210615234106-095c008854e6 // indirect
+	github.com/josharian/txtarfs v0.0.0-20210615234325-77aca6df5bca // indirect
 	github.com/k1LoW/errors v1.0.0 // indirect
 	github.com/minio/pkg v1.7.5 // indirect
 	github.com/mitchellh/go-wordwrap v1.0.1 // indirect
@@ -29,5 +33,6 @@ require (
 	golang.org/x/net v0.34.0 // indirect
 	golang.org/x/oauth2 v0.25.0 // indirect
 	golang.org/x/text v0.21.0 // indirect
+	golang.org/x/tools v0.29.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )

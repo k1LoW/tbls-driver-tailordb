@@ -21,12 +21,16 @@ jobs:
         with:
           go-version-file: go.mod
 
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
       - name: Run lint
         uses: reviewdog/action-golangci-lint@v2
         with:
           fail_on_error: true
           go_version_file: go.mod
-          golangci_lint_flags: --timeout=5m        
+          golangci_lint_flags: --timeout=5m
 
       - name: Run tests
         run: make ci
