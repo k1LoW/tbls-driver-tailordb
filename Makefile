@@ -5,6 +5,7 @@ default: test
 ci: depsdev test
 
 test:
+	rm -rf testdata/manifests/typecue/cue.mod/pkg/github.com/tailor-platform
 	cd testdata/manifests/typecue && tailorctl manifest tidy
 	go test ./... -coverprofile=coverage.out -covermode=count
 
