@@ -10,22 +10,22 @@ InvoiceLineItem model
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false |  |  |  |
 | active | boolean |  | true |  |  | active |
+| createdAt | datetime |  | true |  |  | createdAt |
 | invoiceID | uuid |  | false |  | [Invoice](Invoice.md) | Invoice ID |
 | invoice | Invoice |  | true |  | [Invoice](Invoice.md) | Invoice model. Invoice and this model is n:1. |
 | unitPrice | float |  | false |  |  | unit cost |
 | updatedAt | datetime |  | true |  |  | updatedAt |
-| quantity | float |  | false |  |  | quantity |
-| createdAt | datetime |  | true |  |  | createdAt |
 | variantID | uuid |  | true |  | [ProductVariant](ProductVariant.md) | Variant ID |
 | variant | ProductVariant |  | true |  | [ProductVariant](ProductVariant.md) | Variant |
+| quantity | float |  | false |  |  | quantity |
 | taxable | boolean |  | true |  |  | taxable |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for updatedAt | Index: true |
 | Index for createdAt | Index: true |
+| Index for updatedAt | Index: true |
 
 ## Relations
 

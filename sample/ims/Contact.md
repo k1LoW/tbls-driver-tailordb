@@ -8,26 +8,26 @@ Contact model
 
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
-| id | uuid |  | false | [Invoice](Invoice.md) [PurchaseOrder](PurchaseOrder.md) [Receipt](Receipt.md) [SalesOrder](SalesOrder.md) [Shipment](Shipment.md) |  |  |
+| id | uuid |  | false | [Invoice](Invoice.md) [Receipt](Receipt.md) [SalesOrder](SalesOrder.md) [Shipment](Shipment.md) [PurchaseOrder](PurchaseOrder.md) |  |  |
+| active | boolean |  | true |  |  | active |
+| createdAt | datetime |  | true |  |  | createdAt |
+| name | string |  | false |  |  | name |
+| email | string |  | false |  |  | email |
 | phone | string |  | true |  |  | phone |
 | address1 | string |  | true |  |  | address1 |
+| address2 | string |  | true |  |  | address2 |
 | city | string |  | true |  |  | city |
 | province | string |  | true |  |  | province |
-| createdAt | datetime |  | true |  |  | createdAt |
-| email | string |  | false |  |  | email |
-| name | string |  | false |  |  | name |
-| quickBookCustomerId | string |  | true |  |  | the reference id of the customer in quickbook |
 | country | string |  | true |  |  | country |
-| countryCode | string |  | true |  |  | countryCode |
-| provinceCode | string |  | true |  |  | province_code |
-| openBalance | float |  | true |  |  | The amount of open balance of the customer. |
-| creditLimit | float |  | true |  |  | The amount of credit limit of the customer. |
-| active | boolean |  | true |  |  | active |
-| address2 | string |  | true |  |  | address2 |
-| company | string |  | true |  |  | company |
-| availableCredit | float |  | true |  |  | The amount of credit available to the customer. |
 | updatedAt | datetime |  | true |  |  | updatedAt |
 | zip | string |  | true |  |  | zip |
+| countryCode | string |  | true |  |  | countryCode |
+| company | string |  | true |  |  | company |
+| provinceCode | string |  | true |  |  | province_code |
+| quickBookCustomerId | string |  | true |  |  | the reference id of the customer in quickbook |
+| openBalance | float |  | true |  |  | The amount of open balance of the customer. |
+| creditLimit | float |  | true |  |  | The amount of credit limit of the customer. |
+| availableCredit | float |  | true |  |  | The amount of credit available to the customer. |
 
 ## Indexes
 

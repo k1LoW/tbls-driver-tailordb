@@ -10,31 +10,31 @@ ReceiptLineItem model
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [FinancialStockEvent](FinancialStockEvent.md) [OperationalStockEvent](OperationalStockEvent.md) |  |  |
 | active | boolean |  | true |  |  | active |
+| createdAt | datetime |  | true |  |  | createdAt |
 | receiptID | uuid |  | false |  | [Receipt](Receipt.md) | receipt ID |
+| receipt | Receipt |  | true |  | [Receipt](Receipt.md) | Receipt model. Receipt and this model is n:1. |
+| updatedAt | datetime |  | true |  |  | updatedAt |
+| variantID | uuid |  | false |  | [ProductVariant](ProductVariant.md) | Variant ID |
 | variant | ProductVariant |  | true |  | [ProductVariant](ProductVariant.md) | Variant |
+| quantity | float |  | false |  |  | quantity |
+| subtotalUnitCost | float |  | false |  |  | subtotalUnitCost |
+| subtotalCost | float |  | true |  |  | subtotalCost |
+| cubicMeters | float |  | true |  |  | cubicMeters |
 | costPools | Array\<nested\> |  | true |  |  | CostPool model. CostPool and this model is n:n. |
 | costPools.costPoolID | uuid |  | true |  | [CostPool](CostPool.md) | CostPool ID |
 | costPools.costPool | CostPool |  | true |  | [CostPool](CostPool.md) | CostPool model. CostPool and this model is n:n. |
-| unitCostPoolAllocation | float |  | true |  |  | unitCostPoolAllocation |
-| receivedAt | datetime |  | true |  |  | shipped at |
-| updatedAt | datetime |  | true |  |  | updatedAt |
-| subtotalUnitCost | float |  | false |  |  | subtotalUnitCost |
-| receipt | Receipt |  | true |  | [Receipt](Receipt.md) | Receipt model. Receipt and this model is n:1. |
-| variantID | uuid |  | false |  | [ProductVariant](ProductVariant.md) | Variant ID |
-| subtotalCost | float |  | true |  |  | subtotalCost |
 | totalCostPoolAllocation | float |  | true |  |  | totalCostPoolAllocation |
+| unitCostPoolAllocation | float |  | true |  |  | unitCostPoolAllocation |
 | totalUnitCost | float |  | true |  |  | totalUnitCost |
 | receiptStatus | enum |  | true |  |  | inventoryType |
-| createdAt | datetime |  | true |  |  | createdAt |
-| quantity | float |  | false |  |  | quantity |
-| cubicMeters | float |  | true |  |  | cubicMeters |
+| receivedAt | datetime |  | true |  |  | shipped at |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for updatedAt | Index: true |
 | Index for createdAt | Index: true |
+| Index for updatedAt | Index: true |
 
 ## Relations
 

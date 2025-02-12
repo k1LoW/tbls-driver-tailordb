@@ -11,13 +11,13 @@ StockSummary model for the financial ledger
 | id | uuid |  | false |  |  |  |
 | active | boolean |  | true |  |  | active |
 | createdAt | datetime |  | true |  |  | createdAt |
-| onHoldQuantity | float |  | false |  |  | onHoldQuantity |
-| availableQuantity | float |  | false |  |  | availableQuantity |
-| totalCost | float |  | false |  |  | totalCost |
 | updatedAt | datetime |  | true |  |  | updatedAt |
 | variantID | uuid |  | false |  | [ProductVariant](ProductVariant.md) | Variant ID |
 | variant | ProductVariant |  | true |  | [ProductVariant](ProductVariant.md) | Variant |
+| onHoldQuantity | float |  | false |  |  | onHoldQuantity |
+| availableQuantity | float |  | false |  |  | availableQuantity |
 | inStockQuantity | float |  | true |  |  | DO NOT UPDATE FROM THE FRONT END. The quantity of the product in stock. |
+| totalCost | float |  | false |  |  | totalCost |
 | averageCost | float |  | true |  |  | averageCost |
 
 ## Indexes

@@ -9,21 +9,21 @@ SalesOrder model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [SalesOrderLineItem](SalesOrderLineItem.md) [Shipment](Shipment.md) |  |  |
-| customer | Contact |  | true |  | [Contact](Contact.md) | Customer contact |
-| createdAt | datetime |  | true |  |  | createdAt |
-| shippedAt | datetime |  | true |  |  | shipped at |
+| active | boolean |  | true |  |  | active |
+| orderNumber | integer |  | true |  |  | Order number |
 | customerID | uuid |  | true |  | [Contact](Contact.md) | Contact model. Contact and this model is n:1 |
+| customer | Contact |  | true |  | [Contact](Contact.md) | Customer contact |
+| shopifyID | string |  | true |  |  | Shopify order ID |
+| cancelReason | string |  | true |  |  | Reason for cancellation |
+| cancelledAt | datetime |  | true |  |  | Cancellation date |
 | currency | string |  | true |  |  | Currency |
 | currentSubtotalPrice | string |  | true |  |  | Current subtotal price |
-| customerEmail | string |  | true |  |  | Customer email |
-| active | boolean |  | true |  |  | active |
-| cancelledAt | datetime |  | true |  |  | Cancellation date |
 | customerName | string |  | true |  |  | Customer name |
-| updatedAt | datetime |  | true |  |  | updatedAt |
-| orderNumber | integer |  | true |  |  | Order number |
-| cancelReason | string |  | true |  |  | Reason for cancellation |
+| customerEmail | string |  | true |  |  | Customer email |
+| createdAt | datetime |  | true |  |  | createdAt |
 | shipStationOrderStatus | enum |  | true |  |  | inventoryType |
-| shopifyID | string |  | true |  |  | Shopify order ID |
+| shippedAt | datetime |  | true |  |  | shipped at |
+| updatedAt | datetime |  | true |  |  | updatedAt |
 
 ## Constraints
 

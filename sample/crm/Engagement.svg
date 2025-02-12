@@ -21,23 +21,23 @@
 <text text-anchor="start" x="485.2" y="-243.2" font-family="Arial" font-size="14.00">id </text>
 <text text-anchor="start" x="499.98" y="-243.2" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="478.2,-200.2 478.2,-231 710.53,-231 710.53,-200.2 478.2,-200.2"/>
-<text text-anchor="start" x="485.2" y="-212.4" font-family="Arial" font-size="14.00">userId </text>
-<text text-anchor="start" x="528" y="-212.4" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<text text-anchor="start" x="485.2" y="-212.4" font-family="Arial" font-size="14.00">active </text>
+<text text-anchor="start" x="525.66" y="-212.4" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
 <polygon fill="none" stroke="black" points="478.2,-169.4 478.2,-200.2 710.53,-200.2 710.53,-169.4 478.2,-169.4"/>
-<text text-anchor="start" x="485.2" y="-181.6" font-family="Arial" font-size="14.00">type </text>
-<text text-anchor="start" x="515.55" y="-181.6" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="485.2" y="-181.6" font-family="Arial" font-size="14.00">activityType </text>
+<text text-anchor="start" x="563" y="-181.6" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="478.2,-138.6 478.2,-169.4 710.53,-169.4 710.53,-138.6 478.2,-138.6"/>
-<text text-anchor="start" x="485.2" y="-150.8" font-family="Arial" font-size="14.00">createdAt </text>
-<text text-anchor="start" x="549.01" y="-150.8" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="485.2" y="-150.8" font-family="Arial" font-size="14.00">userId </text>
+<text text-anchor="start" x="528" y="-150.8" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="478.2,-107.8 478.2,-138.6 710.53,-138.6 710.53,-107.8 478.2,-107.8"/>
-<text text-anchor="start" x="485.2" y="-120" font-family="Arial" font-size="14.00">updatedAt </text>
-<text text-anchor="start" x="552.92" y="-120" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="485.2" y="-120" font-family="Arial" font-size="14.00">type </text>
+<text text-anchor="start" x="515.55" y="-120" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="478.2,-77 478.2,-107.8 710.53,-107.8 710.53,-77 478.2,-77"/>
-<text text-anchor="start" x="485.2" y="-89.2" font-family="Arial" font-size="14.00">active </text>
-<text text-anchor="start" x="525.66" y="-89.2" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
+<text text-anchor="start" x="485.2" y="-89.2" font-family="Arial" font-size="14.00">createdAt </text>
+<text text-anchor="start" x="549.01" y="-89.2" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 <polygon fill="none" stroke="black" points="478.2,-46.2 478.2,-77 710.53,-77 710.53,-46.2 478.2,-46.2"/>
-<text text-anchor="start" x="485.2" y="-58.4" font-family="Arial" font-size="14.00">activityType </text>
-<text text-anchor="start" x="563" y="-58.4" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="485.2" y="-58.4" font-family="Arial" font-size="14.00">updatedAt </text>
+<text text-anchor="start" x="552.92" y="-58.4" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 <polygon fill="none" stroke="black" stroke-width="3" points="476.7,-44.7 476.7,-298.9 712.03,-298.9 712.03,-44.7 476.7,-44.7"/>
 </g>
 <!-- EngagementCompany -->
@@ -89,30 +89,30 @@
 <text text-anchor="start" x="457.2" y="-619.8" font-family="Arial" font-size="14.00">id </text>
 <text text-anchor="start" x="471.99" y="-619.8" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="450.2,-576.8 450.2,-607.6 738.52,-607.6 738.52,-576.8 450.2,-576.8"/>
-<text text-anchor="start" x="457.2" y="-589" font-family="Arial" font-size="14.00">createdAt </text>
-<text text-anchor="start" x="521.02" y="-589" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="457.2" y="-589" font-family="Arial" font-size="14.00">contactId </text>
+<text text-anchor="start" x="517.91" y="-589" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="450.2,-546 450.2,-576.8 738.52,-576.8 738.52,-546 450.2,-546"/>
-<text text-anchor="start" x="457.2" y="-558.2" font-family="Arial" font-size="14.00">updatedAt </text>
-<text text-anchor="start" x="524.93" y="-558.2" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="457.2" y="-558.2" font-family="Arial" font-size="14.00">contact </text>
+<text text-anchor="start" x="506.23" y="-558.2" font-family="Arial" font-size="14.00" fill="#666666">[Contact]</text>
 <polygon fill="none" stroke="black" points="450.2,-515.2 450.2,-546 738.52,-546 738.52,-515.2 450.2,-515.2"/>
-<text text-anchor="start" x="457.2" y="-527.4" font-family="Arial" font-size="14.00">contactId </text>
-<text text-anchor="start" x="517.91" y="-527.4" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<text text-anchor="start" x="457.2" y="-527.4" font-family="Arial" font-size="14.00">engagementId </text>
+<text text-anchor="start" x="550.61" y="-527.4" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="450.2,-484.4 450.2,-515.2 738.52,-515.2 738.52,-484.4 450.2,-484.4"/>
-<text text-anchor="start" x="457.2" y="-496.6" font-family="Arial" font-size="14.00">contact </text>
-<text text-anchor="start" x="506.23" y="-496.6" font-family="Arial" font-size="14.00" fill="#666666">[Contact]</text>
+<text text-anchor="start" x="457.2" y="-496.6" font-family="Arial" font-size="14.00">engagement </text>
+<text text-anchor="start" x="538.94" y="-496.6" font-family="Arial" font-size="14.00" fill="#666666">[Engagement]</text>
 <polygon fill="none" stroke="black" points="450.2,-453.6 450.2,-484.4 738.52,-484.4 738.52,-453.6 450.2,-453.6"/>
-<text text-anchor="start" x="457.2" y="-465.8" font-family="Arial" font-size="14.00">engagementId </text>
-<text text-anchor="start" x="550.61" y="-465.8" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<text text-anchor="start" x="457.2" y="-465.8" font-family="Arial" font-size="14.00">createdAt </text>
+<text text-anchor="start" x="521.02" y="-465.8" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 <polygon fill="none" stroke="black" points="450.2,-422.8 450.2,-453.6 738.52,-453.6 738.52,-422.8 450.2,-422.8"/>
-<text text-anchor="start" x="457.2" y="-435" font-family="Arial" font-size="14.00">engagement </text>
-<text text-anchor="start" x="538.94" y="-435" font-family="Arial" font-size="14.00" fill="#666666">[Engagement]</text>
+<text text-anchor="start" x="457.2" y="-435" font-family="Arial" font-size="14.00">updatedAt </text>
+<text text-anchor="start" x="524.93" y="-435" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 </g>
 <!-- EngagementContact&#45;&gt;Engagement -->
 <g id="edge2" class="edge">
 <title>EngagementContact:engagementId&#45;&gt;Engagement:id</title>
-<path fill="none" stroke="black" d="M749.36,-465.5C785.1,-437.18 757.68,-246.4 711.53,-246.4"/>
-<polygon fill="black" stroke="black" points="749.26,-465.54 738.33,-464.65 744.23,-467.33 740.15,-468.78 740.15,-468.78 740.15,-468.78 744.23,-467.33 741.34,-473.13 749.26,-465.54"/>
-<text text-anchor="start" x="709.11" y="-453" font-family="Arial" font-size="10.00">ForeignKeyType: Engagement</text>
+<path fill="none" stroke="black" d="M749.43,-527.97C799.7,-499.32 771.39,-246.4 711.53,-246.4"/>
+<polygon fill="black" stroke="black" points="749.51,-527.95 738.69,-526.16 744.35,-529.32 740.17,-530.43 740.17,-530.43 740.17,-530.43 744.35,-529.32 741,-534.86 749.51,-527.95"/>
+<text text-anchor="start" x="709.11" y="-514.6" font-family="Arial" font-size="10.00">ForeignKeyType: Engagement</text>
 </g>
 <!-- EngagementDeal -->
 <g id="node4" class="node">

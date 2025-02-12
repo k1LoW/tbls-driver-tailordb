@@ -21,19 +21,19 @@ TeamUser model
 
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
-| teamUserCompositeKey | UNIQUE | {"teamUserCompositeKey":{"FieldNames":["teamId","userId"],"Unique":true}} |
 | ForeignKey for team to Team | FOREIGN KEY | ForeignKeyType: Team |
 | ForeignKey for user to User | FOREIGN KEY | ForeignKeyType: User |
+| teamUserCompositeKey | UNIQUE | {"teamUserCompositeKey":{"FieldNames":["teamId","userId"],"Unique":true}} |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
-| teamUserCompositeKey | {"teamUserCompositeKey":{"FieldNames":["teamId","userId"],"Unique":true}} |
-| Index for teamId | Index: true |
-| Index for userId | Index: true |
 | Index for createdAt | Index: true |
+| Index for teamId | Index: true |
 | Index for updatedAt | Index: true |
+| Index for userId | Index: true |
+| teamUserCompositeKey | {"teamUserCompositeKey":{"FieldNames":["teamId","userId"],"Unique":true}} |
 
 ## Relations
 

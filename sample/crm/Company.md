@@ -27,10 +27,10 @@ Company Model
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for name | Index: true |
-| Unique for name | Unique: true |
 | Index for createdAt | Index: true |
+| Index for name | Index: true |
 | Index for updatedAt | Index: true |
+| Unique for name | Unique: true |
 
 ## Relations
 

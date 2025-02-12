@@ -25,11 +25,11 @@ User of the system
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for name | Index: true |
-| Index for email | Index: true |
-| Unique for email | Unique: true |
 | Index for createdAt | Index: true |
+| Index for email | Index: true |
+| Index for name | Index: true |
 | Index for updatedAt | Index: true |
+| Unique for email | Unique: true |
 
 ## Relations
 

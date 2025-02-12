@@ -20,17 +20,17 @@ EngagementDeal model
 
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
-| engagementDealCompositeKey | UNIQUE | {"engagementDealCompositeKey":{"FieldNames":["dealId","engagementId"],"Unique":true}} |
 | ForeignKey for deal to Deal | FOREIGN KEY | ForeignKeyType: Deal |
 | ForeignKey for engagement to Engagement | FOREIGN KEY | ForeignKeyType: Engagement |
+| engagementDealCompositeKey | UNIQUE | {"engagementDealCompositeKey":{"FieldNames":["dealId","engagementId"],"Unique":true}} |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
-| engagementDealCompositeKey | {"engagementDealCompositeKey":{"FieldNames":["dealId","engagementId"],"Unique":true}} |
 | Index for createdAt | Index: true |
 | Index for updatedAt | Index: true |
+| engagementDealCompositeKey | {"engagementDealCompositeKey":{"FieldNames":["dealId","engagementId"],"Unique":true}} |
 
 ## Relations
 

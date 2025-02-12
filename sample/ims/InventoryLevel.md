@@ -10,18 +10,18 @@ Inventory Level of an inventory item
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false |  |  |  |
 | active | boolean |  | true |  |  | active |
-| available | integer |  | true |  |  | Amount of the inventory item available |
-| qualityControl | integer |  | true |  |  | Amount of the inventory item in quality control |
-| inventoryItemID | uuid |  | true |  | [InventoryItem](InventoryItem.md) | Inventory Item ID |
-| onHand | integer |  | true |  |  | Amount of the inventory item on hand |
 | createdAt | datetime |  | true |  |  | createdAt |
+| locationID | uuid |  | true |  | [Location](Location.md) | Inventory Location ID |
 | location | Location |  | true |  | [Location](Location.md) | Inventory Location |
+| inventoryItemID | uuid |  | true |  | [InventoryItem](InventoryItem.md) | Inventory Item ID |
+| inventoryItem | InventoryItem |  | true |  | [InventoryItem](InventoryItem.md) | Inventory Item |
+| available | integer |  | true |  |  | Amount of the inventory item available |
 | committed | integer |  | true |  |  | Amount of the inventory item reserved |
 | reserved | integer |  | true |  |  | Amount of the inventory item reserved |
-| safetyStock | integer |  | true |  |  | Amount of the inventory item safety stock |
-| locationID | uuid |  | true |  | [Location](Location.md) | Inventory Location ID |
-| inventoryItem | InventoryItem |  | true |  | [InventoryItem](InventoryItem.md) | Inventory Item |
 | damaged | integer |  | true |  |  | Amount of the inventory item damaged |
+| safetyStock | integer |  | true |  |  | Amount of the inventory item safety stock |
+| qualityControl | integer |  | true |  |  | Amount of the inventory item in quality control |
+| onHand | integer |  | true |  |  | Amount of the inventory item on hand |
 | incoming | integer |  | true |  |  | Amount of the inventory item incoming |
 | updatedAt | datetime |  | true |  |  | updatedAt |
 
