@@ -20,17 +20,17 @@ EngagementCompany model
 
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
-| engagementCompanyCompositeKey | UNIQUE | {"engagementCompanyCompositeKey":{"FieldNames":["companyId","engagementId"],"Unique":true}} |
 | ForeignKey for company to Company | FOREIGN KEY | ForeignKeyType: Company |
 | ForeignKey for engagement to Engagement | FOREIGN KEY | ForeignKeyType: Engagement |
+| engagementCompanyCompositeKey | UNIQUE | {"engagementCompanyCompositeKey":{"FieldNames":["companyId","engagementId"],"Unique":true}} |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
-| engagementCompanyCompositeKey | {"engagementCompanyCompositeKey":{"FieldNames":["companyId","engagementId"],"Unique":true}} |
 | Index for createdAt | Index: true |
 | Index for updatedAt | Index: true |
+| engagementCompanyCompositeKey | {"engagementCompanyCompositeKey":{"FieldNames":["companyId","engagementId"],"Unique":true}} |
 
 ## Relations
 

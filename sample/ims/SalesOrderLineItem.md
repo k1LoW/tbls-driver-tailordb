@@ -9,31 +9,31 @@ SalesOrderLineItem model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false |  |  |  |
-| shopifyID | string |  | true |  |  | Shopify product ID |
-| updatedAt | datetime |  | true |  |  | updatedAt |
-| fulfillmentStatus | enum |  | true |  |  | fulfillmentStatus |
 | active | boolean |  | true |  |  | active |
-| unitPrice | float |  | true |  |  | unitPrice |
-| unitCompareAtPrice | float |  | true |  |  | unitCompareAtPrice |
-| name | string |  | true |  |  | name |
+| createdAt | datetime |  | true |  |  | createdAt |
+| shopifyID | string |  | true |  |  | Shopify product ID |
 | salesOrderID | uuid |  | true |  | [SalesOrder](SalesOrder.md) | salesOrder ID |
+| salesOrder | SalesOrder |  | true |  | [SalesOrder](SalesOrder.md) | SalesOrder model. SalesOrder and this model is n:1. |
+| updatedAt | datetime |  | true |  |  | updatedAt |
 | variantID | uuid |  | true |  | [ProductVariant](ProductVariant.md) | Variant ID |
+| variant | ProductVariant |  | true |  | [ProductVariant](ProductVariant.md) | Variant |
 | quantity | float |  | true |  |  | quantity |
+| unitPrice | float |  | true |  |  | unitPrice |
+| subtotalPrice | float |  | true |  |  | subtotalCost |
+| unitCompareAtPrice | float |  | true |  |  | unitCompareAtPrice |
 | discount | float |  | true |  |  | discount |
+| name | string |  | true |  |  | name |
 | sku | string |  | true |  |  | sku |
 | requiresShipping | boolean |  | true |  |  | requiresShipping |
-| createdAt | datetime |  | true |  |  | createdAt |
-| salesOrder | SalesOrder |  | true |  | [SalesOrder](SalesOrder.md) | SalesOrder model. SalesOrder and this model is n:1. |
-| variant | ProductVariant |  | true |  | [ProductVariant](ProductVariant.md) | Variant |
-| subtotalPrice | float |  | true |  |  | subtotalCost |
 | taxable | boolean |  | true |  |  | taxable |
+| fulfillmentStatus | enum |  | true |  |  | fulfillmentStatus |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
-| Index for updatedAt | Index: true |
 | Index for createdAt | Index: true |
+| Index for updatedAt | Index: true |
 
 ## Relations
 

@@ -9,16 +9,16 @@ DealStage model
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid |  | false | [Deal](Deal.md) |  |  |
-| label | string |  | false |  |  | Label |
-| name | string |  | false |  |  | Name |
-| type | string |  | true |  |  | Stage type |
-| probability | float |  | false |  |  | Default probability |
-| closedLost | boolean |  | false |  |  | Closed Lost? |
 | dealPipelineId | uuid |  | false |  | [DealPipeline](DealPipeline.md) | DealPipeline ID |
 | dealPipeline | DealPipeline |  | true |  | [DealPipeline](DealPipeline.md) | Link to the DealPipeline |
 | displayOrder | integer |  | false |  |  | Display Order |
 | description | string |  | true |  |  | Description |
+| label | string |  | false |  |  | Label |
+| name | string |  | false |  |  | Name |
+| type | string |  | true |  |  | Stage type |
+| probability | float |  | false |  |  | Default probability |
 | closedWon | boolean |  | false |  |  | Closed Won? |
+| closedLost | boolean |  | false |  |  | Closed Lost? |
 | createdAt | datetime |  | true |  |  | createdAt |
 | updatedAt | datetime |  | true |  |  | updatedAt |
 

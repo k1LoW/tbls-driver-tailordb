@@ -3,6 +3,7 @@ package cue
 import (
 	"encoding/json"
 	"fmt"
+	"sort"
 
 	"cuelang.org/go/cue"
 	"github.com/k1LoW/tbls/schema"
@@ -56,6 +57,7 @@ func Analyze(v cue.Value) (_ *schema.SchemaJSON, err error) {
 		if err := v.Decode(&typ); err != nil {
 			return nil, err
 		}
+
 		t := &schema.TableJSON{
 			Type: "TailorDB.Type",
 		}
@@ -103,10 +105,48 @@ func Analyze(v cue.Value) (_ *schema.SchemaJSON, err error) {
 		if err != nil {
 			return nil, err
 		}
-		t.Columns = append(t.Columns, columns...)
+		fieldsIter, err := v.LookupPath(cue.MakePath(cue.Str("Fields"))).Fields()
+		if err != nil {
+			return nil, err
+		}
+		fieldsLabels := fieldsOrder(fieldsIter)
+		for _, label := range fieldsLabels {
+			for _, c := range columns {
+				if c.Name == label {
+					t.Columns = append(t.Columns, c)
+					break
+				}
+			}
+		}
+
+		// workarounds
+		sort.Slice(t.Indexes, func(i, j int) bool {
+			if t.Indexes[i].Def == t.Indexes[j].Def {
+				return t.Indexes[i].Name < t.Indexes[j].Name
+			}
+			return t.Indexes[i].Def < t.Indexes[j].Def
+		})
+		sort.Slice(t.Constraints, func(i, j int) bool {
+			if t.Constraints[i].Def == t.Constraints[j].Def {
+				return t.Constraints[i].Name < t.Constraints[j].Name
+			}
+			return t.Constraints[i].Def < t.Constraints[j].Def
+		})
 
 		s.Tables = append(s.Tables, t)
 	}
+
+	// workarounds
+	sort.Slice(s.Relations, func(i, j int) bool {
+		if s.Relations[i].Def == s.Relations[j].Def {
+			if s.Relations[i].Table == s.Relations[j].Table {
+				return s.Relations[i].Columns[0] < s.Relations[j].Columns[0]
+			}
+			return s.Relations[i].Table < s.Relations[j].Table
+		}
+		return s.Relations[i].Def < s.Relations[j].Def
+	})
+
 	return s, nil
 }
 
@@ -116,8 +156,6 @@ func analyzeFields(s *schema.SchemaJSON, t *schema.TableJSON, fields Fields, pre
 		if prefix != "" {
 			name = fmt.Sprintf("%s.%s", prefix, name)
 		}
-		// TODO: Fix order
-		// TODO: Array field, nested field
 		c := &schema.ColumnJSON{}
 
 		c.Name = name
@@ -203,4 +241,19 @@ func analyzeFields(s *schema.SchemaJSON, t *schema.TableJSON, fields Fields, pre
 		}
 	}
 	return columns, nil
+}
+
+func fieldsOrder(fieldsIter *cue.Iterator) []string {
+	var fieldsLabels []string
+	for fieldsIter.Next() {
+		fieldsLabels = append(fieldsLabels, fieldsIter.Selector().String())
+		v := fieldsIter.Value()
+		// nested fields
+		if iter, err := v.LookupPath(cue.MakePath(cue.Str("Fields"))).Fields(); err == nil {
+			for _, label := range fieldsOrder(iter) {
+				fieldsLabels = append(fieldsLabels, fmt.Sprintf("%s.%s", fieldsIter.Selector().String(), label))
+			}
+		}
+	}
+	return fieldsLabels
 }

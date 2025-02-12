@@ -11,10 +11,10 @@ Shipment model
 | id | uuid |  | false | [Invoice](Invoice.md) [ShipmentLineItem](ShipmentLineItem.md) |  |  |
 | active | boolean |  | true |  |  | active |
 | createdAt | datetime |  | true |  |  | createdAt |
-| customerID | uuid |  | true |  | [Contact](Contact.md) | Contact ID |
-| salesOrderID | uuid |  | true |  | [SalesOrder](SalesOrder.md) | salesOrder ID |
 | shipmentNumber | string |  | true |  |  | Shipment number |
+| customerID | uuid |  | true |  | [Contact](Contact.md) | Contact ID |
 | customer | Contact |  | true |  | [Contact](Contact.md) | Contact model. Contact and this model is n:1 |
+| salesOrderID | uuid |  | true |  | [SalesOrder](SalesOrder.md) | salesOrder ID |
 | salesOrder | SalesOrder |  | true |  | [SalesOrder](SalesOrder.md) | SalesOrder model. SalesOrder and this model is n:1. |
 | date | datetime |  | true |  |  | date |
 | updatedAt | datetime |  | true |  |  | updatedAt |

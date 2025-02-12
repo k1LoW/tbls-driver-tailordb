@@ -92,23 +92,23 @@
 <text text-anchor="start" x="367.22" y="-255.6" font-family="Arial" font-size="14.00">id </text>
 <text text-anchor="start" x="382" y="-255.6" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="360.22,-212.6 360.22,-243.4 592.55,-243.4 592.55,-212.6 360.22,-212.6"/>
-<text text-anchor="start" x="367.22" y="-224.8" font-family="Arial" font-size="14.00">userId </text>
-<text text-anchor="start" x="410.02" y="-224.8" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<text text-anchor="start" x="367.22" y="-224.8" font-family="Arial" font-size="14.00">active </text>
+<text text-anchor="start" x="407.68" y="-224.8" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
 <polygon fill="none" stroke="black" points="360.22,-181.8 360.22,-212.6 592.55,-212.6 592.55,-181.8 360.22,-181.8"/>
-<text text-anchor="start" x="367.22" y="-194" font-family="Arial" font-size="14.00">type </text>
-<text text-anchor="start" x="397.57" y="-194" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="367.22" y="-194" font-family="Arial" font-size="14.00">activityType </text>
+<text text-anchor="start" x="445.02" y="-194" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="360.22,-151 360.22,-181.8 592.55,-181.8 592.55,-151 360.22,-151"/>
-<text text-anchor="start" x="367.22" y="-163.2" font-family="Arial" font-size="14.00">createdAt </text>
-<text text-anchor="start" x="431.03" y="-163.2" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="367.22" y="-163.2" font-family="Arial" font-size="14.00">userId </text>
+<text text-anchor="start" x="410.02" y="-163.2" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="360.22,-120.2 360.22,-151 592.55,-151 592.55,-120.2 360.22,-120.2"/>
-<text text-anchor="start" x="367.22" y="-132.4" font-family="Arial" font-size="14.00">updatedAt </text>
-<text text-anchor="start" x="434.94" y="-132.4" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="367.22" y="-132.4" font-family="Arial" font-size="14.00">type </text>
+<text text-anchor="start" x="397.57" y="-132.4" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="360.22,-89.4 360.22,-120.2 592.55,-120.2 592.55,-89.4 360.22,-89.4"/>
-<text text-anchor="start" x="367.22" y="-101.6" font-family="Arial" font-size="14.00">active </text>
-<text text-anchor="start" x="407.68" y="-101.6" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
+<text text-anchor="start" x="367.22" y="-101.6" font-family="Arial" font-size="14.00">createdAt </text>
+<text text-anchor="start" x="431.03" y="-101.6" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 <polygon fill="none" stroke="black" points="360.22,-58.6 360.22,-89.4 592.55,-89.4 592.55,-58.6 360.22,-58.6"/>
-<text text-anchor="start" x="367.22" y="-70.8" font-family="Arial" font-size="14.00">activityType </text>
-<text text-anchor="start" x="445.02" y="-70.8" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="367.22" y="-70.8" font-family="Arial" font-size="14.00">updatedAt </text>
+<text text-anchor="start" x="434.94" y="-70.8" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 </g>
 <!-- EngagementCompany&#45;&gt;Engagement -->
 <g id="edge2" class="edge">

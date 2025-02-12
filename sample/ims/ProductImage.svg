@@ -21,23 +21,23 @@
 <text text-anchor="start" x="196.09" y="-243.2" font-family="Arial" font-size="14.00">id </text>
 <text text-anchor="start" x="210.87" y="-243.2" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="189.09,-200.2 189.09,-231 432.42,-231 432.42,-200.2 189.09,-200.2"/>
-<text text-anchor="start" x="196.09" y="-212.4" font-family="Arial" font-size="14.00">shopifyID </text>
-<text text-anchor="start" x="258.34" y="-212.4" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="196.09" y="-212.4" font-family="Arial" font-size="14.00">active </text>
+<text text-anchor="start" x="236.55" y="-212.4" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
 <polygon fill="none" stroke="black" points="189.09,-169.4 189.09,-200.2 432.42,-200.2 432.42,-169.4 189.09,-169.4"/>
-<text text-anchor="start" x="196.09" y="-181.6" font-family="Arial" font-size="14.00">updatedAt </text>
-<text text-anchor="start" x="263.81" y="-181.6" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="196.09" y="-181.6" font-family="Arial" font-size="14.00">createdAt </text>
+<text text-anchor="start" x="259.9" y="-181.6" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 <polygon fill="none" stroke="black" points="189.09,-138.6 189.09,-169.4 432.42,-169.4 432.42,-138.6 189.09,-138.6"/>
-<text text-anchor="start" x="196.09" y="-150.8" font-family="Arial" font-size="14.00">url </text>
-<text text-anchor="start" x="215.54" y="-150.8" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="196.09" y="-150.8" font-family="Arial" font-size="14.00">shopifyID </text>
+<text text-anchor="start" x="258.34" y="-150.8" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="189.09,-107.8 189.09,-138.6 432.42,-138.6 432.42,-107.8 189.09,-107.8"/>
-<text text-anchor="start" x="196.09" y="-120" font-family="Arial" font-size="14.00">altText </text>
-<text text-anchor="start" x="241.99" y="-120" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="196.09" y="-120" font-family="Arial" font-size="14.00">updatedAt </text>
+<text text-anchor="start" x="263.81" y="-120" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 <polygon fill="none" stroke="black" points="189.09,-77 189.09,-107.8 432.42,-107.8 432.42,-77 189.09,-77"/>
-<text text-anchor="start" x="196.09" y="-89.2" font-family="Arial" font-size="14.00">active </text>
-<text text-anchor="start" x="236.55" y="-89.2" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
+<text text-anchor="start" x="196.09" y="-89.2" font-family="Arial" font-size="14.00">url </text>
+<text text-anchor="start" x="215.54" y="-89.2" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="189.09,-46.2 189.09,-77 432.42,-77 432.42,-46.2 189.09,-46.2"/>
-<text text-anchor="start" x="196.09" y="-58.4" font-family="Arial" font-size="14.00">createdAt </text>
-<text text-anchor="start" x="259.9" y="-58.4" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="196.09" y="-58.4" font-family="Arial" font-size="14.00">altText </text>
+<text text-anchor="start" x="241.99" y="-58.4" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" stroke-width="3" points="187.59,-44.7 187.59,-298.9 433.92,-298.9 433.92,-44.7 187.59,-44.7"/>
 </g>
 <!-- Product -->
@@ -52,42 +52,42 @@
 <text text-anchor="start" x="50.2" y="-912.4" font-family="Arial" font-size="14.00">id </text>
 <text text-anchor="start" x="64.99" y="-912.4" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="43.2,-869.4 43.2,-900.2 246.31,-900.2 246.31,-869.4 43.2,-869.4"/>
-<text text-anchor="start" x="50.2" y="-881.6" font-family="Arial" font-size="14.00">handle </text>
-<text text-anchor="start" x="96.13" y="-881.6" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="50.2" y="-881.6" font-family="Arial" font-size="14.00">active </text>
+<text text-anchor="start" x="90.66" y="-881.6" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
 <polygon fill="none" stroke="black" points="43.2,-838.6 43.2,-869.4 246.31,-869.4 246.31,-838.6 43.2,-838.6"/>
-<text text-anchor="start" x="50.2" y="-850.8" font-family="Arial" font-size="14.00">description </text>
-<text text-anchor="start" x="121.79" y="-850.8" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="50.2" y="-850.8" font-family="Arial" font-size="14.00">createdAt </text>
+<text text-anchor="start" x="114.01" y="-850.8" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 <polygon fill="none" stroke="black" points="43.2,-807.8 43.2,-838.6 246.31,-838.6 246.31,-807.8 43.2,-807.8"/>
-<text text-anchor="start" x="50.2" y="-820" font-family="Arial" font-size="14.00">inStock </text>
-<text text-anchor="start" x="100" y="-820" font-family="Arial" font-size="14.00" fill="#666666">[integer]</text>
+<text text-anchor="start" x="50.2" y="-820" font-family="Arial" font-size="14.00">shopifyID </text>
+<text text-anchor="start" x="112.45" y="-820" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="43.2,-777 43.2,-807.8 246.31,-807.8 246.31,-777 43.2,-777"/>
-<text text-anchor="start" x="50.2" y="-789.2" font-family="Arial" font-size="14.00">updatedAt </text>
-<text text-anchor="start" x="117.92" y="-789.2" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="50.2" y="-789.2" font-family="Arial" font-size="14.00">title </text>
+<text text-anchor="start" x="75.88" y="-789.2" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="43.2,-746.2 43.2,-777 246.31,-777 246.31,-746.2 43.2,-746.2"/>
-<text text-anchor="start" x="50.2" y="-758.4" font-family="Arial" font-size="14.00">active </text>
-<text text-anchor="start" x="90.66" y="-758.4" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
+<text text-anchor="start" x="50.2" y="-758.4" font-family="Arial" font-size="14.00">handle </text>
+<text text-anchor="start" x="96.13" y="-758.4" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="43.2,-715.4 43.2,-746.2 246.31,-746.2 246.31,-715.4 43.2,-715.4"/>
-<text text-anchor="start" x="50.2" y="-727.6" font-family="Arial" font-size="14.00">createdAt </text>
-<text text-anchor="start" x="114.01" y="-727.6" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="50.2" y="-727.6" font-family="Arial" font-size="14.00">description </text>
+<text text-anchor="start" x="121.79" y="-727.6" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="43.2,-684.6 43.2,-715.4 246.31,-715.4 246.31,-684.6 43.2,-684.6"/>
-<text text-anchor="start" x="50.2" y="-696.8" font-family="Arial" font-size="14.00">shopifyID </text>
-<text text-anchor="start" x="112.45" y="-696.8" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="50.2" y="-696.8" font-family="Arial" font-size="14.00">featuredImageID </text>
+<text text-anchor="start" x="158.37" y="-696.8" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="43.2,-653.8 43.2,-684.6 246.31,-684.6 246.31,-653.8 43.2,-653.8"/>
-<text text-anchor="start" x="50.2" y="-666" font-family="Arial" font-size="14.00">title </text>
-<text text-anchor="start" x="75.88" y="-666" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="50.2" y="-666" font-family="Arial" font-size="14.00">featuredImage </text>
+<text text-anchor="start" x="144.37" y="-666" font-family="Arial" font-size="14.00" fill="#666666">[ProductImage]</text>
 <polygon fill="none" stroke="black" points="43.2,-623 43.2,-653.8 246.31,-653.8 246.31,-623 43.2,-623"/>
-<text text-anchor="start" x="50.2" y="-635.2" font-family="Arial" font-size="14.00">featuredImageID </text>
-<text text-anchor="start" x="158.37" y="-635.2" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<text text-anchor="start" x="50.2" y="-635.2" font-family="Arial" font-size="14.00">inStock </text>
+<text text-anchor="start" x="100" y="-635.2" font-family="Arial" font-size="14.00" fill="#666666">[integer]</text>
 <polygon fill="none" stroke="black" points="43.2,-592.2 43.2,-623 246.31,-623 246.31,-592.2 43.2,-592.2"/>
-<text text-anchor="start" x="50.2" y="-604.4" font-family="Arial" font-size="14.00">featuredImage </text>
-<text text-anchor="start" x="144.37" y="-604.4" font-family="Arial" font-size="14.00" fill="#666666">[ProductImage]</text>
+<text text-anchor="start" x="50.2" y="-604.4" font-family="Arial" font-size="14.00">updatedAt </text>
+<text text-anchor="start" x="117.92" y="-604.4" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 </g>
 <!-- Product&#45;&gt;ProductImage -->
 <g id="edge1" class="edge">
 <title>Product:featuredImageID&#45;&gt;ProductImage:id</title>
-<path fill="none" stroke="black" d="M257.42,-637.91C406.87,-622.49 15.5,-246.4 188.09,-246.4"/>
-<polygon fill="black" stroke="black" points="257.63,-637.9 247.43,-633.89 252.3,-638.16 247.98,-638.37 247.98,-638.37 247.98,-638.37 252.3,-638.16 247.86,-642.88 257.63,-637.9"/>
-<text text-anchor="start" x="254.31" y="-648.4" font-family="Arial" font-size="10.00">Source: ProductImage</text>
+<path fill="none" stroke="black" d="M257.27,-697.76C307.81,-671.35 199.79,-418.98 189.09,-343.6 183.02,-300.83 144.89,-246.4 188.09,-246.4"/>
+<polygon fill="black" stroke="black" points="257.39,-697.73 246.65,-695.54 252.19,-698.9 247.96,-699.85 247.96,-699.85 247.96,-699.85 252.19,-698.9 248.62,-704.32 257.39,-697.73"/>
+<text text-anchor="start" x="254.31" y="-710" font-family="Arial" font-size="10.00">Source: ProductImage</text>
 </g>
 <!-- ProductVariant -->
 <g id="node3" class="node">
@@ -101,75 +101,75 @@
 <text text-anchor="start" x="357.59" y="-1081.8" font-family="Arial" font-size="14.00">id </text>
 <text text-anchor="start" x="372.37" y="-1081.8" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="350.59,-1038.8 350.59,-1069.6 602.92,-1069.6 602.92,-1038.8 350.59,-1038.8"/>
-<text text-anchor="start" x="357.59" y="-1051" font-family="Arial" font-size="14.00">taxable </text>
-<text text-anchor="start" x="406.62" y="-1051" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
+<text text-anchor="start" x="357.59" y="-1051" font-family="Arial" font-size="14.00">active </text>
+<text text-anchor="start" x="398.05" y="-1051" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
 <polygon fill="none" stroke="black" points="350.59,-1008 350.59,-1038.8 602.92,-1038.8 602.92,-1008 350.59,-1008"/>
-<text text-anchor="start" x="357.59" y="-1020.2" font-family="Arial" font-size="14.00">quickbookItemId </text>
-<text text-anchor="start" x="463.42" y="-1020.2" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="357.59" y="-1020.2" font-family="Arial" font-size="14.00">createdAt </text>
+<text text-anchor="start" x="421.4" y="-1020.2" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 <polygon fill="none" stroke="black" points="350.59,-977.2 350.59,-1008 602.92,-1008 602.92,-977.2 350.59,-977.2"/>
-<text text-anchor="start" x="357.59" y="-989.4" font-family="Arial" font-size="14.00">barcode </text>
-<text text-anchor="start" x="412.07" y="-989.4" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="357.59" y="-989.4" font-family="Arial" font-size="14.00">shopifyID </text>
+<text text-anchor="start" x="419.84" y="-989.4" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="350.59,-946.4 350.59,-977.2 602.92,-977.2 602.92,-946.4 350.59,-946.4"/>
-<text text-anchor="start" x="357.59" y="-958.6" font-family="Arial" font-size="14.00">displayName </text>
-<text text-anchor="start" x="442.4" y="-958.6" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="357.59" y="-958.6" font-family="Arial" font-size="14.00">availableForSale </text>
+<text text-anchor="start" x="465.76" y="-958.6" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
 <polygon fill="none" stroke="black" points="350.59,-915.6 350.59,-946.4 602.92,-946.4 602.92,-915.6 350.59,-915.6"/>
-<text text-anchor="start" x="357.59" y="-927.8" font-family="Arial" font-size="14.00">inventoryItemID </text>
-<text text-anchor="start" x="459.51" y="-927.8" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<text text-anchor="start" x="357.59" y="-927.8" font-family="Arial" font-size="14.00">barcode </text>
+<text text-anchor="start" x="412.07" y="-927.8" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="350.59,-884.8 350.59,-915.6 602.92,-915.6 602.92,-884.8 350.59,-884.8"/>
 <text text-anchor="start" x="357.59" y="-897" font-family="Arial" font-size="14.00">sku </text>
 <text text-anchor="start" x="383.26" y="-897" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="350.59,-854 350.59,-884.8 602.92,-884.8 602.92,-854 350.59,-854"/>
-<text text-anchor="start" x="357.59" y="-866.2" font-family="Arial" font-size="14.00">image </text>
-<text text-anchor="start" x="399.61" y="-866.2" font-family="Arial" font-size="14.00" fill="#666666">[ProductImage]</text>
+<text text-anchor="start" x="357.59" y="-866.2" font-family="Arial" font-size="14.00">displayName </text>
+<text text-anchor="start" x="442.4" y="-866.2" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="350.59,-823.2 350.59,-854 602.92,-854 602.92,-823.2 350.59,-823.2"/>
-<text text-anchor="start" x="357.59" y="-835.4" font-family="Arial" font-size="14.00">createdAt </text>
-<text text-anchor="start" x="421.4" y="-835.4" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="357.59" y="-835.4" font-family="Arial" font-size="14.00">imageID </text>
+<text text-anchor="start" x="413.61" y="-835.4" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="350.59,-792.4 350.59,-823.2 602.92,-823.2 602.92,-792.4 350.59,-792.4"/>
-<text text-anchor="start" x="357.59" y="-804.6" font-family="Arial" font-size="14.00">shopifyID </text>
-<text text-anchor="start" x="419.84" y="-804.6" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="357.59" y="-804.6" font-family="Arial" font-size="14.00">image </text>
+<text text-anchor="start" x="399.61" y="-804.6" font-family="Arial" font-size="14.00" fill="#666666">[ProductImage]</text>
 <polygon fill="none" stroke="black" points="350.59,-761.6 350.59,-792.4 602.92,-792.4 602.92,-761.6 350.59,-761.6"/>
-<text text-anchor="start" x="357.59" y="-773.8" font-family="Arial" font-size="14.00">availableForSale </text>
-<text text-anchor="start" x="465.76" y="-773.8" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
+<text text-anchor="start" x="357.59" y="-773.8" font-family="Arial" font-size="14.00">inventoryQuantity </text>
+<text text-anchor="start" x="470.42" y="-773.8" font-family="Arial" font-size="14.00" fill="#666666">[integer]</text>
 <polygon fill="none" stroke="black" points="350.59,-730.8 350.59,-761.6 602.92,-761.6 602.92,-730.8 350.59,-730.8"/>
-<text text-anchor="start" x="357.59" y="-743" font-family="Arial" font-size="14.00">productID </text>
-<text text-anchor="start" x="422.17" y="-743" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<text text-anchor="start" x="357.59" y="-743" font-family="Arial" font-size="14.00">price </text>
+<text text-anchor="start" x="391.82" y="-743" font-family="Arial" font-size="14.00" fill="#666666">[float]</text>
 <polygon fill="none" stroke="black" points="350.59,-700 350.59,-730.8 602.92,-730.8 602.92,-700 350.59,-700"/>
-<text text-anchor="start" x="357.59" y="-712.2" font-family="Arial" font-size="14.00">inventoryType </text>
-<text text-anchor="start" x="449.41" y="-712.2" font-family="Arial" font-size="14.00" fill="#666666">[enum]</text>
+<text text-anchor="start" x="357.59" y="-712.2" font-family="Arial" font-size="14.00">inventoryItemID </text>
+<text text-anchor="start" x="459.51" y="-712.2" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="350.59,-669.2 350.59,-700 602.92,-700 602.92,-669.2 350.59,-669.2"/>
-<text text-anchor="start" x="357.59" y="-681.4" font-family="Arial" font-size="14.00">quickbookSyncToken </text>
-<text text-anchor="start" x="494.55" y="-681.4" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="357.59" y="-681.4" font-family="Arial" font-size="14.00">inventoryItem </text>
+<text text-anchor="start" x="445.51" y="-681.4" font-family="Arial" font-size="14.00" fill="#666666">[InventoryItem]</text>
 <polygon fill="none" stroke="black" points="350.59,-638.4 350.59,-669.2 602.92,-669.2 602.92,-638.4 350.59,-638.4"/>
-<text text-anchor="start" x="357.59" y="-650.6" font-family="Arial" font-size="14.00">updatedAt </text>
-<text text-anchor="start" x="425.31" y="-650.6" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
+<text text-anchor="start" x="357.59" y="-650.6" font-family="Arial" font-size="14.00">productID </text>
+<text text-anchor="start" x="422.17" y="-650.6" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
 <polygon fill="none" stroke="black" points="350.59,-607.6 350.59,-638.4 602.92,-638.4 602.92,-607.6 350.59,-607.6"/>
-<text text-anchor="start" x="357.59" y="-619.8" font-family="Arial" font-size="14.00">active </text>
-<text text-anchor="start" x="398.05" y="-619.8" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
+<text text-anchor="start" x="357.59" y="-619.8" font-family="Arial" font-size="14.00">product </text>
+<text text-anchor="start" x="408.17" y="-619.8" font-family="Arial" font-size="14.00" fill="#666666">[Product]</text>
 <polygon fill="none" stroke="black" points="350.59,-576.8 350.59,-607.6 602.92,-607.6 602.92,-576.8 350.59,-576.8"/>
-<text text-anchor="start" x="357.59" y="-589" font-family="Arial" font-size="14.00">imageID </text>
-<text text-anchor="start" x="413.61" y="-589" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<text text-anchor="start" x="357.59" y="-589" font-family="Arial" font-size="14.00">taxable </text>
+<text text-anchor="start" x="406.62" y="-589" font-family="Arial" font-size="14.00" fill="#666666">[boolean]</text>
 <polygon fill="none" stroke="black" points="350.59,-546 350.59,-576.8 602.92,-576.8 602.92,-546 350.59,-546"/>
-<text text-anchor="start" x="357.59" y="-558.2" font-family="Arial" font-size="14.00">price </text>
-<text text-anchor="start" x="391.82" y="-558.2" font-family="Arial" font-size="14.00" fill="#666666">[float]</text>
+<text text-anchor="start" x="357.59" y="-558.2" font-family="Arial" font-size="14.00">inventoryType </text>
+<text text-anchor="start" x="449.41" y="-558.2" font-family="Arial" font-size="14.00" fill="#666666">[enum]</text>
 <polygon fill="none" stroke="black" points="350.59,-515.2 350.59,-546 602.92,-546 602.92,-515.2 350.59,-515.2"/>
-<text text-anchor="start" x="357.59" y="-527.4" font-family="Arial" font-size="14.00">quickbookItemName </text>
-<text text-anchor="start" x="489.09" y="-527.4" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
+<text text-anchor="start" x="357.59" y="-527.4" font-family="Arial" font-size="14.00">quickbookItemId </text>
+<text text-anchor="start" x="463.42" y="-527.4" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="350.59,-484.4 350.59,-515.2 602.92,-515.2 602.92,-484.4 350.59,-484.4"/>
-<text text-anchor="start" x="357.59" y="-496.6" font-family="Arial" font-size="14.00">inventoryQuantity </text>
-<text text-anchor="start" x="470.42" y="-496.6" font-family="Arial" font-size="14.00" fill="#666666">[integer]</text>
+<text text-anchor="start" x="357.59" y="-496.6" font-family="Arial" font-size="14.00">quickbookSyncToken </text>
+<text text-anchor="start" x="494.55" y="-496.6" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="350.59,-453.6 350.59,-484.4 602.92,-484.4 602.92,-453.6 350.59,-453.6"/>
-<text text-anchor="start" x="357.59" y="-465.8" font-family="Arial" font-size="14.00">inventoryItem </text>
-<text text-anchor="start" x="445.51" y="-465.8" font-family="Arial" font-size="14.00" fill="#666666">[InventoryItem]</text>
+<text text-anchor="start" x="357.59" y="-465.8" font-family="Arial" font-size="14.00">quickbookItemName </text>
+<text text-anchor="start" x="489.09" y="-465.8" font-family="Arial" font-size="14.00" fill="#666666">[string]</text>
 <polygon fill="none" stroke="black" points="350.59,-422.8 350.59,-453.6 602.92,-453.6 602.92,-422.8 350.59,-422.8"/>
-<text text-anchor="start" x="357.59" y="-435" font-family="Arial" font-size="14.00">product </text>
-<text text-anchor="start" x="408.17" y="-435" font-family="Arial" font-size="14.00" fill="#666666">[Product]</text>
+<text text-anchor="start" x="357.59" y="-435" font-family="Arial" font-size="14.00">updatedAt </text>
+<text text-anchor="start" x="425.31" y="-435" font-family="Arial" font-size="14.00" fill="#666666">[datetime]</text>
 </g>
 <!-- ProductVariant&#45;&gt;ProductImage -->
 <g id="edge2" class="edge">
 <title>ProductVariant:imageID&#45;&gt;ProductImage:id</title>
-<path fill="none" stroke="black" d="M339.76,-589.18C305.85,-565.97 326.7,-416.02 350.59,-379.6 372.38,-346.38 410.54,-376.76 432.42,-343.6 456.22,-307.54 476.62,-246.4 433.42,-246.4"/>
-<polygon fill="black" stroke="black" points="339.71,-589.16 347.95,-596.4 344.81,-590.73 348.95,-592 348.95,-592 348.95,-592 344.81,-590.73 350.59,-587.8 339.71,-589.16"/>
-<text text-anchor="start" x="299.84" y="-576.2" font-family="Arial" font-size="10.00">Source: ProductImage</text>
+<path fill="none" stroke="black" d="M340.64,-833.62C301.71,-786.49 324.47,-419.53 350.59,-379.6 372.34,-346.35 410.54,-376.76 432.42,-343.6 456.22,-307.54 476.62,-246.4 433.42,-246.4"/>
+<polygon fill="black" stroke="black" points="340.56,-833.58 347.11,-842.37 345.22,-836.17 349,-838.27 349,-838.27 349,-838.27 345.22,-836.17 351.48,-834.51 340.56,-833.58"/>
+<text text-anchor="start" x="299.84" y="-822.6" font-family="Arial" font-size="10.00">Source: ProductImage</text>
 </g>
 </g>
 </svg>
