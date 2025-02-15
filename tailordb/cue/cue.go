@@ -3,11 +3,17 @@ package cue
 import (
 	"encoding/json"
 	"fmt"
+	"os"
+	"path"
 	"sort"
 
 	"cuelang.org/go/cue"
+	"cuelang.org/go/cue/cuecontext"
+	"cuelang.org/go/cue/load"
 	"github.com/k1LoW/tbls/schema"
 )
+
+const kindTailordb = "tailordb"
 
 type Type struct {
 	Name        string  `json:"Name"`
@@ -39,12 +45,83 @@ type Index struct {
 
 type Indexes map[string]*Index
 
+func LookupModRoot(root string) (string, error) {
+	if fi, err := os.Stat(path.Join(root, "cue.mod")); err == nil && fi.IsDir() {
+		return root, nil
+	}
+	if root == "." || root == "/" {
+		return "", fmt.Errorf("module root not found")
+	}
+	return LookupModRoot(path.Dir(root))
+}
+
+func Load(root string) (cue.Value, error) {
+	modRoot, err := LookupModRoot(root)
+	if err != nil {
+		return cue.Value{}, err
+	}
+
+	ctx := cuecontext.New()
+	cfg := &load.Config{
+		ModuleRoot: modRoot,
+	}
+	insts := load.Instances([]string{root}, cfg)
+	v := ctx.BuildInstance(insts[0])
+	return detectTailordb(v)
+}
+
+func detectTailordb(v cue.Value) (cue.Value, error) {
+	services := v.LookupPath(cue.MakePath(cue.Str("Services")))
+	if !services.Exists() {
+		kind, err := v.LookupPath(cue.MakePath(cue.Str("Kind"))).String()
+		if err != nil {
+			return cue.Value{}, err
+		}
+		if kind != kindTailordb {
+			return cue.Value{}, fmt.Errorf("no tailordb found")
+		}
+		return v, nil
+	}
+	var databases []cue.Value
+	iter, err := services.List()
+	if err != nil {
+		return cue.Value{}, err
+	}
+	for iter.Next() {
+		value := iter.Value()
+		kindValue := value.LookupPath(cue.MakePath(cue.Str("Kind")))
+		if kindValue.Exists() {
+			k, err := kindValue.String()
+			if err != nil {
+				return cue.Value{}, err
+			}
+			if k == kindTailordb {
+				databases = append(databases, value)
+			}
+		}
+	}
+	switch len(databases) {
+	case 0:
+		return cue.Value{}, fmt.Errorf("no tailordb found")
+	case 1:
+	default:
+		return cue.Value{}, fmt.Errorf("multiple tailordb found")
+	}
+	database := databases[0]
+	return database, nil
+}
+
 func Analyze(v cue.Value) (_ *schema.SchemaJSON, err error) {
 	s := &schema.SchemaJSON{}
 	s.Name, err = v.LookupPath(cue.MakePath(cue.Str("Namespace"))).String()
 	if err != nil {
 		return nil, err
 	}
+	vv := v.LookupPath(cue.MakePath(cue.Str("Types")))
+	if !vv.Exists() {
+		return nil, fmt.Errorf("no types found")
+	}
+
 	typesIter, err := v.LookupPath(cue.MakePath(cue.Str("Types"))).List()
 	if err != nil {
 		return nil, err

@@ -28,9 +28,6 @@ import (
 	"os"
 	"path"
 
-	"cuelang.org/go/cue"
-	"cuelang.org/go/cue/cuecontext"
-	"cuelang.org/go/cue/load"
 	cuedb "github.com/k1LoW/tbls-driver-tailordb/tailordb/cue"
 	"github.com/k1LoW/tbls-driver-tailordb/version"
 	"github.com/spf13/cobra"
@@ -52,41 +49,9 @@ var rootCmd = &cobra.Command{
 			return err
 		}
 		root := path.Join(u.Host, u.Path)
-		modRoot, err := lookupModRoot(root)
+		database, err := cuedb.Load(root)
 		if err != nil {
 			return err
-		}
-
-		ctx := cuecontext.New()
-		cfg := &load.Config{
-			ModuleRoot: modRoot,
-		}
-		insts := load.Instances([]string{root}, cfg)
-		v := ctx.BuildInstance(insts[0])
-		services := v.LookupPath(cue.MakePath(cue.Str("Services")))
-		var database cue.Value
-		if !services.Exists() {
-			kind, err := v.LookupPath(cue.MakePath(cue.Str("Kind"))).String()
-			if err != nil {
-				return err
-			}
-			if kind != "tailordb" {
-				return fmt.Errorf("no tailordb found")
-			}
-			database = v
-		} else {
-			databases, err := findTailordb(services)
-			if err != nil {
-				return err
-			}
-			switch len(databases) {
-			case 0:
-				return fmt.Errorf("no tailordb found")
-			case 1:
-			default:
-				return fmt.Errorf("multiple tailordb found")
-			}
-			database = databases[0]
 		}
 		s, err := cuedb.Analyze(database)
 		if err != nil {
@@ -111,37 +76,3 @@ func Execute() {
 }
 
 func init() {}
-
-func findTailordb(v cue.Value) ([]cue.Value, error) {
-	const kind = "tailordb"
-	var result []cue.Value
-	iter, err := v.List()
-	if err != nil {
-		return nil, err
-	}
-	for iter.Next() {
-		value := iter.Value()
-		kindValue := value.LookupPath(cue.MakePath(cue.Str("Kind")))
-		if kindValue.Exists() {
-			k, err := kindValue.String()
-			if err != nil {
-				return nil, err
-			}
-			if k == kind {
-				result = append(result, value)
-			}
-		}
-	}
-
-	return result, nil
-}
-
-func lookupModRoot(root string) (string, error) {
-	if fi, err := os.Stat(path.Join(root, "cue.mod")); err == nil && fi.IsDir() {
-		return root, nil
-	}
-	if root == "." || root == "/" {
-		return "", fmt.Errorf("module root not found")
-	}
-	return lookupModRoot(path.Dir(root))
-}
