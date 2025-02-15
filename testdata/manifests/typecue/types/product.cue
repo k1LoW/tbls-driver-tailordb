@@ -11,6 +11,9 @@ Product: tailordb.#Type & {
 		shopifyID: {
 			Type:        tailordb.#TypeString
 			Description: "Shopify product ID"
+			Required:    true
+			Index:       true
+			Unique:      true
 		}
 		title: {
 			Type:        tailordb.#TypeString
@@ -32,6 +35,8 @@ Product: tailordb.#Type & {
 			Type:        "ProductImage"
 			Description: "Featured image of the product"
 			SourceId:    "featuredImageID"
+			ForeignKey:  true
+			ForeignKeyType: "ProductImage"
 		}
 	}
 }

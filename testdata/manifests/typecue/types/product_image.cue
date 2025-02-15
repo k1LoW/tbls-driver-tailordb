@@ -11,10 +11,12 @@ ProductImage: tailordb.#Type & {
 		url: {
 			Type:        tailordb.#TypeString
 			Description: "Image URL"
+			Required:    true
+			Index:       true
 		}
 		description: {
 			Type:        tailordb.#TypeString
-			Description: "Product description"
+			Description: "ProductImage description"
 		}
 	}
 }
