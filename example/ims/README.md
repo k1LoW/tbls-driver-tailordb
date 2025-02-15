@@ -4,7 +4,6 @@
 
 | Name | Columns | Comment | Type |
 | ---- | ------- | ------- | ---- |
-| [Category](Category.md) | 5 | Contains information about categories of products. | TailorDB.Type |
 | [Contact](Contact.md) | 20 | Contact model | TailorDB.Type |
 | [CostPool](CostPool.md) | 7 | CostPool model | TailorDB.Type |
 | [CostPoolLineItem](CostPoolLineItem.md) | 9 | CostPoolLineItem model | TailorDB.Type |
@@ -16,7 +15,7 @@
 | [InvoiceLineItem](InvoiceLineItem.md) | 11 | InvoiceLineItem model | TailorDB.Type |
 | [Location](Location.md) | 6 | Inventory location on Shopify | TailorDB.Type |
 | [OperationalStockEvent](OperationalStockEvent.md) | 21 | OperationalStockEvent model. Holds the stock event data that can change. | TailorDB.Type |
-| [Product](Product.md) | 11 | Product model | TailorDB.Type |
+| [Product](Product.md) | 10 | Product model | TailorDB.Type |
 | [ProductImage](ProductImage.md) | 7 | Product Image | TailorDB.Type |
 | [ProductVariant](ProductVariant.md) | 22 | The variants of a product | TailorDB.Type |
 | [PurchaseOrder](PurchaseOrder.md) | 24 | PurchaseOrder model | TailorDB.Type |

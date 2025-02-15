@@ -17,7 +17,6 @@ Product model
 | description | string |  | true |  |  | Product description |
 | featuredImageID | uuid |  | true |  | [ProductImage](ProductImage.md) | Featured image ID |
 | featuredImage | ProductImage |  | true |  | [ProductImage](ProductImage.md) | Featured image of the product |
-| inStock | integer |  | true |  |  | Quantity of the product |
 | updatedAt | datetime |  | true |  |  | updatedAt |
 
 ## Indexes
