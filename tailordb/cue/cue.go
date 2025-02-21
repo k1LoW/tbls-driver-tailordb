@@ -9,7 +9,7 @@ import (
 
 	"cuelang.org/go/cue"
 	"cuelang.org/go/cue/cuecontext"
-	"cuelang.org/go/cue/load"
+	cueload "cuelang.org/go/cue/load"
 	"github.com/k1LoW/tbls/schema"
 )
 
@@ -55,17 +55,25 @@ func LookupModRoot(root string) (string, error) {
 	return LookupModRoot(path.Dir(root))
 }
 
-func Load(root string) (cue.Value, error) {
+func Analyze(root string) (_ *schema.SchemaJSON, err error) {
+	v, err := load(root)
+	if err != nil {
+		return nil, err
+	}
+	return analyze(v)
+}
+
+func load(root string) (cue.Value, error) {
 	modRoot, err := LookupModRoot(root)
 	if err != nil {
 		return cue.Value{}, err
 	}
 
 	ctx := cuecontext.New()
-	cfg := &load.Config{
+	cfg := &cueload.Config{
 		ModuleRoot: modRoot,
 	}
-	insts := load.Instances([]string{root}, cfg)
+	insts := cueload.Instances([]string{root}, cfg)
 	v := ctx.BuildInstance(insts[0])
 	return detectTailordb(v)
 }
@@ -111,7 +119,7 @@ func detectTailordb(v cue.Value) (cue.Value, error) {
 	return database, nil
 }
 
-func Analyze(v cue.Value) (_ *schema.SchemaJSON, err error) {
+func analyze(v cue.Value) (_ *schema.SchemaJSON, err error) {
 	s := &schema.SchemaJSON{}
 	s.Name, err = v.LookupPath(cue.MakePath(cue.Str("Namespace"))).String()
 	if err != nil {
@@ -196,7 +204,7 @@ func Analyze(v cue.Value) (_ *schema.SchemaJSON, err error) {
 			}
 		}
 
-		// workarounds
+		// sort workarounds
 		sort.Slice(t.Indexes, func(i, j int) bool {
 			if t.Indexes[i].Def == t.Indexes[j].Def {
 				return t.Indexes[i].Name < t.Indexes[j].Name
@@ -213,7 +221,7 @@ func Analyze(v cue.Value) (_ *schema.SchemaJSON, err error) {
 		s.Tables = append(s.Tables, t)
 	}
 
-	// workarounds
+	// sort workarounds
 	sort.Slice(s.Relations, func(i, j int) bool {
 		if s.Relations[i].Def == s.Relations[j].Def {
 			if s.Relations[i].Table == s.Relations[j].Table {
@@ -253,36 +261,36 @@ func analyzeFields(s *schema.SchemaJSON, t *schema.TableJSON, fields Fields, pre
 		}
 
 		if field.SourceId != "" {
-			sourceIdName := field.SourceId
+			sourceName := field.SourceId
 			if prefix != "" {
-				sourceIdName = fmt.Sprintf("%s.%s", prefix, sourceIdName)
+				sourceName = fmt.Sprintf("%s.%s", prefix, sourceName)
 			}
 
 			parentTable := c.Type
 			rel := &schema.RelationJSON{
 				Table:       t.Name,
-				Columns:     []string{sourceIdName, name},
+				Columns:     []string{sourceName, name},
 				ParentTable: parentTable,
 			}
 			// Check sourceId
-			sourceId, ok := fields[field.SourceId]
+			source, ok := fields[field.SourceId]
 			if !ok {
-				return nil, fmt.Errorf("sourceId %s not found", sourceIdName)
+				return nil, fmt.Errorf("source %s not found", sourceName)
 			}
-			if sourceId.ForeignKey {
-				if sourceId.ForeignKeyField != "" {
-					rel.ParentColumns = []string{sourceId.ForeignKeyField}
+			if source.ForeignKey {
+				if source.ForeignKeyField != "" {
+					rel.ParentColumns = []string{source.ForeignKeyField}
 				} else {
 					rel.ParentColumns = []string{"id"}
 				}
-				rel.Def = fmt.Sprintf("ForeignKeyType: %s", sourceId.ForeignKeyType)
+				rel.Def = fmt.Sprintf("ForeignKeyType: %s", source.ForeignKeyType)
 
 				t.Constraints = append(t.Constraints, &schema.Constraint{
 					Name:    fmt.Sprintf("ForeignKey for %s to %s", name, parentTable),
 					Type:    "FOREIGN KEY",
 					Def:     fmt.Sprintf("ForeignKeyType: %s", parentTable),
 					Table:   &t.Name,
-					Columns: []string{sourceIdName, name},
+					Columns: []string{sourceName, name},
 				})
 
 			} else {
@@ -292,28 +300,27 @@ func analyzeFields(s *schema.SchemaJSON, t *schema.TableJSON, fields Fields, pre
 			s.Relations = append(s.Relations, rel)
 		}
 
-		if field.Index {
+		switch {
+		case field.Index && !field.Unique:
 			t.Indexes = append(t.Indexes, &schema.Index{
-				Name:    fmt.Sprintf("Index for %s", c.Name),
+				Name:    fmt.Sprintf("Index for %s", name),
 				Def:     "Index: true",
 				Table:   &t.Name,
-				Columns: []string{c.Name},
+				Columns: []string{name},
 			})
-		}
-
-		if field.Unique {
+		case field.Unique:
 			t.Indexes = append(t.Indexes, &schema.Index{
-				Name:    fmt.Sprintf("Unique for %s", c.Name),
-				Def:     "Unique: true",
+				Name:    fmt.Sprintf("Unique for %s", name),
+				Def:     "Unique: true / Index: true",
 				Table:   &t.Name,
-				Columns: []string{c.Name},
+				Columns: []string{name},
 			})
 			t.Constraints = append(t.Constraints, &schema.Constraint{
-				Name:    fmt.Sprintf("Unique for %s", c.Name),
+				Name:    fmt.Sprintf("Unique for %s", name),
 				Type:    "UNIQUE",
-				Def:     "Unique: true",
+				Def:     "Unique: true / Index: true",
 				Table:   &t.Name,
-				Columns: []string{c.Name},
+				Columns: []string{name},
 			})
 		}
 	}

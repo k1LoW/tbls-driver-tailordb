@@ -27,9 +27,12 @@ import (
 	"net/url"
 	"os"
 	"path"
+	"path/filepath"
 
 	cuedb "github.com/k1LoW/tbls-driver-tailordb/tailordb/cue"
+	"github.com/k1LoW/tbls-driver-tailordb/tailordb/tf"
 	"github.com/k1LoW/tbls-driver-tailordb/version"
+	"github.com/k1LoW/tbls/schema"
 	"github.com/spf13/cobra"
 )
 
@@ -49,13 +52,22 @@ var rootCmd = &cobra.Command{
 			return err
 		}
 		root := path.Join(u.Host, u.Path)
-		database, err := cuedb.Load(root)
+		fi, err := os.Stat(root)
 		if err != nil {
 			return err
 		}
-		s, err := cuedb.Analyze(database)
-		if err != nil {
-			return err
+		var s *schema.SchemaJSON
+		switch {
+		case filepath.Ext(root) == ".cue":
+			s, err = cuedb.Analyze(root)
+			if err != nil {
+				return err
+			}
+		case fi.IsDir():
+			s, err = tf.Analyze(root)
+			if err != nil {
+				return err
+			}
 		}
 		b, err := json.MarshalIndent(s, "", "  ")
 		if err != nil {
