@@ -4,13 +4,17 @@ go 1.23.5
 
 require (
 	cuelang.org/go v0.12.0
+	github.com/hashicorp/hcl/v2 v2.20.1
 	github.com/k1LoW/tbls v1.81.0
 	github.com/spf13/cobra v1.8.1
 	github.com/tenntenn/golden v0.5.4
+	github.com/zclconf/go-cty v1.14.4
 )
 
 require (
 	cuelabs.dev/go/oci/ociregistry v0.0.0-20241125120445-2c00c104c6e1 // indirect
+	github.com/agext/levenshtein v1.2.2 // indirect
+	github.com/apparentlymart/go-textseg/v15 v15.0.0 // indirect
 	github.com/cockroachdb/apd/v3 v3.2.1 // indirect
 	github.com/emicklei/proto v1.13.4 // indirect
 	github.com/goccy/go-yaml v1.15.13 // indirect
@@ -32,6 +36,7 @@ require (
 	golang.org/x/mod v0.22.0 // indirect
 	golang.org/x/net v0.34.0 // indirect
 	golang.org/x/oauth2 v0.25.0 // indirect
+	golang.org/x/sync v0.10.0 // indirect
 	golang.org/x/text v0.21.0 // indirect
 	golang.org/x/tools v0.29.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect

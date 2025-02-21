@@ -1,7 +1,6 @@
-package cue
+package tf
 
 import (
-	"bytes"
 	"encoding/json"
 	"os"
 	"testing"
@@ -10,17 +9,17 @@ import (
 )
 
 func TestAnalyze(t *testing.T) {
-	root := "../../testdata/manifests/typecue/tailordb.cue"
+	root := "../../testdata/manifests/typetf"
 	s, err := Analyze(root)
 	if err != nil {
 		t.Fatal(err)
 	}
-	f := "typecue.json"
-	buf := new(bytes.Buffer)
-	if err := json.NewEncoder(buf).Encode(s); err != nil {
+	f := "typetf.json"
+	b, err := json.MarshalIndent(s, "", "	 ")
+	if err != nil {
 		t.Fatal(err)
 	}
-	got := buf.String()
+	got := string(b)
 	if os.Getenv("UPDATE_GOLDEN") != "" {
 		golden.Update(t, "../../testdata", f, got)
 		return

@@ -1,0 +1,224 @@
+{
+	 "tables": [
+	 	 {
+	 	 	 "name": "Product",
+	 	 	 "type": "TailorDB.Type",
+	 	 	 "comment": "Product model",
+	 	 	 "columns": [
+	 	 	 	 {
+	 	 	 	 	 "name": "id",
+	 	 	 	 	 "type": "uuid",
+	 	 	 	 	 "nullable": false
+	 	 	 	 },
+	 	 	 	 {
+	 	 	 	 	 "name": "description",
+	 	 	 	 	 "type": "string",
+	 	 	 	 	 "nullable": false,
+	 	 	 	 	 "comment": "Product description"
+	 	 	 	 },
+	 	 	 	 {
+	 	 	 	 	 "name": "featuredImage",
+	 	 	 	 	 "type": "ProductImage",
+	 	 	 	 	 "nullable": false,
+	 	 	 	 	 "comment": "Featured image of the product"
+	 	 	 	 },
+	 	 	 	 {
+	 	 	 	 	 "name": "featuredImageID",
+	 	 	 	 	 "type": "uuid",
+	 	 	 	 	 "nullable": false,
+	 	 	 	 	 "comment": "Featured image ID"
+	 	 	 	 },
+	 	 	 	 {
+	 	 	 	 	 "name": "handle",
+	 	 	 	 	 "type": "string",
+	 	 	 	 	 "nullable": false,
+	 	 	 	 	 "comment": "Product handle"
+	 	 	 	 },
+	 	 	 	 {
+	 	 	 	 	 "name": "shopifyID",
+	 	 	 	 	 "type": "string",
+	 	 	 	 	 "nullable": false,
+	 	 	 	 	 "comment": "Shopify product ID"
+	 	 	 	 },
+	 	 	 	 {
+	 	 	 	 	 "name": "title",
+	 	 	 	 	 "type": "string",
+	 	 	 	 	 "nullable": false,
+	 	 	 	 	 "comment": "Title of the product"
+	 	 	 	 }
+	 	 	 ],
+	 	 	 "indexes": [
+	 	 	 	 {
+	 	 	 	 	 "name": "Unique for shopifyID",
+	 	 	 	 	 "def": "Unique: true / Index: true",
+	 	 	 	 	 "table": "Product",
+	 	 	 	 	 "columns": [
+	 	 	 	 	 	 "shopifyID"
+	 	 	 	 	 ]
+	 	 	 	 },
+	 	 	 	 {
+	 	 	 	 	 "name": "shopifyID",
+	 	 	 	 	 "def": "{\"field_names\":null,\"unique\":true}",
+	 	 	 	 	 "table": "Product",
+	 	 	 	 	 "columns": null
+	 	 	 	 }
+	 	 	 ],
+	 	 	 "constraints": [
+	 	 	 	 {
+	 	 	 	 	 "name": "shopifyID",
+	 	 	 	 	 "type": "UNIQUE",
+	 	 	 	 	 "def": "{\"field_names\":null,\"unique\":true}",
+	 	 	 	 	 "table": "Product"
+	 	 	 	 }
+	 	 	 ]
+	 	 },
+	 	 {
+	 	 	 "name": "ProductImage",
+	 	 	 "type": "TailorDB.Type",
+	 	 	 "comment": "ProductImage model",
+	 	 	 "columns": [
+	 	 	 	 {
+	 	 	 	 	 "name": "id",
+	 	 	 	 	 "type": "uuid",
+	 	 	 	 	 "nullable": false
+	 	 	 	 },
+	 	 	 	 {
+	 	 	 	 	 "name": "description",
+	 	 	 	 	 "type": "string",
+	 	 	 	 	 "nullable": false,
+	 	 	 	 	 "comment": "Product description"
+	 	 	 	 },
+	 	 	 	 {
+	 	 	 	 	 "name": "url",
+	 	 	 	 	 "type": "string",
+	 	 	 	 	 "nullable": false,
+	 	 	 	 	 "comment": "Image URL"
+	 	 	 	 }
+	 	 	 ],
+	 	 	 "indexes": [
+	 	 	 	 {
+	 	 	 	 	 "name": "Index for url",
+	 	 	 	 	 "def": "Index: true",
+	 	 	 	 	 "table": "ProductImage",
+	 	 	 	 	 "columns": [
+	 	 	 	 	 	 "url"
+	 	 	 	 	 ]
+	 	 	 	 }
+	 	 	 ]
+	 	 },
+	 	 {
+	 	 	 "name": "Starship",
+	 	 	 "type": "TailorDB.Type",
+	 	 	 "comment": "A single transport craft that has hyperdrive capability.\nDesigned to include all the types supported by TailorDB.\n",
+	 	 	 "columns": [
+	 	 	 	 {
+	 	 	 	 	 "name": "id",
+	 	 	 	 	 "type": "uuid",
+	 	 	 	 	 "nullable": false
+	 	 	 	 },
+	 	 	 	 {
+	 	 	 	 	 "name": "crew",
+	 	 	 	 	 "type": "integer",
+	 	 	 	 	 "nullable": false,
+	 	 	 	 	 "comment": "Number of crew members"
+	 	 	 	 },
+	 	 	 	 {
+	 	 	 	 	 "name": "hyperdriveRating",
+	 	 	 	 	 "type": "nested",
+	 	 	 	 	 "nullable": false,
+	 	 	 	 	 "comment": "Hyperdrive rating of the starship"
+	 	 	 	 },
+	 	 	 	 {
+	 	 	 	 	 "name": "hyperdriveRating.backup",
+	 	 	 	 	 "type": "float",
+	 	 	 	 	 "nullable": false,
+	 	 	 	 	 "comment": "Backup hyperdrive rating"
+	 	 	 	 },
+	 	 	 	 {
+	 	 	 	 	 "name": "hyperdriveRating.main",
+	 	 	 	 	 "type": "float",
+	 	 	 	 	 "nullable": false,
+	 	 	 	 	 "comment": "Main hyperdrive rating"
+	 	 	 	 },
+	 	 	 	 {
+	 	 	 	 	 "name": "isArmed",
+	 	 	 	 	 "type": "boolean",
+	 	 	 	 	 "nullable": false,
+	 	 	 	 	 "comment": "Whether the starship is armed"
+	 	 	 	 },
+	 	 	 	 {
+	 	 	 	 	 "name": "lastLaunchDateTime",
+	 	 	 	 	 "type": "datetime",
+	 	 	 	 	 "nullable": false,
+	 	 	 	 	 "comment": "Last launch date and time"
+	 	 	 	 },
+	 	 	 	 {
+	 	 	 	 	 "name": "length",
+	 	 	 	 	 "type": "float",
+	 	 	 	 	 "nullable": false,
+	 	 	 	 	 "comment": "Length of the starship in meters"
+	 	 	 	 },
+	 	 	 	 {
+	 	 	 	 	 "name": "maintenanceTime",
+	 	 	 	 	 "type": "time",
+	 	 	 	 	 "nullable": false,
+	 	 	 	 	 "comment": "Time required for maintenance"
+	 	 	 	 },
+	 	 	 	 {
+	 	 	 	 	 "name": "manufactureDate",
+	 	 	 	 	 "type": "date",
+	 	 	 	 	 "nullable": false,
+	 	 	 	 	 "comment": "Date of manufacture"
+	 	 	 	 },
+	 	 	 	 {
+	 	 	 	 	 "name": "manufacturers",
+	 	 	 	 	 "type": "string",
+	 	 	 	 	 "nullable": false,
+	 	 	 	 	 "comment": "Manufacturers of the starship"
+	 	 	 	 },
+	 	 	 	 {
+	 	 	 	 	 "name": "name",
+	 	 	 	 	 "type": "string",
+	 	 	 	 	 "nullable": false,
+	 	 	 	 	 "comment": "Name of the starship"
+	 	 	 	 },
+	 	 	 	 {
+	 	 	 	 	 "name": "serialNumber",
+	 	 	 	 	 "type": "uuid",
+	 	 	 	 	 "nullable": false,
+	 	 	 	 	 "comment": "Serial number of the starship"
+	 	 	 	 },
+	 	 	 	 {
+	 	 	 	 	 "name": "status",
+	 	 	 	 	 "type": "enum",
+	 	 	 	 	 "nullable": false,
+	 	 	 	 	 "comment": "Status of the starship"
+	 	 	 	 }
+	 	 	 ],
+	 	 	 "indexes": [
+	 	 	 	 {
+	 	 	 	 	 "name": "Index for serialNumber",
+	 	 	 	 	 "def": "Index: true",
+	 	 	 	 	 "table": "Starship",
+	 	 	 	 	 "columns": [
+	 	 	 	 	 	 "serialNumber"
+	 	 	 	 	 ]
+	 	 	 	 }
+	 	 	 ]
+	 	 }
+	 ],
+	 "relations": [
+	 	 {
+	 	 	 "table": "Product",
+	 	 	 "columns": [
+	 	 	 	 "featuredImageID",
+	 	 	 	 "featuredImage"
+	 	 	 ],
+	 	 	 "parent_table": "ProductImage",
+	 	 	 "parent_columns": [
+	 	 	 	 "id"
+	 	 	 ],
+	 	 	 "def": "Source: ProductImage"
+	 	 }
+	 ]
+}
