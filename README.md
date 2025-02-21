@@ -5,6 +5,10 @@
 ## Usage
 
 ```console
+$ tbls doc tailordb://path/to/terraform/workspace
+```
+
+```console
 $ tbls doc tailordb://path/to/workspace.cue
 ```
 
@@ -21,8 +25,8 @@ $ tbls doc tailordb://path/to/services/tailordb/tailordb.cue
 
 ## Support type
 
+- [x] Terraform
 - [x] CUE
-- [ ] Terraform
 
 ## Install
 
