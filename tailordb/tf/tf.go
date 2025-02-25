@@ -14,7 +14,6 @@ import (
 	"github.com/zclconf/go-cty/cty"
 )
 
-const providerTailordb = "tailor"
 const typeTailorWorkspace = "tailor_workspace"
 const typeTailordb = "tailor_tailordb"
 const typeTailordbType = "tailor_tailordb_type"
@@ -92,7 +91,7 @@ func Analyze(dir string) (*schema.SchemaJSON, error) {
 					attrs = content.Attributes
 				default:
 					attrs, diags = block.Body.JustAttributes()
-					if diags.HasErrors() && !strings.Contains(diags.Error(), "Blocks are not allowed here") {
+					if diags.HasErrors() && !strings.Contains(diags.Error(), errHCLBlocksNotAllowed) {
 						return nil, diags
 					}
 				}

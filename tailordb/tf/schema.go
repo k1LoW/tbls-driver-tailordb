@@ -127,11 +127,3 @@ var terraformSchema = &hcl.BodySchema{
 		},
 	},
 }
-
-var authSchema = &hcl.BodySchema{
-	Blocks: []hcl.BlockHeaderSchema{
-		{
-			Type: "auth",
-		},
-	},
-}
