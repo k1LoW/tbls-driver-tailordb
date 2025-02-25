@@ -18,6 +18,8 @@ const providerTailordb = "tailor"
 const typeTailorWorkspace = "tailor_workspace"
 const typeTailordb = "tailor_tailordb"
 const typeTailordbType = "tailor_tailordb_type"
+const errHCLFunctionCallsNotAllowed = "Function calls not allowed"
+const errHCLBlocksNotAllowed = "Blocks are not allowed"
 
 type Types struct {
 	Types []Type `hcl:"resource,block"`
@@ -113,7 +115,7 @@ func Analyze(dir string) (*schema.SchemaJSON, error) {
 				}
 				vv, diags := attr.Expr.Value(nil)
 				if diags.HasErrors() {
-					if strings.Contains(diags.Error(), "Functions may not be called here") {
+					if strings.Contains(diags.Error(), errHCLFunctionCallsNotAllowed) {
 						vv = cty.StringVal("[function]")
 					} else {
 						return nil, diags
@@ -229,7 +231,9 @@ func Analyze(dir string) (*schema.SchemaJSON, error) {
 			if v, ok := content.Attributes["fields"]; ok {
 				vv, diags := v.Expr.Value(ctx)
 				if diags.HasErrors() {
-					return nil, diags
+					if !strings.Contains(diags.Error(), errHCLFunctionCallsNotAllowed) {
+						return nil, diags
+					}
 				}
 				columns, err := analyzeFields(ctx, s, t, vv, "")
 				if err != nil {
