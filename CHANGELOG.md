@@ -1,5 +1,7 @@
 # Changelog
 
+## [v0.2.2](https://github.com/k1LoW/tbls-driver-tailordb/compare/v0.2.1...v0.2.2) - 2025-02-25
+
 ## [v0.2.1](https://github.com/k1LoW/tbls-driver-tailordb/compare/v0.2.0...v0.2.1) - 2025-02-25
 ### Fix bug 🐛
 - fix(tf): replace hardcoded error messages with constants by @k1LoW in https://github.com/k1LoW/tbls-driver-tailordb/pull/10
