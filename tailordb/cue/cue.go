@@ -266,7 +266,7 @@ func analyzeFields(s *schema.SchemaJSON, t *schema.TableJSON, fields Fields, pre
 				sourceName = fmt.Sprintf("%s.%s", prefix, sourceName)
 			}
 
-			parentTable := c.Type
+			parentTable := field.Type
 			rel := &schema.RelationJSON{
 				Table:       t.Name,
 				Columns:     []string{sourceName, name},
