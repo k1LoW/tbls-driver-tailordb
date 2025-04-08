@@ -1,5 +1,10 @@
 # Changelog
 
+## [v0.2.4](https://github.com/k1LoW/tbls-driver-tailordb/compare/v0.2.3...v0.2.4) - 2025-04-08
+### Other Changes
+- chore(deps): bump golang.org/x/net from 0.34.0 to 0.36.0 by @dependabot in https://github.com/k1LoW/tbls-driver-tailordb/pull/16
+- chore(deps): bump the dependencies group across 1 directory with 2 updates by @dependabot in https://github.com/k1LoW/tbls-driver-tailordb/pull/18
+
 ## [v0.2.3](https://github.com/k1LoW/tbls-driver-tailordb/compare/v0.2.2...v0.2.3) - 2025-02-27
 ### Fix bug 🐛
 - fix(cue): correct parentTable assignment in analyzeFields function by @k1LoW in https://github.com/k1LoW/tbls-driver-tailordb/pull/13
