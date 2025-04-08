@@ -1,6 +1,6 @@
 module github.com/k1LoW/tbls-driver-tailordb
 
-go 1.23.5
+go 1.23.8
 
 require (
 	cuelang.org/go v0.12.0
