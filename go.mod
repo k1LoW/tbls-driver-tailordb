@@ -5,7 +5,7 @@ go 1.23.8
 require (
 	cuelang.org/go v0.12.1
 	github.com/hashicorp/hcl/v2 v2.23.0
-	github.com/k1LoW/tbls v1.84.1
+	github.com/k1LoW/tbls v1.85.0
 	github.com/spf13/cobra v1.9.1
 	github.com/tenntenn/golden v0.5.4
 	github.com/zclconf/go-cty v1.16.2
@@ -17,7 +17,7 @@ require (
 	github.com/apparentlymart/go-textseg/v15 v15.0.0 // indirect
 	github.com/cockroachdb/apd/v3 v3.2.1 // indirect
 	github.com/emicklei/proto v1.13.4 // indirect
-	github.com/goccy/go-yaml v1.15.23 // indirect
+	github.com/goccy/go-yaml v1.17.1 // indirect
 	github.com/google/go-cmp v0.7.0 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
@@ -35,9 +35,9 @@ require (
 	github.com/spf13/pflag v1.0.6 // indirect
 	golang.org/x/mod v0.23.0 // indirect
 	golang.org/x/net v0.38.0 // indirect
-	golang.org/x/oauth2 v0.26.0 // indirect
-	golang.org/x/sync v0.12.0 // indirect
-	golang.org/x/text v0.23.0 // indirect
+	golang.org/x/oauth2 v0.28.0 // indirect
+	golang.org/x/sync v0.13.0 // indirect
+	golang.org/x/text v0.24.0 // indirect
 	golang.org/x/tools v0.30.0 // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
