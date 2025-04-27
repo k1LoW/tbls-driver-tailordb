@@ -5,7 +5,7 @@ go 1.23.8
 require (
 	cuelang.org/go v0.12.1
 	github.com/hashicorp/hcl/v2 v2.23.0
-	github.com/k1LoW/tbls v1.85.0
+	github.com/k1LoW/tbls v1.85.1
 	github.com/spf13/cobra v1.9.1
 	github.com/tenntenn/golden v0.5.4
 	github.com/zclconf/go-cty v1.16.2
