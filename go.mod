@@ -1,13 +1,13 @@
 module github.com/k1LoW/tbls-driver-tailordb
 
-go 1.23.8
+go 1.23.9
 
 require (
 	cuelang.org/go v0.13.0
 	github.com/hashicorp/hcl/v2 v2.23.0
 	github.com/k1LoW/tbls v1.85.4
 	github.com/spf13/cobra v1.9.1
-	github.com/tenntenn/golden v0.5.4
+	github.com/tenntenn/golden v0.5.5
 	github.com/zclconf/go-cty v1.16.3
 )
 
@@ -22,7 +22,7 @@ require (
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/josharian/mapfs v0.0.0-20210615234106-095c008854e6 // indirect
-	github.com/josharian/txtarfs v0.0.0-20210615234325-77aca6df5bca // indirect
+	github.com/josharian/txtarfs v0.0.0-20240408113805-5dc76b8fe6bf // indirect
 	github.com/k1LoW/errors v1.0.0 // indirect
 	github.com/minio/pkg v1.7.5 // indirect
 	github.com/mitchellh/go-wordwrap v1.0.1 // indirect
@@ -34,11 +34,11 @@ require (
 	github.com/samber/lo v1.50.0 // indirect
 	github.com/spf13/pflag v1.0.6 // indirect
 	golang.org/x/mod v0.24.0 // indirect
-	golang.org/x/net v0.39.0 // indirect
+	golang.org/x/net v0.40.0 // indirect
 	golang.org/x/oauth2 v0.29.0 // indirect
-	golang.org/x/sync v0.13.0 // indirect
-	golang.org/x/text v0.24.0 // indirect
-	golang.org/x/tools v0.32.0 // indirect
+	golang.org/x/sync v0.14.0 // indirect
+	golang.org/x/text v0.25.0 // indirect
+	golang.org/x/tools v0.33.0 // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
