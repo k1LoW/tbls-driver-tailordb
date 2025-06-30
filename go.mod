@@ -3,7 +3,7 @@ module github.com/k1LoW/tbls-driver-tailordb
 go 1.23.9
 
 require (
-	cuelang.org/go v0.13.1
+	cuelang.org/go v0.13.2
 	github.com/hashicorp/hcl/v2 v2.23.0
 	github.com/k1LoW/tbls v1.85.5
 	github.com/spf13/cobra v1.9.1
