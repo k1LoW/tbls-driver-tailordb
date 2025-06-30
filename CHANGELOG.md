@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.2.6](https://github.com/k1LoW/tbls-driver-tailordb/compare/v0.2.5...v0.2.6) - 2025-06-30
+### Other Changes
+- chore(deps): bump github.com/k1LoW/tbls from 1.84.1 to 1.85.0 in the dependencies group by @dependabot in https://github.com/k1LoW/tbls-driver-tailordb/pull/21
+- chore(deps): bump the dependencies group across 1 directory with 2 updates by @dependabot in https://github.com/k1LoW/tbls-driver-tailordb/pull/24
+- chore(deps): bump the dependencies group with 2 updates by @dependabot in https://github.com/k1LoW/tbls-driver-tailordb/pull/25
+- chore(deps): bump the dependencies group across 1 directory with 3 updates by @dependabot in https://github.com/k1LoW/tbls-driver-tailordb/pull/28
+- chore(deps): bump cuelang.org/go from 0.13.1 to 0.13.2 in the dependencies group by @dependabot in https://github.com/k1LoW/tbls-driver-tailordb/pull/29
+
 ## [v0.2.5](https://github.com/k1LoW/tbls-driver-tailordb/compare/v0.2.4...v0.2.5) - 2025-04-17
 ### Other Changes
 - chore(deps): bump golang.org/x/net from 0.36.0 to 0.38.0 by @dependabot in https://github.com/k1LoW/tbls-driver-tailordb/pull/19
