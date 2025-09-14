@@ -1,14 +1,14 @@
 module github.com/k1LoW/tbls-driver-tailordb
 
-go 1.23.11
+go 1.24.7
 
 require (
 	cuelang.org/go v0.14.1
 	github.com/hashicorp/hcl/v2 v2.24.0
-	github.com/k1LoW/tbls v1.87.0
-	github.com/spf13/cobra v1.9.1
+	github.com/k1LoW/tbls v1.88.0
+	github.com/spf13/cobra v1.10.1
 	github.com/tenntenn/golden v0.5.5
-	github.com/zclconf/go-cty v1.16.4
+	github.com/zclconf/go-cty v1.17.0
 )
 
 require (
@@ -23,7 +23,7 @@ require (
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/josharian/mapfs v0.0.0-20210615234106-095c008854e6 // indirect
 	github.com/josharian/txtarfs v0.0.0-20240408113805-5dc76b8fe6bf // indirect
-	github.com/k1LoW/errors v1.0.0 // indirect
+	github.com/k1LoW/errors v1.1.0 // indirect
 	github.com/minio/pkg v1.7.5 // indirect
 	github.com/mitchellh/go-wordwrap v1.0.1 // indirect
 	github.com/opencontainers/go-digest v1.0.0 // indirect
@@ -32,13 +32,13 @@ require (
 	github.com/protocolbuffers/txtpbfmt v0.0.0-20250627152318-f293424e46b5 // indirect
 	github.com/rogpeppe/go-internal v1.14.1 // indirect
 	github.com/samber/lo v1.51.0 // indirect
-	github.com/spf13/pflag v1.0.7 // indirect
-	golang.org/x/mod v0.26.0 // indirect
-	golang.org/x/net v0.42.0 // indirect
-	golang.org/x/oauth2 v0.30.0 // indirect
-	golang.org/x/sync v0.16.0 // indirect
-	golang.org/x/text v0.27.0 // indirect
-	golang.org/x/tools v0.35.0 // indirect
+	github.com/spf13/pflag v1.0.9 // indirect
+	golang.org/x/mod v0.27.0 // indirect
+	golang.org/x/net v0.43.0 // indirect
+	golang.org/x/oauth2 v0.31.0 // indirect
+	golang.org/x/sync v0.17.0 // indirect
+	golang.org/x/text v0.29.0 // indirect
+	golang.org/x/tools v0.36.0 // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
