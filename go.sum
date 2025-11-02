@@ -35,8 +35,8 @@ github.com/josharian/txtarfs v0.0.0-20240408113805-5dc76b8fe6bf h1:ZWuoyLMwZvLJ6
 github.com/josharian/txtarfs v0.0.0-20240408113805-5dc76b8fe6bf/go.mod h1:UbC32ft9G/jG+sZI8wLbIBNIrYr7vp/yqMDa9SxVBNA=
 github.com/k1LoW/errors v1.1.0 h1:ybrPBJApN+CDaouedGEbJGEl6EtWhse9LThRhgfrOZ0=
 github.com/k1LoW/errors v1.1.0/go.mod h1:FnyqU5omnd/+J2ViEsDaIZXTZGuRMZ5uDpLEqrEsMp4=
-github.com/k1LoW/tbls v1.91.1 h1:8NhztlScjTgU3k6v62ExeuID19W5bJ+fdyQDEIDuzNw=
-github.com/k1LoW/tbls v1.91.1/go.mod h1:qCkHN1yiI/vQ5ry1jyYsR+hHkEqG6N3YeKVDzlZRs/o=
+github.com/k1LoW/tbls v1.91.2 h1:16pgcUnDbqRwQMI5vZ8jEuF9rHox7g3AdbWmtorKExc=
+github.com/k1LoW/tbls v1.91.2/go.mod h1:qCkHN1yiI/vQ5ry1jyYsR+hHkEqG6N3YeKVDzlZRs/o=
 github.com/kr/pretty v0.2.1/go.mod h1:ipq/a2n7PKx3OHsz4KJII5eveXtPO4qwEXGdVfWzfnI=
 github.com/kr/pretty v0.3.1 h1:flRD4NNwYAUpkphVc1HcthR4KEIFJ65n8Mw5qdRn3LE=
 github.com/kr/pretty v0.3.1/go.mod h1:hoEshYVHaxMs3cyo3Yncou5ZscifuDolrwPKZanG3xk=
