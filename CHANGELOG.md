@@ -1,5 +1,14 @@
 # Changelog
 
+## [v0.3.1](https://github.com/k1LoW/tbls-driver-tailordb/compare/v0.3.0...v0.3.1) - 2025-12-16
+### Other Changes
+- chore: setup tagpr labels by @k1LoW in https://github.com/k1LoW/tbls-driver-tailordb/pull/41
+- chore(deps): bump the dependencies group across 1 directory with 4 updates by @dependabot[bot] in https://github.com/k1LoW/tbls-driver-tailordb/pull/39
+- chore(deps): bump the dependencies group with 2 updates by @dependabot[bot] in https://github.com/k1LoW/tbls-driver-tailordb/pull/43
+- chore(deps): bump actions/checkout from 5 to 6 in the dependencies group by @dependabot[bot] in https://github.com/k1LoW/tbls-driver-tailordb/pull/46
+- chore(deps): bump the dependencies group across 1 directory with 3 updates by @dependabot[bot] in https://github.com/k1LoW/tbls-driver-tailordb/pull/47
+- chore(deps): bump github.com/k1LoW/tbls from 1.91.4 to 1.92.0 in the dependencies group by @dependabot[bot] in https://github.com/k1LoW/tbls-driver-tailordb/pull/48
+
 ## [v0.3.0](https://github.com/k1LoW/tbls-driver-tailordb/compare/v0.2.5...v0.3.0) - 2025-10-09
 ### Other Changes
 - chore(deps): bump github.com/k1LoW/tbls from 1.84.1 to 1.85.0 in the dependencies group by @dependabot[bot] in https://github.com/k1LoW/tbls-driver-tailordb/pull/21
