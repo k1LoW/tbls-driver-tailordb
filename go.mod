@@ -1,6 +1,6 @@
 module github.com/k1LoW/tbls-driver-tailordb
 
-go 1.24.10
+go 1.25
 
 require (
 	cuelang.org/go v0.15.4
@@ -8,7 +8,7 @@ require (
 	github.com/k1LoW/tbls v1.92.3
 	github.com/spf13/cobra v1.10.2
 	github.com/tenntenn/golden v0.5.5
-	github.com/zclconf/go-cty v1.17.0
+	github.com/zclconf/go-cty v1.18.0
 )
 
 require (

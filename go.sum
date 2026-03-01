@@ -71,8 +71,8 @@ github.com/spf13/pflag v1.0.10/go.mod h1:McXfInJRrz4CZXVZOBLb0bTZqETkiAhM9Iw0y3A
 github.com/tenntenn/golden v0.5.5 h1:3LPemp4rZUIYeh0MTgIn8nzbY8EKVu0Kyb7AOBM016g=
 github.com/tenntenn/golden v0.5.5/go.mod h1:zPPkSkshkDGyYIFOIRkyydYQB4XErvg+Uufi0Q9H5qE=
 github.com/yuin/goldmark v1.2.1/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
-github.com/zclconf/go-cty v1.17.0 h1:seZvECve6XX4tmnvRzWtJNHdscMtYEx5R7bnnVyd/d0=
-github.com/zclconf/go-cty v1.17.0/go.mod h1:wqFzcImaLTI6A5HfsRwB0nj5n0MRZFwmey8YoFPPs3U=
+github.com/zclconf/go-cty v1.18.0 h1:pJ8+HNI4gFoyRNqVE37wWbJWVw43BZczFo7KUoRczaA=
+github.com/zclconf/go-cty v1.18.0/go.mod h1:qpnV6EDNgC1sns/AleL1fvatHw72j+S+nS+MJ+T2CSg=
 github.com/zclconf/go-cty-debug v0.0.0-20240509010212-0d6042c53940 h1:4r45xpDWB6ZMSMNJFMOjqrGHynW3DIBuR2H9j0ug+Mo=
 github.com/zclconf/go-cty-debug v0.0.0-20240509010212-0d6042c53940/go.mod h1:CmBdvvj3nqzfzJ6nTCIwDTPZ56aVGvDrmztiO5g3qrM=
 go.yaml.in/yaml/v3 v3.0.4 h1:tfq32ie2Jv2UxXFdLJdh3jXuOzWiL1fo0bu/FbuKpbc=
