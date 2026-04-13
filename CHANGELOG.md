@@ -1,5 +1,15 @@
 # Changelog
 
+## [v0.3.2](https://github.com/k1LoW/tbls-driver-tailordb/compare/v0.3.1...v0.3.2) - 2026-04-13
+### Other Changes
+- chore(deps): bump the dependencies group across 1 directory with 2 updates by @dependabot[bot] in https://github.com/k1LoW/tbls-driver-tailordb/pull/50
+- chore(deps): bump github.com/k1LoW/tbls from 1.92.2 to 1.92.3 in the dependencies group by @dependabot[bot] in https://github.com/k1LoW/tbls-driver-tailordb/pull/52
+- chore(deps): bump cuelang.org/go from 0.15.3 to 0.15.4 in the dependencies group by @dependabot[bot] in https://github.com/k1LoW/tbls-driver-tailordb/pull/53
+- chore(deps): bump goreleaser/goreleaser-action from 6 to 7 in the dependencies group by @dependabot[bot] in https://github.com/k1LoW/tbls-driver-tailordb/pull/54
+- chore(deps): bump the dependencies group across 1 directory with 3 updates by @dependabot[bot] in https://github.com/k1LoW/tbls-driver-tailordb/pull/57
+- chore(deps): bump github.com/k1LoW/tbls from 1.93.0 to 1.94.2 in the dependencies group by @dependabot[bot] in https://github.com/k1LoW/tbls-driver-tailordb/pull/58
+- chore(deps): bump the dependencies group with 2 updates by @dependabot[bot] in https://github.com/k1LoW/tbls-driver-tailordb/pull/59
+
 ## [v0.3.1](https://github.com/k1LoW/tbls-driver-tailordb/compare/v0.3.0...v0.3.1) - 2025-12-16
 ### Other Changes
 - chore: setup tagpr labels by @k1LoW in https://github.com/k1LoW/tbls-driver-tailordb/pull/41
