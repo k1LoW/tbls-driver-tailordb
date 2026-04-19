@@ -8,7 +8,7 @@ require (
 	github.com/k1LoW/tbls v1.94.4
 	github.com/spf13/cobra v1.10.2
 	github.com/tenntenn/golden v0.5.5
-	github.com/zclconf/go-cty v1.18.0
+	github.com/zclconf/go-cty v1.18.1
 )
 
 require (
