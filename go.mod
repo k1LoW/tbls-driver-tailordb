@@ -5,10 +5,10 @@ go 1.25.7
 require (
 	cuelang.org/go v0.16.1
 	github.com/hashicorp/hcl/v2 v2.24.0
-	github.com/k1LoW/tbls v1.94.4
+	github.com/k1LoW/tbls v1.94.5
 	github.com/spf13/cobra v1.10.2
 	github.com/tenntenn/golden v0.5.5
-	github.com/zclconf/go-cty v1.18.0
+	github.com/zclconf/go-cty v1.18.1
 )
 
 require (
