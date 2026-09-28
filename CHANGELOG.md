@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.3.3](https://github.com/k1LoW/tbls-driver-tailordb/compare/v0.3.2...v0.3.3) - 2026-09-28
+
+### Other Changes
+- chore(deps): bump cuelang.org/go from 0.16.1 to 0.17.0 in the dependencies group by @dependabot[bot] in https://github.com/k1LoW/tbls-driver-tailordb/pull/64
+- ci: generate CREDITS with gocredits v1.0.0 from a make target by @k1LoW in https://github.com/k1LoW/tbls-driver-tailordb/pull/70
+- chore(deps): bump the dependencies group across 1 directory with 4 updates by @dependabot[bot] in https://github.com/k1LoW/tbls-driver-tailordb/pull/69
+- chore(deps): bump actions/setup-go from 6 to 7 in the dependencies group by @dependabot[bot] in https://github.com/k1LoW/tbls-driver-tailordb/pull/67
+
 ## [v0.3.2](https://github.com/k1LoW/tbls-driver-tailordb/compare/v0.3.1...v0.3.2) - 2026-07-04
 
 ### Other Changes
